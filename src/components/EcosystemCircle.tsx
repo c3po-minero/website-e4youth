@@ -38,18 +38,16 @@ export default function EcosystemCircle() {
             const y1 = center + radius * Math.sin(startAngle)
             const x2 = center + radius * Math.cos(endAngle)
             const y2 = center + radius * Math.sin(endAngle)
-            const isElevate = stage.label === 'Elevate'
             const isHovered = hoveredIndex === i
             return (
               <path
                 key={stage.label}
                 d={`M ${x1} ${y1} A ${radius} ${radius} 0 0 1 ${x2} ${y2}`}
                 stroke={stage.color}
-                strokeWidth={isElevate ? 10 : isHovered ? 8 : 6}
+                strokeWidth={isHovered ? 8 : 6}
                 strokeLinecap="round"
                 opacity={hoveredIndex !== null && hoveredIndex !== i ? 0.3 : 1}
                 className="transition-all duration-300"
-                style={isElevate ? { filter: 'drop-shadow(0 0 8px rgba(123,220,181,0.5))' } : undefined}
               />
             )
           })}
@@ -88,7 +86,6 @@ export default function EcosystemCircle() {
           const labelR = radius * 0.55
           const x = center + labelR * Math.cos(angle - Math.PI / 4)
           const y = center + labelR * Math.sin(angle - Math.PI / 4)
-          const isElevate = stage.label === 'Elevate'
           const isHovered = hoveredIndex === i
           return (
             <motion.div
@@ -106,11 +103,8 @@ export default function EcosystemCircle() {
               onMouseLeave={() => setHoveredIndex(null)}
             >
               <div
-                className={`w-20 h-20 rounded-full mx-auto flex items-center justify-center text-white mb-2 transition-all duration-300 ${isElevate ? 'ring-3 ring-offset-2 ring-emerald-300' : ''} ${isHovered ? 'shadow-xl scale-110' : 'shadow-md'}`}
-                style={{
-                  backgroundColor: stage.color,
-                  ...(isElevate ? { boxShadow: '0 0 20px rgba(123,220,181,0.4)' } : {}),
-                }}
+                className={`w-20 h-20 rounded-full mx-auto flex items-center justify-center text-white mb-2 transition-all duration-300 ${isHovered ? 'shadow-xl scale-110' : 'shadow-md'}`}
+                style={{ backgroundColor: stage.color }}
               >
                 <FontAwesomeIcon icon={stage.icon} className="w-9 h-9" />
               </div>
@@ -173,7 +167,6 @@ export default function EcosystemCircle() {
       {/* Mobile: interactive stacked layout */}
       <div className="md:hidden space-y-3 w-full max-w-md">
         {stages.map((stage, i) => {
-          const isElevate = stage.label === 'Elevate'
           return (
             <motion.div
               key={stage.label}
@@ -181,10 +174,10 @@ export default function EcosystemCircle() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: i * 0.1 }}
             >
-              <details className={`rounded-xl border overflow-hidden ${isElevate ? 'border-2 shadow-md' : 'border-gray-200'}`} style={{ borderColor: isElevate ? stage.color : undefined }}>
+              <details className="rounded-xl border border-gray-200 overflow-hidden">
                 <summary className="flex items-center gap-4 p-4 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
                   <div
-                    className={`w-12 h-12 rounded-full flex items-center justify-center text-white flex-shrink-0 ${isElevate ? 'ring-2 ring-offset-1 ring-emerald-300' : ''}`}
+                    className="w-12 h-12 rounded-full flex items-center justify-center text-white flex-shrink-0"
                     style={{ backgroundColor: stage.color }}
                   >
                     <FontAwesomeIcon icon={stage.icon} className="w-5 h-5" />
