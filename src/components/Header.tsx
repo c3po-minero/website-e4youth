@@ -52,6 +52,7 @@ const mobileLinks = [
   { label: 'Stories & Showcases', href: '/stories' },
   { label: 'Impact & Evaluation', href: '/impact' },
   { label: 'Partner With Us', href: '/partner' },
+  { label: 'Funders', href: '/funders' },
   { label: 'Contact', href: '/contact' },
 ]
 
@@ -60,6 +61,11 @@ export default function Header() {
   const [hidden, setHidden] = useState(false)
   const lastScrollY = useRef(0)
   const menuRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    document.body.style.overflow = mobileOpen ? 'hidden' : ''
+    return () => { document.body.style.overflow = '' }
+  }, [mobileOpen])
 
   useEffect(() => {
     const handleScroll = () => {
@@ -141,8 +147,9 @@ export default function Header() {
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-expanded={mobileOpen}
             aria-label="Toggle navigation menu"
+            style={{ zIndex: 10000, position: 'relative' }}
           >
-            <i className="fa-solid fa-bars"></i>
+            <i className={`fa-solid ${mobileOpen ? 'fa-xmark' : 'fa-bars'}`}></i>
           </button>
 
           <div className={`mobile-menu${mobileOpen ? ' active' : ''}`} role="navigation" aria-label="Mobile navigation">
