@@ -2,13 +2,14 @@
 
 import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import type { IconProp } from '@fortawesome/fontawesome-svg-core'
+import type { IconDefinition } from '@fortawesome/fontawesome-svg-core'
+import { resolveIcon } from '@/lib/iconMap'
 import HeroSection from './HeroSection'
 import AnimatedSection from './AnimatedSection'
 
 interface Outcome {
   text: string
-  icon: IconProp
+  icon: string | IconDefinition
 }
 
 interface Props {
@@ -21,7 +22,7 @@ interface Props {
   secondaryCTA?: { text: string; href: string }
   gradient?: string
   accentColor: string
-  features?: { title: string; description: string; icon: IconProp }[]
+  features?: { title: string; description: string; icon: string | IconDefinition }[]
 }
 
 export default function ProgramPageLayout({
@@ -73,7 +74,7 @@ export default function ProgramPageLayout({
                 <AnimatedSection key={o.text} delay={i * 0.1}>
                   <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 text-center h-full">
                     <div className="w-14 h-14 rounded-2xl mx-auto flex items-center justify-center mb-4" style={{ backgroundColor: `${accentColor}15` }}>
-                      <FontAwesomeIcon icon={o.icon} className="w-6 h-6" style={{ color: accentColor }} />
+                      <FontAwesomeIcon icon={resolveIcon(o.icon)} className="w-6 h-6" style={{ color: accentColor }} />
                     </div>
                     <p className="font-display font-semibold text-secondary">{o.text}</p>
                   </div>
@@ -95,7 +96,7 @@ export default function ProgramPageLayout({
                 <AnimatedSection key={f.title} delay={i * 0.1}>
                   <div className="flex gap-4">
                     <div className="w-12 h-12 rounded-xl flex-shrink-0 flex items-center justify-center" style={{ backgroundColor: `${accentColor}15` }}>
-                      <FontAwesomeIcon icon={f.icon} className="w-5 h-5" style={{ color: accentColor }} />
+                      <FontAwesomeIcon icon={resolveIcon(f.icon)} className="w-5 h-5" style={{ color: accentColor }} />
                     </div>
                     <div>
                       <h3 className="font-display font-bold text-secondary mb-1">{f.title}</h3>

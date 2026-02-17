@@ -2,16 +2,17 @@
 
 import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSchool, faBriefcase, faSeedling, faPeopleGroup, faLandmark, faCode } from '@fortawesome/free-solid-svg-icons'
 import HeroSection from '@/components/HeroSection'
 import AnimatedSection from '@/components/AnimatedSection'
 
 const partnerTypes = [
-  { title: 'Schools & Educators', desc: 'Bring E4 Youth programming into your school, after-school program, or educational institution. We offer curriculum integration, workshops, and ongoing partnerships.', icon: 'school' as const, color: '#4DB8FF' },
-  { title: 'Workforce & Industry Partners', desc: 'Connect with emerging creative talent through paid learning pilots, mentorship opportunities, portfolio reviews, and hiring pathways.', icon: 'briefcase' as const, color: '#9B51E0' },
-  { title: 'Funders & Foundations', desc: 'Invest in storytelling as infrastructure for equity and opportunity. Support programs, evaluation, and organizational growth.', icon: 'seedling' as const, color: '#FCB900' },
-  { title: 'Community Organizations', desc: 'Collaborate on projects that preserve community history, amplify local voices, and create shared learning experiences.', icon: 'people-group' as const, color: '#7BDCB5' },
-  { title: 'Cultural Institutions', desc: 'Partner on exhibitions, public programming, and research projects that connect community storytelling to institutional reach.', icon: 'landmark' as const, color: '#0072CE' },
-  { title: 'Technology Partners', desc: 'Provide tools, platforms, and expertise that help E4 Youth participants build cutting-edge digital skills.', icon: 'code' as const, color: '#9B51E0' },
+  { title: 'Schools & Educators', desc: 'Bring E4 Youth programming into your school, after-school program, or educational institution. We offer curriculum integration, workshops, and ongoing partnerships.', icon: faSchool, color: '#4DB8FF' },
+  { title: 'Workforce & Industry Partners', desc: 'Connect with emerging creative talent through paid learning pilots, mentorship opportunities, portfolio reviews, and hiring pathways.', icon: faBriefcase, color: '#9B51E0' },
+  { title: 'Funders & Foundations', desc: 'Invest in storytelling as infrastructure for equity and opportunity. Support programs, evaluation, and organizational growth.', icon: faSeedling, color: '#FCB900' },
+  { title: 'Community Organizations', desc: 'Collaborate on projects that preserve community history, amplify local voices, and create shared learning experiences.', icon: faPeopleGroup, color: '#7BDCB5' },
+  { title: 'Cultural Institutions', desc: 'Partner on exhibitions, public programming, and research projects that connect community storytelling to institutional reach.', icon: faLandmark, color: '#0072CE' },
+  { title: 'Technology Partners', desc: 'Provide tools, platforms, and expertise that help E4 Youth participants build cutting-edge digital skills.', icon: faCode, color: '#9B51E0' },
 ]
 
 export default function PartnerClient() {

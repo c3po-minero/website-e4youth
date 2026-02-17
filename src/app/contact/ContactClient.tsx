@@ -1,14 +1,15 @@
 'use client'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faUsers, faGraduationCap, faHandshake, faHeart, faEnvelope, faLocationDot } from '@fortawesome/free-solid-svg-icons'
 import HeroSection from '@/components/HeroSection'
 import AnimatedSection from '@/components/AnimatedSection'
 
 const ways = [
-  { title: 'Youth & Families', desc: 'Explore programs, sign up for workshops, or attend an upcoming event.', icon: 'users' as const, color: '#4DB8FF' },
-  { title: 'Educators', desc: 'Bring E4 Youth programming into your school or after-school program.', icon: 'graduation-cap' as const, color: '#9B51E0' },
-  { title: 'Partners & Funders', desc: 'Start a conversation about collaboration, sponsorship, or investment.', icon: 'handshake' as const, color: '#FCB900' },
-  { title: 'Volunteers & Mentors', desc: 'Share your skills and time with the next generation of creatives.', icon: 'heart' as const, color: '#7BDCB5' },
+  { title: 'Youth & Families', desc: 'Explore programs, sign up for workshops, or attend an upcoming event.', icon: faUsers, color: '#4DB8FF' },
+  { title: 'Educators', desc: 'Bring E4 Youth programming into your school or after-school program.', icon: faGraduationCap, color: '#9B51E0' },
+  { title: 'Partners & Funders', desc: 'Start a conversation about collaboration, sponsorship, or investment.', icon: faHandshake, color: '#FCB900' },
+  { title: 'Volunteers & Mentors', desc: 'Share your skills and time with the next generation of creatives.', icon: faHeart, color: '#7BDCB5' },
 ]
 
 export default function ContactClient() {
@@ -84,7 +85,7 @@ export default function ContactClient() {
                 <textarea id="message" name="message" rows={5} required className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary-dark focus:ring-2 focus:ring-primary/20 outline-none transition-all resize-none" />
               </div>
               <button type="submit" className="btn-primary w-full justify-center">
-                <FontAwesomeIcon icon="envelope" className="w-4 h-4 mr-2" />
+                <FontAwesomeIcon icon={faEnvelope} className="w-4 h-4 mr-2" />
                 Send Message
               </button>
             </form>
@@ -99,11 +100,11 @@ export default function ContactClient() {
             <h2 className="text-3xl font-display font-bold mb-8">Other Ways to Reach Us</h2>
             <div className="flex flex-wrap justify-center gap-8">
               <div className="flex items-center gap-3">
-                <FontAwesomeIcon icon="envelope" className="w-5 h-5 text-gold" />
+                <FontAwesomeIcon icon={faEnvelope} className="w-5 h-5 text-gold" />
                 <a href="mailto:info@e4youth.org" className="text-white hover:text-gold transition-colors">info@e4youth.org</a>
               </div>
               <div className="flex items-center gap-3">
-                <FontAwesomeIcon icon="location-dot" className="w-5 h-5 text-gold" />
+                <FontAwesomeIcon icon={faLocationDot} className="w-5 h-5 text-gold" />
                 <span>Austin, Texas</span>
               </div>
             </div>

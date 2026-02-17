@@ -1,6 +1,8 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faLocationDot, faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faFacebook, faXTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons'
 
 export default function Footer() {
   return (
@@ -17,13 +19,13 @@ export default function Footer() {
             </p>
             <div className="flex gap-4 mt-6">
               <a href="https://www.facebook.com/e4youth" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-gray-400 hover:text-primary transition-colors">
-                <FontAwesomeIcon icon={['fab', 'facebook']} className="w-5 h-5" />
+                <FontAwesomeIcon icon={faFacebook} className="w-5 h-5" />
               </a>
               <a href="https://twitter.com/e4youth" target="_blank" rel="noopener noreferrer" aria-label="X / Twitter" className="text-gray-400 hover:text-primary transition-colors">
-                <FontAwesomeIcon icon={['fab', 'x-twitter']} className="w-5 h-5" />
+                <FontAwesomeIcon icon={faXTwitter} className="w-5 h-5" />
               </a>
               <a href="https://www.instagram.com/e4youth" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-gray-400 hover:text-primary transition-colors">
-                <FontAwesomeIcon icon={['fab', 'instagram']} className="w-5 h-5" />
+                <FontAwesomeIcon icon={faInstagram} className="w-5 h-5" />
               </a>
             </div>
           </div>
@@ -60,11 +62,11 @@ export default function Footer() {
             <h3 className="font-display font-semibold text-lg mb-4">Get in Touch</h3>
             <ul className="space-y-3 text-sm text-gray-300">
               <li className="flex items-start gap-3">
-                <FontAwesomeIcon icon="location-dot" className="w-4 h-4 text-primary mt-0.5" />
+                <FontAwesomeIcon icon={faLocationDot} className="w-4 h-4 text-primary mt-0.5" />
                 <span>Austin, Texas</span>
               </li>
               <li className="flex items-start gap-3">
-                <FontAwesomeIcon icon="envelope" className="w-4 h-4 text-primary mt-0.5" />
+                <FontAwesomeIcon icon={faEnvelope} className="w-4 h-4 text-primary mt-0.5" />
                 <a href="mailto:info@e4youth.org" className="hover:text-primary transition-colors">info@e4youth.org</a>
               </li>
             </ul>

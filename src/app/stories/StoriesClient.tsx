@@ -2,16 +2,17 @@
 
 import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faVrCardboard, faMicrophone, faPalette, faMagicWandSparkles, faVideo, faPeopleGroup } from '@fortawesome/free-solid-svg-icons'
 import HeroSection from '@/components/HeroSection'
 import AnimatedSection from '@/components/AnimatedSection'
 
 const stories = [
-  { title: 'Walking Through History', desc: 'Youth participants created an augmented reality experience that brings Black Austin history to life in public spaces, connecting past and present through technology and storytelling.', tag: 'AR Experience', color: '#9B51E0', icon: 'vr-cardboard' as const },
-  { title: 'Voices of the Community', desc: 'An oral history project that captured stories from three generations of Austin families, preserving memories and perspectives that might otherwise be lost.', tag: 'Oral History', color: '#FCB900', icon: 'microphone' as const },
-  { title: 'Creative Futures', desc: 'High school participants developed professional portfolios and presented their work at a public showcase, gaining confidence and visibility as emerging creatives.', tag: 'Student Showcase', color: '#4DB8FF', icon: 'palette' as const },
-  { title: 'Heritage Remix', desc: 'College-aged participants combined traditional cultural practices with emerging technology to create interactive installations for community spaces.', tag: 'Innovation', color: '#7BDCB5', icon: 'magic-wand-sparkles' as const },
-  { title: 'Digital Storytellers', desc: 'Youth learned video production, audio editing, and digital publishing to tell stories about their neighborhoods, schools, and communities.', tag: 'Digital Media', color: '#0072CE', icon: 'video' as const },
-  { title: 'Community Connection', desc: 'An E4 Live networking event brought together over 100 creatives, professionals, and community members for an evening of connection and collaboration.', tag: 'E4 Live', color: '#9B51E0', icon: 'people-group' as const },
+  { title: 'Walking Through History', desc: 'Youth participants created an augmented reality experience that brings Black Austin history to life in public spaces, connecting past and present through technology and storytelling.', tag: 'AR Experience', color: '#9B51E0', icon: faVrCardboard },
+  { title: 'Voices of the Community', desc: 'An oral history project that captured stories from three generations of Austin families, preserving memories and perspectives that might otherwise be lost.', tag: 'Oral History', color: '#FCB900', icon: faMicrophone },
+  { title: 'Creative Futures', desc: 'High school participants developed professional portfolios and presented their work at a public showcase, gaining confidence and visibility as emerging creatives.', tag: 'Student Showcase', color: '#4DB8FF', icon: faPalette },
+  { title: 'Heritage Remix', desc: 'College-aged participants combined traditional cultural practices with emerging technology to create interactive installations for community spaces.', tag: 'Innovation', color: '#7BDCB5', icon: faMagicWandSparkles },
+  { title: 'Digital Storytellers', desc: 'Youth learned video production, audio editing, and digital publishing to tell stories about their neighborhoods, schools, and communities.', tag: 'Digital Media', color: '#0072CE', icon: faVideo },
+  { title: 'Community Connection', desc: 'An E4 Live networking event brought together over 100 creatives, professionals, and community members for an evening of connection and collaboration.', tag: 'E4 Live', color: '#9B51E0', icon: faPeopleGroup },
 ]
 
 export default function StoriesClient() {

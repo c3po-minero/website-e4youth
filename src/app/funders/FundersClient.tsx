@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChalkboardTeacher, faBriefcase, faEye, faChartLine, faVrCardboard, faPeopleGroup, faLaptopCode } from '@fortawesome/free-solid-svg-icons'
 import HeroSection from '@/components/HeroSection'
 import AnimatedSection from '@/components/AnimatedSection'
 
@@ -53,10 +54,10 @@ export default function FundersClient() {
           </AnimatedSection>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { icon: 'chalkboard-teacher' as const, label: 'Co-Designed Programs', desc: 'Tailored initiatives that reflect community priorities and institutional goals.' },
-              { icon: 'briefcase' as const, label: 'Paid Learning Pilots', desc: 'Compensated pathways where participants build real skills with real stakes.' },
-              { icon: 'eye' as const, label: 'Public Showcases', desc: 'Events and exhibitions that demonstrate impact and elevate participant voices.' },
-              { icon: 'chart-line' as const, label: 'Evaluation & Infrastructure', desc: 'Rigorous measurement and systems to scale what works.' },
+              { icon: faChalkboardTeacher, label: 'Co-Designed Programs', desc: 'Tailored initiatives that reflect community priorities and institutional goals.' },
+              { icon: faBriefcase, label: 'Paid Learning Pilots', desc: 'Compensated pathways where participants build real skills with real stakes.' },
+              { icon: faEye, label: 'Public Showcases', desc: 'Events and exhibitions that demonstrate impact and elevate participant voices.' },
+              { icon: faChartLine, label: 'Evaluation & Infrastructure', desc: 'Rigorous measurement and systems to scale what works.' },
             ].map((item, i) => (
               <AnimatedSection key={item.label} delay={i * 0.1}>
                 <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 text-center h-full">
@@ -80,9 +81,9 @@ export default function FundersClient() {
           </AnimatedSection>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {[
-              { title: 'Walk With History: The Jacob Fontaine AR Tour', desc: 'A location-based augmented reality experience developed with community input that brings Black Austin history into public space through youth-informed storytelling and technology.', icon: 'vr-cardboard' as const, color: '#9B51E0' },
-              { title: 'Community Showcases and Public Learning Events', desc: 'Live events where emerging creatives present work, portfolios, and research alongside mentors, historians, and partners.', icon: 'people-group' as const, color: '#FCB900' },
-              { title: 'Workshops, Labs, and Pilot Programs', desc: 'Immersive learning experiences exploring oral history, digital storytelling, creative technology, and workforce connection.', icon: 'laptop-code' as const, color: '#7BDCB5' },
+              { title: 'Walk With History: The Jacob Fontaine AR Tour', desc: 'A location-based augmented reality experience developed with community input that brings Black Austin history into public space through youth-informed storytelling and technology.', icon: faVrCardboard, color: '#9B51E0' },
+              { title: 'Community Showcases and Public Learning Events', desc: 'Live events where emerging creatives present work, portfolios, and research alongside mentors, historians, and partners.', icon: faPeopleGroup, color: '#FCB900' },
+              { title: 'Workshops, Labs, and Pilot Programs', desc: 'Immersive learning experiences exploring oral history, digital storytelling, creative technology, and workforce connection.', icon: faLaptopCode, color: '#7BDCB5' },
             ].map((item, i) => (
               <AnimatedSection key={item.title} delay={i * 0.1}>
                 <div className="bg-gray-50 rounded-2xl p-8 h-full border-l-4" style={{ borderLeftColor: item.color }}>

@@ -5,6 +5,7 @@ import { useMemo, useState } from 'react'
 import Link from 'next/link'
 import Fuse from 'fuse.js'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMagnifyingGlass, faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import { searchIndex } from '@/lib/searchIndex'
 import AnimatedSection from '@/components/AnimatedSection'
 
@@ -34,7 +35,7 @@ export default function SearchClient() {
         <div className="max-w-3xl mx-auto w-full text-center">
           <h1 className="text-3xl md:text-4xl font-display font-bold text-white mb-8">Search E4 Youth</h1>
           <form onSubmit={(e) => e.preventDefault()} className="relative">
-            <FontAwesomeIcon icon="magnifying-glass" className="absolute left-5 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
+            <FontAwesomeIcon icon={faMagnifyingGlass} className="absolute left-5 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
             <input
               type="text"
               value={query}
@@ -71,7 +72,7 @@ export default function SearchClient() {
                         </h2>
                         <p className="text-body text-sm leading-relaxed">{result.item.description}</p>
                         <span className="inline-flex items-center text-sm font-semibold text-primary-dark mt-3 gap-2 group-hover:gap-3 transition-all">
-                          Visit page <FontAwesomeIcon icon="arrow-right" className="w-3.5 h-3.5" />
+                          Visit page <FontAwesomeIcon icon={faArrowRight} className="w-3.5 h-3.5" />
                         </span>
                       </div>
                     </Link>
@@ -81,7 +82,7 @@ export default function SearchClient() {
             </>
           ) : (
             <div className="text-center py-12">
-              <FontAwesomeIcon icon="magnifying-glass" className="w-12 h-12 text-gray-300 mb-4" />
+              <FontAwesomeIcon icon={faMagnifyingGlass} className="w-12 h-12 text-gray-300 mb-4" />
               <p className="text-body text-lg">Enter a search term to find programs, stories, and resources.</p>
             </div>
           )}

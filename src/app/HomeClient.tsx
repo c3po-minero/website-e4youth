@@ -2,37 +2,38 @@
 
 import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBookOpen, faLightbulb, faCompass, faLandmark, faSchool, faMicrophone, faRocket, faVrCardboard, faPeopleGroup, faMagicWandSparkles, faHeart, faGraduationCap, faBolt } from '@fortawesome/free-solid-svg-icons'
 import HeroSection from '@/components/HeroSection'
 import AnimatedSection from '@/components/AnimatedSection'
 import ProgramCard from '@/components/ProgramCard'
 
 const programs = [
-  { title: 'Digital Storytelling (DSP)', description: 'Introduces young people to storytelling, digital literacy, and creative expression through workshops and community learning.', href: '/programs/dsp', icon: 'book-open' as const, color: '#4DB8FF' },
-  { title: 'Get Creative!', description: 'Career exploration and applied learning helping high school students connect storytelling to creative and tech pathways.', href: '/programs/get-creative', icon: 'lightbulb' as const, color: '#9B51E0' },
-  { title: 'Heritage & Innovation (HIP)', description: 'Connects community history and emerging tech to applied learning, research, and professional pathways.', href: '/programs/hip', icon: 'compass' as const, color: '#FCB900' },
-  { title: 'What Once Was (WOW)', description: 'Public storytelling platform elevating participant work into exhibitions, digital experiences, and public space.', href: '/programs/wow', icon: 'landmark' as const, color: '#7BDCB5' },
-  { title: 'WOW Heritage Center', description: 'Physical, place-based hub for storytelling, learning, and community connection.', href: '/programs/wow-heritage-center', icon: 'school' as const, color: '#0072CE' },
-  { title: 'E4 Live', description: 'Dynamic in-person networking events celebrating creativity, connection, and community.', href: '/programs/e4-live', icon: 'microphone' as const, color: '#9B51E0' },
-  { title: 'E4 Level Up', description: 'Advanced workshop and professional development for college-aged, early-career, and established creatives.', href: '/programs/e4-level-up', icon: 'rocket' as const, color: '#FCB900' },
+  { title: 'Digital Storytelling (DSP)', description: 'Introduces young people to storytelling, digital literacy, and creative expression through workshops and community learning.', href: '/programs/dsp', icon: faBookOpen, color: '#4DB8FF' },
+  { title: 'Get Creative!', description: 'Career exploration and applied learning helping high school students connect storytelling to creative and tech pathways.', href: '/programs/get-creative', icon: faLightbulb, color: '#9B51E0' },
+  { title: 'Heritage & Innovation (HIP)', description: 'Connects community history and emerging tech to applied learning, research, and professional pathways.', href: '/programs/hip', icon: faCompass, color: '#FCB900' },
+  { title: 'What Once Was (WOW)', description: 'Public storytelling platform elevating participant work into exhibitions, digital experiences, and public space.', href: '/programs/wow', icon: faLandmark, color: '#7BDCB5' },
+  { title: 'WOW Heritage Center', description: 'Physical, place-based hub for storytelling, learning, and community connection.', href: '/programs/wow-heritage-center', icon: faSchool, color: '#0072CE' },
+  { title: 'E4 Live', description: 'Dynamic in-person networking events celebrating creativity, connection, and community.', href: '/programs/e4-live', icon: faMicrophone, color: '#9B51E0' },
+  { title: 'E4 Level Up', description: 'Advanced workshop and professional development for college-aged, early-career, and established creatives.', href: '/programs/e4-level-up', icon: faRocket, color: '#FCB900' },
 ]
 
 const experiences = [
   {
     title: 'Walk With History: The Jacob Fontaine AR Tour',
     description: 'A location-based augmented reality experience developed with community input that brings Black Austin history into public space through youth-informed storytelling and technology.',
-    icon: 'vr-cardboard' as const,
+    icon: faVrCardboard,
     color: '#9B51E0',
   },
   {
     title: 'Community Showcases and Public Learning Events',
     description: 'Live events where emerging creatives present work, portfolios, and research alongside mentors, historians, and partners.',
-    icon: 'people-group' as const,
+    icon: faPeopleGroup,
     color: '#FCB900',
   },
   {
     title: 'Workshops, Labs, and Pilot Programs',
     description: 'Immersive learning experiences exploring oral history, digital storytelling, creative technology, and workforce connection.',
-    icon: 'magic-wand-sparkles' as const,
+    icon: faMagicWandSparkles,
     color: '#7BDCB5',
   },
 ]
@@ -76,10 +77,10 @@ export default function HomeClient() {
           </AnimatedSection>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { label: 'Engage', icon: 'heart' as const, color: '#4DB8FF', desc: 'Meeting young people where they are through culturally relevant programming.' },
-              { label: 'Educate', icon: 'graduation-cap' as const, color: '#9B51E0', desc: 'Building digital literacy, communication skills, and creative confidence.' },
-              { label: 'Empower', icon: 'bolt' as const, color: '#FCB900', desc: 'Creating pathways for participants to own their narratives and build portfolios.' },
-              { label: 'Elevate', icon: 'rocket' as const, color: '#7BDCB5', desc: 'Connecting emerging creatives to workforce opportunities and public visibility.' },
+              { label: 'Engage', icon: faHeart, color: '#4DB8FF', desc: 'Meeting young people where they are through culturally relevant programming.' },
+              { label: 'Educate', icon: faGraduationCap, color: '#9B51E0', desc: 'Building digital literacy, communication skills, and creative confidence.' },
+              { label: 'Empower', icon: faBolt, color: '#FCB900', desc: 'Creating pathways for participants to own their narratives and build portfolios.' },
+              { label: 'Elevate', icon: faRocket, color: '#7BDCB5', desc: 'Connecting emerging creatives to workforce opportunities and public visibility.' },
             ].map((e, i) => (
               <AnimatedSection key={e.label} delay={i * 0.1}>
                 <div className="bg-white rounded-2xl p-8 text-center shadow-sm border border-gray-100 h-full">

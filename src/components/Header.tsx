@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronDown, faMagnifyingGlass, faTimes, faBars } from '@fortawesome/free-solid-svg-icons'
 
 const programs = [
   { name: 'Digital Storytelling (DSP)', href: '/programs/dsp' },
@@ -59,7 +60,7 @@ export default function Header() {
               >
                 {link.name}
                 {link.children && (
-                  <FontAwesomeIcon icon="chevron-down" className="w-3 h-3" />
+                  <FontAwesomeIcon icon={faChevronDown} className="w-3 h-3" />
                 )}
               </Link>
               {link.children && (
@@ -84,7 +85,7 @@ export default function Header() {
             className="text-gray-800 hover:text-primary-dark transition-colors p-2"
             aria-label="Search"
           >
-            <FontAwesomeIcon icon="magnifying-glass" className="w-4 h-4" />
+            <FontAwesomeIcon icon={faMagnifyingGlass} className="w-4 h-4" />
           </button>
           <Link href="/contact" className="btn-primary text-sm !px-6 !py-2.5">
             Get Involved
@@ -98,7 +99,7 @@ export default function Header() {
             className="p-2 text-gray-800"
             aria-label="Search"
           >
-            <FontAwesomeIcon icon="magnifying-glass" className="w-5 h-5" />
+            <FontAwesomeIcon icon={faMagnifyingGlass} className="w-5 h-5" />
           </button>
           <button
             className="p-2 text-gray-800"
@@ -106,7 +107,7 @@ export default function Header() {
             aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
             aria-expanded={mobileOpen}
           >
-            <FontAwesomeIcon icon={mobileOpen ? 'times' : 'bars'} className="w-6 h-6" />
+            <FontAwesomeIcon icon={mobileOpen ? faTimes : faBars} className="w-6 h-6" />
           </button>
         </div>
       </nav>
@@ -116,7 +117,7 @@ export default function Header() {
         <div className="bg-white border-t border-gray-100 shadow-lg px-6 py-4">
           <form onSubmit={handleSearch} className="max-w-2xl mx-auto flex gap-3">
             <div className="relative flex-1">
-              <FontAwesomeIcon icon="magnifying-glass" className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
+              <FontAwesomeIcon icon={faMagnifyingGlass} className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
               <input
                 type="text"
                 value={searchQuery}
@@ -147,7 +148,7 @@ export default function Header() {
                       aria-expanded={programsOpen}
                     >
                       {link.name}
-                      <FontAwesomeIcon icon="chevron-down" className={`w-3 h-3 transition-transform ${programsOpen ? 'rotate-180' : ''}`} />
+                      <FontAwesomeIcon icon={faChevronDown} className={`w-3 h-3 transition-transform ${programsOpen ? 'rotate-180' : ''}`} />
                     </button>
                     {programsOpen && (
                       <div className="pl-4 space-y-1">

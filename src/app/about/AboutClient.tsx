@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHeart, faGraduationCap, faBolt, faRocket, faBookOpen, faPeopleGroup, faPalette, faGlobe, faEye, faSeedling } from '@fortawesome/free-solid-svg-icons'
 import HeroSection from '@/components/HeroSection'
 import AnimatedSection from '@/components/AnimatedSection'
 
@@ -36,10 +37,10 @@ export default function AboutClient() {
             <AnimatedSection delay={0.2}>
               <div className="space-y-6">
                 {[
-                  { label: 'Engage', desc: 'Meeting young people where they are through culturally relevant, community-informed programming.', color: '#4DB8FF', icon: 'heart' as const },
-                  { label: 'Educate', desc: 'Building digital literacy, creative confidence, and professional communication skills.', color: '#9B51E0', icon: 'graduation-cap' as const },
-                  { label: 'Empower', desc: 'Creating pathways for participants to own their narratives and build public-facing work.', color: '#FCB900', icon: 'bolt' as const },
-                  { label: 'Elevate', desc: 'Connecting emerging creatives to workforce opportunities, visibility, and leadership.', color: '#7BDCB5', icon: 'rocket' as const },
+                  { label: 'Engage', desc: 'Meeting young people where they are through culturally relevant, community-informed programming.', color: '#4DB8FF', icon: faHeart },
+                  { label: 'Educate', desc: 'Building digital literacy, creative confidence, and professional communication skills.', color: '#9B51E0', icon: faGraduationCap },
+                  { label: 'Empower', desc: 'Creating pathways for participants to own their narratives and build public-facing work.', color: '#FCB900', icon: faBolt },
+                  { label: 'Elevate', desc: 'Connecting emerging creatives to workforce opportunities, visibility, and leadership.', color: '#7BDCB5', icon: faRocket },
                 ].map((e) => (
                   <div key={e.label} className="flex gap-4 items-start">
                     <div className="w-12 h-12 rounded-xl flex-shrink-0 flex items-center justify-center" style={{ backgroundColor: `${e.color}15` }}>
@@ -65,12 +66,12 @@ export default function AboutClient() {
           </AnimatedSection>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              { title: 'Stories Are Infrastructure', desc: 'Storytelling is not just enrichment—it is a workforce and civic tool that builds skills, visibility, and opportunity.', icon: 'book-open' as const, color: '#4DB8FF' },
-              { title: 'Community Comes First', desc: 'Our programs are designed with and for the communities we serve, centering their knowledge, priorities, and voices.', icon: 'people-group' as const, color: '#9B51E0' },
-              { title: 'Creativity Is Career-Ready', desc: 'Creative skills are professional skills. We bridge the gap between artistic expression and economic opportunity.', icon: 'palette' as const, color: '#FCB900' },
-              { title: 'Access Is Non-Negotiable', desc: 'Every young person deserves access to high-quality creative learning, regardless of background or circumstance.', icon: 'globe' as const, color: '#7BDCB5' },
-              { title: 'Visibility Matters', desc: 'Being seen, heard, and recognized is a critical step in professional and personal development.', icon: 'eye' as const, color: '#0072CE' },
-              { title: 'Growth Is a Journey', desc: 'Our ecosystem of programs meets participants where they are and supports growth over time.', icon: 'seedling' as const, color: '#9B51E0' },
+              { title: 'Stories Are Infrastructure', desc: 'Storytelling is not just enrichment—it is a workforce and civic tool that builds skills, visibility, and opportunity.', icon: faBookOpen, color: '#4DB8FF' },
+              { title: 'Community Comes First', desc: 'Our programs are designed with and for the communities we serve, centering their knowledge, priorities, and voices.', icon: faPeopleGroup, color: '#9B51E0' },
+              { title: 'Creativity Is Career-Ready', desc: 'Creative skills are professional skills. We bridge the gap between artistic expression and economic opportunity.', icon: faPalette, color: '#FCB900' },
+              { title: 'Access Is Non-Negotiable', desc: 'Every young person deserves access to high-quality creative learning, regardless of background or circumstance.', icon: faGlobe, color: '#7BDCB5' },
+              { title: 'Visibility Matters', desc: 'Being seen, heard, and recognized is a critical step in professional and personal development.', icon: faEye, color: '#0072CE' },
+              { title: 'Growth Is a Journey', desc: 'Our ecosystem of programs meets participants where they are and supports growth over time.', icon: faSeedling, color: '#9B51E0' },
             ].map((v, i) => (
               <AnimatedSection key={v.title} delay={i * 0.08}>
                 <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 h-full" style={{ borderTopColor: v.color, borderTopWidth: '3px' }}>

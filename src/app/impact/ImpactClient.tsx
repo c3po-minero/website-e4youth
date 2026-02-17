@@ -2,14 +2,15 @@
 
 import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faUsers, faCalendarDays, faHandshake, faGlobe, faGraduationCap, faEye, faRocket } from '@fortawesome/free-solid-svg-icons'
 import HeroSection from '@/components/HeroSection'
 import AnimatedSection from '@/components/AnimatedSection'
 
 const metrics = [
-  { label: 'Youth Engaged', value: '500+', icon: 'users' as const, color: '#4DB8FF' },
-  { label: 'Programs Delivered', value: '25+', icon: 'calendar-days' as const, color: '#9B51E0' },
-  { label: 'Community Partners', value: '40+', icon: 'handshake' as const, color: '#FCB900' },
-  { label: 'Cities Reached', value: '3', icon: 'globe' as const, color: '#7BDCB5' },
+  { label: 'Youth Engaged', value: '500+', icon: faUsers, color: '#4DB8FF' },
+  { label: 'Programs Delivered', value: '25+', icon: faCalendarDays, color: '#9B51E0' },
+  { label: 'Community Partners', value: '40+', icon: faHandshake, color: '#FCB900' },
+  { label: 'Cities Reached', value: '3', icon: faGlobe, color: '#7BDCB5' },
 ]
 
 export default function ImpactClient() {
@@ -51,9 +52,9 @@ export default function ImpactClient() {
           </AnimatedSection>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { title: 'Learning & Skill Development', desc: 'Tracking growth in digital literacy, creative production, communication, and professional readiness through portfolio assessment and skill benchmarks.', icon: 'graduation-cap' as const, color: '#4DB8FF' },
-              { title: 'Visibility & Public Engagement', desc: 'Measuring the reach and impact of participant work through exhibitions, events, media features, and audience engagement metrics.', icon: 'eye' as const, color: '#9B51E0' },
-              { title: 'Opportunity & Pathway Progression', desc: 'Following participants as they move into advanced programs, employment, higher education, and leadership roles in creative industries.', icon: 'rocket' as const, color: '#FCB900' },
+              { title: 'Learning & Skill Development', desc: 'Tracking growth in digital literacy, creative production, communication, and professional readiness through portfolio assessment and skill benchmarks.', icon: faGraduationCap, color: '#4DB8FF' },
+              { title: 'Visibility & Public Engagement', desc: 'Measuring the reach and impact of participant work through exhibitions, events, media features, and audience engagement metrics.', icon: faEye, color: '#9B51E0' },
+              { title: 'Opportunity & Pathway Progression', desc: 'Following participants as they move into advanced programs, employment, higher education, and leadership roles in creative industries.', icon: faRocket, color: '#FCB900' },
             ].map((item, i) => (
               <AnimatedSection key={item.title} delay={i * 0.1}>
                 <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 h-full relative overflow-hidden" style={{ borderTopColor: item.color, borderTopWidth: '3px' }}>
