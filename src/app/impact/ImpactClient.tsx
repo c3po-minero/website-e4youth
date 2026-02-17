@@ -1,21 +1,41 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faUsers, faMapMarkerAlt, faCalendarCheck, faUserPlus, faCity, faGraduationCap, faFlask, faLaptopCode, faFolderOpen, faClock, faPaintBrush, faBriefcase, faMicrophone, faUserTie, faFileAlt, faDollarSign, faBuilding, faHandshake, faUserShield, faEye, faChartLine } from '@fortawesome/free-solid-svg-icons'
+import type { IconDefinition } from '@fortawesome/fontawesome-svg-core'
 import HeroSection from '@/components/HeroSection'
 import AnimatedSection from '@/components/AnimatedSection'
 import StoryTile from '@/components/StoryTile'
 
-const metricSections = [
+const metricSections: {
+  tag: string
+  title: string
+  color: string
+  image: string
+  imageAlt: string
+  image2: string
+  image2Alt: string
+  imagePosition: 'left' | 'right'
+  metrics: { text: string; icon: IconDefinition }[]
+  body: string
+}[] = [
   {
     tag: 'Engage',
     title: 'Engage Metrics',
     color: '#4DB8FF',
+    image: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&q=80',
+    imageAlt: 'Diverse community members participating in a public engagement event in Austin',
+    image2: 'https://images.unsplash.com/photo-1517457373958-b7bdd4587205?w=600&q=80',
+    image2Alt: 'Youth leading an interactive community tour experience',
+    imagePosition: 'left',
     metrics: [
-      'Community members reached through public experiences',
-      'AR Heritage Tour participants served',
-      'Community showcases and public events hosted',
-      'New youth connected to the E4Youth ecosystem',
-      'Neighborhoods and communities engaged across Austin',
+      { text: 'Community members reached through public experiences', icon: faUsers },
+      { text: 'AR Heritage Tour participants served', icon: faMapMarkerAlt },
+      { text: 'Community showcases and public events hosted', icon: faCalendarCheck },
+      { text: 'New youth connected to the E4Youth ecosystem', icon: faUserPlus },
+      { text: 'Neighborhoods and communities engaged across Austin', icon: faCity },
     ],
     body: 'Engage creates the front door — bringing young people and communities into the ecosystem for the first time.',
   },
@@ -23,12 +43,17 @@ const metricSections = [
     tag: 'Educate',
     title: 'Educate Metrics',
     color: '#9B51E0',
+    image: 'https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=800&q=80',
+    imageAlt: 'Youth learning digital media skills in a creative technology workshop',
+    image2: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=600&q=80',
+    image2Alt: 'Students collaborating on a digital storytelling project',
+    imagePosition: 'right',
     metrics: [
-      'Youth completing DSP cohorts',
-      'Workshop and lab sessions delivered',
-      'Digital media skills developed (audio, video, photography, design, AR)',
-      'Portfolio projects initiated',
-      'Hours of hands-on creative technology training',
+      { text: 'Youth completing DSP cohorts', icon: faGraduationCap },
+      { text: 'Workshop and lab sessions delivered', icon: faFlask },
+      { text: 'Digital media skills developed (audio, video, photography, design, AR)', icon: faLaptopCode },
+      { text: 'Portfolio projects initiated', icon: faFolderOpen },
+      { text: 'Hours of hands-on creative technology training', icon: faClock },
     ],
     body: 'Educate builds capability — turning curiosity into real, marketable skills.',
   },
@@ -36,12 +61,17 @@ const metricSections = [
     tag: 'Empower',
     title: 'Empower Metrics',
     color: '#FCB900',
+    image: 'https://images.unsplash.com/photo-1531545514256-b1400bc00f31?w=800&q=80',
+    imageAlt: 'Young creative professional presenting portfolio work at a showcase',
+    image2: 'https://images.unsplash.com/photo-1542744094-3a31f272c490?w=800&q=80',
+    image2Alt: 'Student working on a creative design project',
+    imagePosition: 'left',
     metrics: [
-      'Original creative projects produced',
-      'Professional portfolios completed',
-      'Public presentations delivered to industry and community audiences',
-      'Youth presenting work in professional settings',
-      'Employer-ready work samples created',
+      { text: 'Original creative projects produced', icon: faPaintBrush },
+      { text: 'Professional portfolios completed', icon: faBriefcase },
+      { text: 'Public presentations delivered to industry and community audiences', icon: faMicrophone },
+      { text: 'Youth presenting work in professional settings', icon: faUserTie },
+      { text: 'Employer-ready work samples created', icon: faFileAlt },
     ],
     body: 'Empower makes talent visible — producing real work for real audiences.',
   },
@@ -49,13 +79,18 @@ const metricSections = [
     tag: 'Elevate',
     title: 'Elevate Metrics',
     color: '#7BDCB5',
+    image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&q=80',
+    imageAlt: 'Young professionals collaborating in leadership roles',
+    image2: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=600&q=80',
+    image2Alt: 'Young professional in a creative technology leadership position',
+    imagePosition: 'right',
     metrics: [
-      'Stipend-supported pathways created',
-      'Employer-funded roles placed (expanding)',
-      'Paid pilot placements completed',
-      'Alumni returning as mentors and facilitators',
-      'Youth in visible leadership positions across the ecosystem',
-      'Career advancement outcomes tracked over time',
+      { text: 'Stipend-supported pathways created', icon: faDollarSign },
+      { text: 'Employer-funded roles placed (expanding)', icon: faBuilding },
+      { text: 'Paid pilot placements completed', icon: faHandshake },
+      { text: 'Alumni returning as mentors and facilitators', icon: faUserShield },
+      { text: 'Youth in visible leadership positions across the ecosystem', icon: faEye },
+      { text: 'Career advancement outcomes tracked over time', icon: faChartLine },
     ],
     body: 'Elevate delivers on the promise — paid pathways, visible leadership, and return-to-ecosystem mentorship.',
   },
@@ -78,27 +113,101 @@ export default function ImpactClient() {
           <h2 className="text-3xl md:text-4xl font-display font-bold text-secondary">Our Impact — Measured Across Four Stages</h2>
         </AnimatedSection>
 
-        {metricSections.map((section, i) => (
-          <section key={section.tag} className={`section-padding ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}`}>
-            <div className="max-w-4xl mx-auto">
-              <AnimatedSection>
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="w-4 h-4 rounded-full" style={{ backgroundColor: section.color }} />
-                  <h3 className="text-2xl font-display font-bold text-secondary">{section.title}</h3>
-                </div>
-                <ul className="space-y-2 mb-6">
-                  {section.metrics.map((metric) => (
-                    <li key={metric} className="flex items-start gap-3 text-body">
-                      <span className="mt-1.5 w-2 h-2 rounded-full flex-shrink-0" style={{ backgroundColor: section.color }} />
-                      <span>{metric}</span>
-                    </li>
-                  ))}
-                </ul>
-                <p className="text-sm italic text-body">{section.body}</p>
-              </AnimatedSection>
+        {metricSections.map((section, i) => {
+          const imageBlock = (
+            <div className="relative" style={{ minHeight: 380 }}>
+              {/* Primary image */}
+              <div className="relative rounded-2xl overflow-hidden shadow-lg w-[85%] aspect-[4/3]">
+                <Image
+                  src={section.image}
+                  alt={section.imageAlt}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 40vw"
+                />
+              </div>
+              {/* Secondary image — overlapping */}
+              <div className="absolute bottom-0 right-0 w-[55%] aspect-[4/3] rounded-2xl overflow-hidden shadow-xl border-4 border-white">
+                <Image
+                  src={section.image2}
+                  alt={section.image2Alt}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 50vw, 25vw"
+                />
+              </div>
+              {/* Accent dots */}
+              <div className="absolute -top-3 -right-3 w-8 h-8 rounded-full opacity-40 hidden lg:block" style={{ backgroundColor: section.color }} />
+              <div className="absolute -bottom-3 -left-3 w-6 h-6 rounded-full opacity-25 hidden lg:block" style={{ backgroundColor: section.color }} />
             </div>
-          </section>
-        ))}
+          )
+
+          const contentBlock = (
+            <div>
+              {/* Stage badge */}
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-4 h-4 rounded-full" style={{ backgroundColor: section.color }} />
+                <span className="text-sm font-semibold uppercase tracking-wider" style={{ color: section.color }}>{section.tag}</span>
+              </div>
+
+              <h3 className="text-2xl md:text-3xl font-display font-bold text-secondary mb-2">{section.title}</h3>
+              <div className="w-12 h-1 rounded-full mb-6" style={{ backgroundColor: section.color }} />
+
+              <div className="space-y-4 mb-6">
+                {section.metrics.map((metric) => (
+                  <div key={metric.text} className="flex items-start gap-4">
+                    <div className="w-10 h-10 rounded-xl flex-shrink-0 flex items-center justify-center mt-0.5" style={{ backgroundColor: `${section.color}15` }}>
+                      <FontAwesomeIcon icon={metric.icon} className="w-4 h-4" style={{ color: section.color }} />
+                    </div>
+                    <p className="text-body leading-relaxed pt-2">{metric.text}</p>
+                  </div>
+                ))}
+              </div>
+
+              <p className="text-sm italic text-body border-l-4 pl-4 py-1" style={{ borderColor: section.color }}>{section.body}</p>
+            </div>
+          )
+
+          return (
+            <section key={section.tag} className={`section-padding ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}`}>
+              <div className="max-w-7xl mx-auto">
+                <AnimatedSection>
+                  {/* Desktop: two-column with alternating image position */}
+                  <div className="hidden lg:grid grid-cols-2 gap-16 items-start">
+                    {section.imagePosition === 'left' ? (
+                      <>{imageBlock}{contentBlock}</>
+                    ) : (
+                      <>{contentBlock}{imageBlock}</>
+                    )}
+                  </div>
+
+                  {/* Mobile: Title → Image → Metrics */}
+                  <div className="lg:hidden">
+                    <div className="mb-8">
+                      <div className="flex items-center gap-3 mb-4">
+                        <div className="w-4 h-4 rounded-full" style={{ backgroundColor: section.color }} />
+                        <span className="text-sm font-semibold uppercase tracking-wider" style={{ color: section.color }}>{section.tag}</span>
+                      </div>
+                      <h3 className="text-2xl font-display font-bold text-secondary">{section.title}</h3>
+                    </div>
+                    <div className="mb-8">{imageBlock}</div>
+                    <div className="space-y-4 mb-6">
+                      {section.metrics.map((metric) => (
+                        <div key={metric.text} className="flex items-start gap-4">
+                          <div className="w-10 h-10 rounded-xl flex-shrink-0 flex items-center justify-center mt-0.5" style={{ backgroundColor: `${section.color}15` }}>
+                            <FontAwesomeIcon icon={metric.icon} className="w-4 h-4" style={{ color: section.color }} />
+                          </div>
+                          <p className="text-body leading-relaxed pt-2">{metric.text}</p>
+                        </div>
+                      ))}
+                    </div>
+                    <p className="text-sm italic text-body border-l-4 pl-4 py-1" style={{ borderColor: section.color }}>{section.body}</p>
+                  </div>
+                </AnimatedSection>
+              </div>
+            </section>
+          )
+        })}
       </div>
 
       {/* Elevate Proof */}
