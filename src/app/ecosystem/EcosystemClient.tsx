@@ -2,7 +2,8 @@
 
 import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
+import { faArrowRight, faHeart, faGraduationCap, faBolt, faRocket } from '@fortawesome/free-solid-svg-icons'
+import type { IconDefinition } from '@fortawesome/fontawesome-svg-core'
 import HeroSection from '@/components/HeroSection'
 import AnimatedSection from '@/components/AnimatedSection'
 import EcosystemCircle from '@/components/EcosystemCircle'
@@ -13,6 +14,7 @@ const stages = [
     label: 'Engage',
     subtitle: 'Discover Your Creative Voice',
     color: '#4DB8FF',
+    icon: faHeart as IconDefinition,
     body: 'Engage is the front door. It\'s where young people, families, and community members encounter E4Youth for the first time — often without realizing they\'re stepping into a workforce development ecosystem.',
     experiences: [
       { name: 'AR Heritage Tours', desc: 'Youth-created augmented reality walking tours that bring Austin\'s cultural history to life through immersive storytelling. Open to the public, powered by young people.' },
@@ -30,6 +32,7 @@ const stages = [
     label: 'Educate',
     subtitle: 'Build Skills Through Technology',
     color: '#9B51E0',
+    icon: faGraduationCap as IconDefinition,
     body: 'Educate is where curiosity becomes capability. Young people build real, marketable skills in digital media, creative technology, and community storytelling through structured programs and hands-on labs.',
     experiences: [
       { name: 'Digital Storytelling Program (DSP)', desc: 'A foundational youth media training experience where participants learn to research, produce, and share digital stories rooted in their communities. DSP builds technical skills in audio, video, photography, and narrative design.' },
@@ -46,6 +49,7 @@ const stages = [
     label: 'Empower',
     subtitle: 'Create Real Work, Real Impact',
     color: '#FCB900',
+    icon: faBolt as IconDefinition,
     body: 'Empower is where skills become visible. Young people produce original creative work, build professional portfolios, and present to real audiences — industry professionals, community stakeholders, and potential employers.',
     experiences: [
       { name: 'Get Creative!', desc: 'A creative technology education experience where participants develop original projects across design, media, and digital arts. Work produced here feeds directly into professional portfolios.' },
@@ -63,6 +67,7 @@ const stages = [
     label: 'Elevate',
     subtitle: 'Lead, Earn, Transform',
     color: '#7BDCB5',
+    icon: faRocket as IconDefinition,
     isElevate: true,
     body: 'Elevate is where the ecosystem delivers on its promise. This stage is open-access but advanced — designed for participants who have built skills, produced work, and demonstrated readiness across earlier stages.\n\nElevate isn\'t a finish line. It\'s a launchpad into real careers, paid leadership, and lasting community impact. And it\'s where the circle completes: Elevate participants return to the ecosystem as mentors, facilitators, and leaders who power the next generation of Engage experiences.',
     experiences: [
@@ -116,66 +121,71 @@ export default function EcosystemClient() {
         </div>
       </section>
 
-      {/* Stage Sections */}
-      {stages.map((stage, i) => (
-        <section key={stage.label} className={`section-padding ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}`}>
-          <div className="max-w-4xl mx-auto">
-            <AnimatedSection>
-              <div className={`rounded-2xl p-8 md:p-12 ${stage.isElevate ? 'bg-white shadow-lg ring-2 ring-offset-4' : 'bg-white shadow-sm border border-gray-100'}`} style={stage.isElevate ? { ringColor: stage.color } as React.CSSProperties : {}}>
-                {stage.isElevate && (
-                  <div className="absolute -top-0 left-0 right-0 h-1.5 rounded-t-2xl" style={{ backgroundColor: stage.color }} />
-                )}
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="w-4 h-4 rounded-full" style={{ backgroundColor: stage.color }} />
-                  <h2 className="text-2xl md:text-3xl font-display font-bold text-secondary">{stage.label} — {stage.subtitle}</h2>
-                </div>
+      {/* Stage Sections — 2x2 Grid */}
+      <section className="section-padding bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {stages.map((stage, i) => (
+              <AnimatedSection key={stage.label} delay={i * 0.1}>
+                <div className={`rounded-2xl p-8 md:p-10 h-full ${stage.isElevate ? 'bg-white shadow-lg ring-2 ring-offset-4' : 'bg-white shadow-sm border border-gray-100'}`} style={stage.isElevate ? { ringColor: stage.color } as React.CSSProperties : {}}>
+                  {/* Large icon header — alternate left/right */}
+                  <div className={`flex ${i % 2 === 1 ? 'flex-row-reverse' : 'flex-row'} items-start gap-6 mb-6`}>
+                    <div className="w-20 h-20 md:w-24 md:h-24 rounded-2xl flex-shrink-0 flex items-center justify-center" style={{ backgroundColor: `${stage.color}15` }}>
+                      <FontAwesomeIcon icon={stage.icon} className="w-10 h-10 md:w-12 md:h-12" style={{ color: stage.color }} />
+                    </div>
+                    <div>
+                      <h2 className="text-xl md:text-2xl font-display font-bold text-secondary">{stage.label}</h2>
+                      <p className="text-sm font-semibold mt-1" style={{ color: stage.color }}>{stage.subtitle}</p>
+                    </div>
+                  </div>
 
-                {stage.body.split('\n\n').map((p, pi) => (
-                  <p key={pi} className="text-body leading-relaxed mb-4">{p}</p>
-                ))}
+                  {stage.body.split('\n\n').map((p, pi) => (
+                    <p key={pi} className="text-sm text-body leading-relaxed mb-3">{p}</p>
+                  ))}
 
-                <div className="mt-6">
-                  <p className="font-semibold text-secondary mb-3">Experiences in this stage:</p>
-                  <div className="space-y-3">
-                    {stage.experiences.map((exp) => (
-                      <div key={exp.name} className="pl-4 border-l-2" style={{ borderColor: stage.color }}>
-                        <p className="font-semibold text-secondary text-sm">{exp.name}</p>
-                        <p className="text-sm text-body">{exp.desc}</p>
+                  <div className="mt-5">
+                    <p className="font-semibold text-secondary text-sm mb-3">Experiences in this stage:</p>
+                    <div className="space-y-3">
+                      {stage.experiences.map((exp) => (
+                        <div key={exp.name} className="pl-4 border-l-2" style={{ borderColor: stage.color }}>
+                          <p className="font-semibold text-secondary text-sm">{exp.name}</p>
+                          <p className="text-xs text-body">{exp.desc}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <p className="mt-5 text-xs text-body"><strong>Outcomes:</strong> {stage.outcomes}</p>
+
+                  {/* Story Tile */}
+                  <div className="mt-6">
+                    <h3 className="text-sm font-display font-bold text-secondary mb-3">Where This Can Lead</h3>
+                    {stage.spotlight ? (
+                      <div className="p-5 rounded-xl" style={{ backgroundColor: `${stage.color}08`, borderLeft: `3px solid ${stage.color}` }}>
+                        <p className="text-xs font-semibold uppercase tracking-wider mb-2" style={{ color: stage.color }}>Featured Spotlight</p>
+                        <h4 className="text-base font-display font-bold text-secondary mb-1">{stage.spotlight.name}</h4>
+                        <p className="text-xs italic text-body mb-2">{stage.spotlight.pathway}</p>
+                        <p className="text-xs text-body leading-relaxed mb-2">{stage.spotlight.fullStory}</p>
+                        <blockquote className="text-xs italic text-body border-l-2 pl-3" style={{ borderColor: stage.color }}>
+                          &ldquo;{stage.spotlight.quote}&rdquo;
+                        </blockquote>
                       </div>
-                    ))}
+                    ) : (
+                      <div className="p-5 rounded-xl" style={{ backgroundColor: `${stage.color}08`, borderLeft: `3px solid ${stage.color}` }}>
+                        <h4 className="text-sm font-display font-bold text-secondary mb-1">{stage.story!.name}</h4>
+                        <p className="text-xs italic text-body mb-2">{stage.story!.pathway}</p>
+                        <blockquote className="text-xs italic text-body">
+                          &ldquo;{stage.story!.quote}&rdquo;
+                        </blockquote>
+                      </div>
+                    )}
                   </div>
                 </div>
-
-                <p className="mt-6 text-sm text-body"><strong>Outcomes:</strong> {stage.outcomes}</p>
-
-                {/* Story Tile */}
-                <div className="mt-8">
-                  <h3 className="text-lg font-display font-bold text-secondary mb-4">Where This Can Lead</h3>
-                  {stage.spotlight ? (
-                    <div className="p-6 rounded-xl" style={{ backgroundColor: `${stage.color}08`, borderLeft: `3px solid ${stage.color}` }}>
-                      <p className="text-xs font-semibold uppercase tracking-wider mb-2" style={{ color: stage.color }}>Featured Spotlight</p>
-                      <h4 className="text-lg font-display font-bold text-secondary mb-1">{stage.spotlight.name}</h4>
-                      <p className="text-sm italic text-body mb-3">{stage.spotlight.pathway}</p>
-                      <p className="text-sm text-body leading-relaxed mb-3">{stage.spotlight.fullStory}</p>
-                      <blockquote className="text-sm italic text-body border-l-2 pl-4" style={{ borderColor: stage.color }}>
-                        &ldquo;{stage.spotlight.quote}&rdquo;
-                      </blockquote>
-                    </div>
-                  ) : (
-                    <div className="p-6 rounded-xl" style={{ backgroundColor: `${stage.color}08`, borderLeft: `3px solid ${stage.color}` }}>
-                      <h4 className="text-base font-display font-bold text-secondary mb-1">{stage.story!.name}</h4>
-                      <p className="text-sm italic text-body mb-2">{stage.story!.pathway}</p>
-                      <blockquote className="text-sm italic text-body">
-                        &ldquo;{stage.story!.quote}&rdquo;
-                      </blockquote>
-                    </div>
-                  )}
-                </div>
-              </div>
-            </AnimatedSection>
+              </AnimatedSection>
+            ))}
           </div>
-        </section>
-      ))}
+        </div>
+      </section>
 
       {/* The Circle Continues */}
       <section className="section-padding bg-gradient-to-br from-primary-dark to-purple text-white">
