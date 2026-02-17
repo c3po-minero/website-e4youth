@@ -28,7 +28,7 @@ export default function HeritageCenterPage() {
             { img: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&h=600&fit=crop', title: 'Kitchen & Hospitality Space', desc: 'Full kitchen facilities for event catering, cooking workshops, and community meals.' },
             { img: 'https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=800&h=600&fit=crop', title: 'Flexible Workshop Rooms', desc: 'Two rooms that can be combined or separate. 12-15 people each. Moveable furniture.' },
             { img: 'https://images.unsplash.com/photo-1541746972996-4e0b0f93e586?w=800&h=600&fit=crop', title: 'Outdoor Community Space', desc: 'Covered pavilion, garden areas, performance space, children\'s play area.' },
-          ].map(c => <div className="card" key={c.title}><img src={c.img} alt={c.title} className="card-image" /><h3 className="card-title">{c.title}</h3><p className="card-description">{c.desc}</p></div>)}
+          ].map(c => <div className="card" key={c.title}><img src={c.img} alt={c.title} className="card-image" width={800} height={600} loading="lazy" /><h3 className="card-title">{c.title}</h3><p className="card-description">{c.desc}</p></div>)}
         </div>
       </Section>
 

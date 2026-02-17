@@ -65,7 +65,7 @@ export default function DSPPage() {
             { img: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&h=600&fit=crop', title: 'Community Problem-Solving Stories', desc: 'Young people identify issues they care about and create stories exploring solutions.', example: '"Making Our Playground Better" - A student-led project that led to actual community action.' },
           ].map(c => (
             <div className="card" key={c.title}>
-              <img src={c.img} alt={c.title} className="card-image" />
+              <img src={c.img} alt={c.title} className="card-image" width={800} height={600} loading="lazy" />
               <h3 className="card-title">{c.title}</h3>
               <p className="card-description">{c.desc}</p>
               <div className="example-box"><p style={{ margin: 0, fontSize: '0.9rem' }}><strong>Example:</strong> {c.example}</p></div>

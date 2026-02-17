@@ -55,13 +55,13 @@ export default function LivePage() {
       <Section icon="fa-solid fa-calendar-days" title="Upcoming E4 Live Events" id="upcoming">
         <div className="grid grid-2">
           <div className="card">
-            <img src="https://images.unsplash.com/photo-1559223607-a43c990c692c?w=800&h=600&fit=crop" alt="Creative Tech Showcase" className="card-image" />
+            <img src="https://images.unsplash.com/photo-1559223607-a43c990c692c?w=800&h=600&fit=crop" alt="Creative Tech Showcase" className="card-image" width={800} height={600} loading="lazy" />
             <h3 className="card-title">Creative Tech Showcase</h3>
             <p className="card-description"><strong>Date:</strong> March 15, 2025 | 6:00PM - 8:30PM<br /><strong>Location:</strong> Capital Factory, Austin<br /><strong>Focus:</strong> Digital storytelling meets emerging technology</p>
             <div className="card-cta"><Link href="/contact" className="btn btn-primary">Register Now</Link></div>
           </div>
           <div className="card">
-            <img src="https://images.unsplash.com/photo-1531545514256-b1400bc00f31?w=800&h=600&fit=crop" alt="Stories for Change" className="card-image" />
+            <img src="https://images.unsplash.com/photo-1531545514256-b1400bc00f31?w=800&h=600&fit=crop" alt="Stories for Change" className="card-image" width={800} height={600} loading="lazy" />
             <h3 className="card-title">Stories for Change: Community Impact Edition</h3>
             <p className="card-description"><strong>Date:</strong> April 12, 2025 | 5:30PM - 8:00PM<br /><strong>Location:</strong> WOW Heritage Center<br /><strong>Focus:</strong> Storytelling for social justice and community organizing</p>
             <div className="card-cta"><Link href="/contact" className="btn btn-primary">Register Now</Link></div>

@@ -27,7 +27,7 @@ export default function AboutPage() {
             <p>From day one, we&apos;ve operated on the principle that <strong>storytelling is workforce and civic infrastructure</strong>—not just personal expression, but a fundamental tool for communication, professional development, community building, and social change.</p>
           </div>
           <div>
-            <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?w=800&h=600&fit=crop" alt="Diverse group collaborating on storytelling projects" className="card-image" />
+            <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?w=800&h=600&fit=crop" alt="Diverse group collaborating on storytelling projects" className="card-image" width={800} height={600} loading="lazy" />
             <h3>Our community-centered approach means:</h3>
             <ul className="check-list">
               <li><strong>Youth leadership</strong> in program design and evaluation</li>

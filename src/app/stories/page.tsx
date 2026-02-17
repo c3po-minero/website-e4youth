@@ -24,14 +24,14 @@ export default function StoriesPage() {
       <Section icon="fa-solid fa-users" title="Voices From Our Community" id="stories">
         <div className="grid grid-2">
           <div className="card" style={{ padding: 'var(--spacing-xl)' }}>
-            <img src="https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?w=800&h=600&fit=crop" alt="Young woman with camera" className="card-image" />
+            <img src="https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?w=800&h=600&fit=crop" alt="Young woman with camera" className="card-image" width={800} height={600} loading="lazy" />
             <h3 className="card-title">Maria&apos;s Story: From Shy Student to Community Documentary Filmmaker</h3>
             <p style={{ fontSize: '0.9rem' }}><strong>Program:</strong> DSP → Get Creative! → HIP<br /><strong>Timeline:</strong> 4 years with E4 Youth<br /><strong>Current:</strong> College sophomore studying Media Arts</p>
             <blockquote className="blockquote">&quot;I started DSP in middle school because my mom thought it would help me make friends. I was really shy. The first day, we learned how to interview our family members about their immigration stories, and suddenly I realized my quiet listening skills were actually superpowers for storytelling.&quot;</blockquote>
             <p style={{ fontSize: '0.9rem', fontWeight: 600, color: 'var(--primary)' }}>Recent Work: &quot;Vanishing Austin: Small Business Stories&quot; - 6-part documentary series featured in local film festival</p>
           </div>
           <div className="card" style={{ padding: 'var(--spacing-xl)' }}>
-            <img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?w=800&h=600&fit=crop" alt="Young person working on UX design" className="card-image" />
+            <img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?w=800&h=600&fit=crop" alt="Young person working on UX design" className="card-image" width={800} height={600} loading="lazy" />
             <h3 className="card-title">Jordan&apos;s Story: Creative Technology Career Through Community Connection</h3>
             <p style={{ fontSize: '0.9rem' }}><strong>Program:</strong> Get Creative! → E4 Level Up Workshops<br /><strong>Timeline:</strong> 2 years with E4 Youth<br /><strong>Current:</strong> UX Designer at local tech company, volunteer mentor</p>
             <blockquote className="blockquote">&quot;I came to Get Creative! thinking I wanted to be a graphic designer, but I had no idea how many different creative careers existed. The program introduced me to UX design, and suddenly I understood how creativity could solve real problems for people.&quot;</blockquote>
@@ -59,7 +59,7 @@ export default function StoriesPage() {
             { img: 'https://images.unsplash.com/photo-1556075798-4825dfaaf498?w=800&h=600&fit=crop', title: 'Austin History AR Experience', desc: 'Level Up workshop participants created an augmented reality tour highlighting overlooked Austin history.', impact: 'Downloaded 500+ times, used by schools' },
           ].map(c => (
             <div className="card" key={c.title}>
-              <img src={c.img} alt={c.title} className="card-image" />
+              <img src={c.img} alt={c.title} className="card-image" width={800} height={600} loading="lazy" />
               <h3 className="card-title">{c.title}</h3>
               <p className="card-description">{c.desc}</p>
               <p style={{ fontSize: '0.9rem', fontWeight: 600, marginBottom: '1rem' }}>Impact: {c.impact}</p>

@@ -23,7 +23,7 @@ export default function PartnerPage() {
             </ul>
           </div>
           <div>
-            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=600&fit=crop" alt="Diverse group collaborating" className="card-image" />
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=600&fit=crop" alt="Diverse group collaborating" className="card-image" width={800} height={600} loading="lazy" />
           </div>
         </div>
         <div className="text-center mt-lg"><Link href="/impact" className="btn btn-accent">See Our Community Impact Results</Link></div>

@@ -30,7 +30,7 @@ export default function LevelUpPage() {
             { img: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=800&h=600&fit=crop', title: 'Community-Centered Research Methods', duration: '10-week program', tools: 'Complete community research project', items: ['Ethical community engagement methods', 'Oral history collection and archive development', 'Community asset mapping', 'Grant writing and program evaluation'] },
           ].map(c => (
             <div className="card" key={c.title}>
-              <img src={c.img} alt={c.title} className="card-image" />
+              <img src={c.img} alt={c.title} className="card-image" width={800} height={600} loading="lazy" />
               <h3 className="card-title">{c.title}</h3>
               <p><strong>Duration:</strong> {c.duration}</p>
               <ul style={{ fontSize: '0.9rem', marginBottom: '1rem' }}>{c.items.map(i => <li key={i}>{i}</li>)}</ul>

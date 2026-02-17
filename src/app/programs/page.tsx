@@ -24,7 +24,7 @@ export default function ProgramsPage() {
       <Section icon="fa-solid fa-map" title="Three Core Programs, Endless Possibilities" id="program-pathways">
         <div className="grid grid-3">
           <div className="card">
-            <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&h=600&fit=crop" alt="Young students in digital storytelling workshop" className="card-image" />
+            <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&h=600&fit=crop" alt="Young students in digital storytelling workshop" className="card-image" width={800} height={600} loading="lazy" />
             <span className="card-icon"><i className="fa-solid fa-seedling"></i></span>
             <h3 className="card-title">Foundation Level: Digital Storytelling Program (DSP)</h3>
             <p><strong>Ages:</strong> Elementary and middle school students, families</p>
@@ -34,7 +34,7 @@ export default function ProgramsPage() {
             <div className="card-cta"><Link href="/programs/dsp" className="btn btn-primary">Learn More About DSP</Link></div>
           </div>
           <div className="card">
-            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=600&fit=crop" alt="High school students in creative workshop" className="card-image" />
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=600&fit=crop" alt="High school students in creative workshop" className="card-image" width={800} height={600} loading="lazy" />
             <span className="card-icon"><i className="fa-solid fa-palette"></i></span>
             <h3 className="card-title">Development Level: Get Creative!</h3>
             <p><strong>Ages:</strong> High school students</p>
@@ -44,7 +44,7 @@ export default function ProgramsPage() {
             <div className="card-cta"><Link href="/programs/get-creative" className="btn btn-primary">Explore Get Creative!</Link></div>
           </div>
           <div className="card">
-            <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=800&h=600&fit=crop" alt="College students leading community projects" className="card-image" />
+            <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=800&h=600&fit=crop" alt="College students leading community projects" className="card-image" width={800} height={600} loading="lazy" />
             <span className="card-icon"><i className="fa-solid fa-mountain"></i></span>
             <h3 className="card-title">Leadership Level: Heritage &amp; Innovation Pathways (HIP)</h3>
             <p><strong>Ages:</strong> College students and emerging adults</p>

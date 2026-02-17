@@ -1,18 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
   --primary: #4DB8FF;
   --secondary: #54595F;
-  --text: #7A7A7A;
+  --text: #595959;
   --accent: #0072CE;
   --background: #FFFFFF;
   --bg-alt: #F5F7FA;
   --dark: #1a1a1a;
   --light-gray: #f8f9fa;
   --border: #e9ecef;
-  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --spacing-xs: 0.5rem;
   --spacing-sm: 1rem;
   --spacing-md: 1.5rem;
@@ -139,6 +137,10 @@ p { margin-bottom: var(--spacing-sm); font-size: 1rem; line-height: 1.7; }
 .mb-lg { margin-bottom: var(--spacing-lg); }
 
 img { max-width: 100%; height: auto; }
+
+/* Focus styles for accessibility */
+:focus-visible { outline: 3px solid var(--primary); outline-offset: 2px; }
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible { outline: 3px solid var(--primary); outline-offset: 2px; }
 
 .form-group { margin-bottom: var(--spacing-md); }
 .form-label { display: block; margin-bottom: var(--spacing-xs); font-weight: 500; color: var(--secondary); }
