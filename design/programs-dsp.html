@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Storytelling Program for Youth | E4 Youth</title>
+    <meta name="description" content="DSP introduces children and families to storytelling and digital literacy through fun, hands-on workshops. Build confidence and creativity together.">
+    <meta name="keywords" content="digital storytelling kids, youth digital literacy, family creative workshops, elementary storytelling program">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Digital Storytelling Program for Youth | E4 Youth">
+    <meta property="og:description" content="Where every voice matters - building creative confidence and digital skills through family-centered storytelling.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://e4youth.org/programs/dsp">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=1200&h=630&fit=crop">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Skip link for accessibility -->
+    <a href="#main" class="skip-link">Skip to main content</a>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="https://e4youth.org/wp-content/uploads/2024/06/Copy-of-e4-full-white-logo.png" 
+                             alt="E4 Youth Logo">
+                    </a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <nav class="nav">
+                    <div class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="programs.html" class="nav-link">Programs <i class="fas fa-chevron-down"></i></a>
+                        <div class="nav-dropdown">
+                            <a href="programs.html" class="dropdown-link">All Programs</a>
+                            <a href="programs-dsp.html" class="dropdown-link">Digital Storytelling Program</a>
+                            <a href="programs-get-creative.html" class="dropdown-link">Get Creative!</a>
+                            <a href="programs-hip.html" class="dropdown-link">Heritage & Innovation Pathways</a>
+                        </div>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#" class="nav-link">Experiences <i class="fas fa-chevron-down"></i></a>
+                        <div class="nav-dropdown">
+                            <a href="experiences-wow.html" class="dropdown-link">What Once Was</a>
+                            <a href="experiences-heritage-center.html" class="dropdown-link">WOW Heritage Center</a>
+                            <a href="experiences-live.html" class="dropdown-link">E4 Live</a>
+                            <a href="experiences-level-up.html" class="dropdown-link">E4 Level Up</a>
+                        </div>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#" class="nav-link">About <i class="fas fa-chevron-down"></i></a>
+                        <div class="nav-dropdown">
+                            <a href="about.html" class="dropdown-link">About E4 Youth</a>
+                            <a href="stories.html" class="dropdown-link">Stories & Showcases</a>
+                            <a href="impact.html" class="dropdown-link">Impact & Evaluation</a>
+                        </div>
+                    </div>
+                    <div class="nav-item">
+                        <a href="partner.html" class="nav-link">Partner With Us</a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="contact.html" class="nav-link">Contact</a>
+                    </div>
+                </nav>
+                
+                <!-- Mobile Menu Toggle -->
+                <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <!-- Mobile Menu -->
+                <div class="mobile-menu" id="mobileMenu">
+                    <a href="index.html" class="mobile-nav-link">Home</a>
+                    <a href="programs.html" class="mobile-nav-link">Programs</a>
+                    <a href="programs-dsp.html" class="mobile-nav-link">— Digital Storytelling Program</a>
+                    <a href="programs-get-creative.html" class="mobile-nav-link">— Get Creative!</a>
+                    <a href="programs-hip.html" class="mobile-nav-link">— Heritage & Innovation Pathways</a>
+                    <a href="experiences-wow.html" class="mobile-nav-link">What Once Was</a>
+                    <a href="experiences-heritage-center.html" class="mobile-nav-link">WOW Heritage Center</a>
+                    <a href="experiences-live.html" class="mobile-nav-link">E4 Live</a>
+                    <a href="experiences-level-up.html" class="mobile-nav-link">E4 Level Up</a>
+                    <a href="about.html" class="mobile-nav-link">About E4 Youth</a>
+                    <a href="stories.html" class="mobile-nav-link">Stories & Showcases</a>
+                    <a href="impact.html" class="mobile-nav-link">Impact & Evaluation</a>
+                    <a href="partner.html" class="mobile-nav-link">Partner With Us</a>
+                    <a href="contact.html" class="mobile-nav-link">Contact</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main" id="main">
+        <!-- Hero Section -->
+        <section class="hero" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1509062522246-3755977927d7?w=1920&h=1080&fit=crop');">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Your Story, Your Voice, Your Future Starts Here</h1>
+                    <p class="lead">DSP creates a welcoming space where children and families explore storytelling together, building digital literacy, creative confidence, and communication skills that serve as the foundation for lifelong learning and growth.</p>
+                    <div class="btn-group">
+                        <a href="#getting-started" class="btn btn-primary">Join DSP Today</a>
+                        <a href="#program-structure" class="btn btn-secondary">Visit a Workshop</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Program Overview Section -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <i class="fas fa-house-heart section-icon"></i>
+                    <h2>Building Foundations Through Story</h2>
+                    <p class="lead">Digital Storytelling Program (DSP) recognizes that every child has valuable experiences and perspectives worth sharing. Rather than focusing on technology for its own sake, DSP uses age-appropriate digital tools to help young people discover and develop their authentic voice.</p>
+                </div>
+                <div class="grid grid-2">
+                    <div>
+                        <h3>Core Beliefs:</h3>
+                        <ul style="list-style: none; padding-left: 0;">
+                            <li style="margin-bottom: 1rem;"><i class="fas fa-heart" style="color: var(--primary); margin-right: 0.5rem;"></i> <strong>Every story matters:</strong> Children's experiences and perspectives are valuable and worth documenting</li>
+                            <li style="margin-bottom: 1rem;"><i class="fas fa-users" style="color: var(--primary); margin-right: 0.5rem;"></i> <strong>Families learn together:</strong> When whole families engage in creative learning, everyone benefits</li>
+                            <li style="margin-bottom: 1rem;"><i class="fas fa-tools" style="color: var(--primary); margin-right: 0.5rem;"></i> <strong>Technology serves story:</strong> Digital tools are powerful when they help us share what matters most</li>
+                            <li style="margin-bottom: 1rem;"><i class="fas fa-handshake" style="color: var(--primary); margin-right: 0.5rem;"></i> <strong>Community strengthens individuals:</strong> Supportive peer groups build confidence and creativity</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3 class="card-title">Who This Serves:</h3>
+                        <div style="margin-bottom: 1rem;">
+                            <p><strong>Primary Participants:</strong> Children ages 8-14</p>
+                            <p><strong>Family Members:</strong> Parents, caregivers, and siblings encouraged to participate</p>
+                            <p><strong>Schools & Organizations:</strong> Educators seeking innovative approaches to digital literacy</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- What DSP Participants Learn Section -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <i class="fas fa-tools section-icon"></i>
+                    <h2>Skills That Serve You Everywhere</h2>
+                </div>
+                <div class="grid grid-2">
+                    <div class="card">
+                        <h3 class="card-title">Creative & Technical Skills</h3>
+                        <h4>Basic Digital Literacy:</h4>
+                        <ul>
+                            <li>Computer navigation and file management</li>
+                            <li>Age-appropriate introduction to creative software</li>
+                            <li>Digital photography and basic image editing</li>
+                            <li>Simple video recording and editing techniques</li>
+                            <li>Online safety and digital citizenship</li>
+                        </ul>
+                        
+                        <h4>Storytelling Fundamentals:</h4>
+                        <ul>
+                            <li>Finding and developing personal stories worth telling</li>
+                            <li>Understanding audience and purpose in communication</li>
+                            <li>Basic narrative structure (beginning, middle, end)</li>
+                            <li>Interview skills and listening techniques</li>
+                            <li>Presentation skills and public speaking confidence</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3 class="card-title">Life Skills Development</h3>
+                        <h4>Communication & Confidence:</h4>
+                        <ul>
+                            <li>Clear verbal expression and active listening</li>
+                            <li>Comfort with public speaking and presentation</li>
+                            <li>Ability to ask questions and seek help when needed</li>
+                            <li>Respectful collaboration and peer feedback</li>
+                        </ul>
+                        
+                        <h4>Critical Thinking:</h4>
+                        <ul>
+                            <li>Analyzing what makes stories compelling and effective</li>
+                            <li>Problem-solving when technology doesn't work as expected</li>
+                            <li>Planning projects from concept through completion</li>
+                            <li>Reflecting on work and identifying areas for improvement</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DSP Program Structure Section -->
+        <section class="section" id="program-structure">
+            <div class="container">
+                <div class="section-header">
+                    <i class="fas fa-calendar-days section-icon"></i>
+                    <h2>Flexible Learning That Fits Your Life</h2>
+                </div>
+                <div class="grid grid-3">
+                    <div class="card">
+                        <i class="fas fa-calendar-week card-icon"></i>
+                        <h3 class="card-title">Workshop Series Format</h3>
+                        <p style="font-size: 0.9rem; color: var(--accent); margin-bottom: 1rem;">(Most Common)</p>
+                        <ul style="font-size: 0.9rem;">
+                            <li><strong>Duration:</strong> 6-8 weeks, 2 hours per session</li>
+                            <li><strong>Group Size:</strong> 12-15 participants plus family members</li>
+                            <li><strong>Schedule:</strong> Saturdays 10AM-12PM or weekday after-school options</li>
+                            <li><strong>Cost:</strong> Sliding scale $50-150 per family (scholarships available)</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-clock card-icon"></i>
+                        <h3 class="card-title">Family Workshop Days</h3>
+                        <ul style="font-size: 0.9rem;">
+                            <li><strong>Duration:</strong> Single-day events, 4-6 hours with breaks</li>
+                            <li><strong>Format:</strong> Drop-in style with multiple activity stations</li>
+                            <li><strong>Focus:</strong> Accessible introduction to digital storytelling for whole families</li>
+                            <li><strong>Cost:</strong> Free or low-cost ($10-25 per family)</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-school card-icon"></i>
+                        <h3 class="card-title">School & Organization Partnerships</h3>
+                        <ul style="font-size: 0.9rem;">
+                            <li><strong>Duration:</strong> Customized to fit academic calendar and organizational needs</li>
+                            <li><strong>Format:</strong> In-school residencies, after-school programs, or summer camps</li>
+                            <li><strong>Support:</strong> E4 Youth provides curriculum, training, and ongoing consultation</li>
+                            <li><strong>Cost:</strong> Varies based on partnership scope and duration</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="card mt-lg">
+                    <h3>Session Progression (Workshop Series):</h3>
+                    <div class="grid grid-2" style="gap: 1rem; margin-top: 1rem;">
+                        <div>
+                            <p><strong>1. Story Discovery:</strong> Finding personal stories and exploring what makes them special</p>
+                            <p><strong>2. Digital Tools Introduction:</strong> Learning basic software and equipment in supportive environment</p>
+                            <p><strong>3. Project Planning:</strong> Choosing story format and creating project timeline</p>
+                        </div>
+                        <div>
+                            <p><strong>4. Production Workshops:</strong> Hands-on creation with peer support and adult mentorship</p>
+                            <p><strong>5. Feedback & Revision:</strong> Sharing work in progress and incorporating suggestions</p>
+                            <p><strong>6. Community Showcase:</strong> Presenting finished projects to families and community</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sample Project Showcase Section -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <i class="fas fa-star section-icon"></i>
+                    <h2>Amazing Stories from Amazing Kids</h2>
+                </div>
+                <div class="grid grid-3">
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1544717297-fa95b6ee9643?w=800&h=600&fit=crop" 
+                             alt="Elderly woman sharing stories with young person" class="card-image">
+                        <h3 class="card-title">Community History Projects</h3>
+                        <p class="card-description">Students interview family members, neighbors, and community elders to document important local stories, creating digital presentations that preserve and share community knowledge.</p>
+                        <div style="background-color: var(--bg-alt); padding: 1rem; border-radius: var(--radius-md); margin-top: 1rem; font-style: italic;">
+                            <p style="margin: 0; font-size: 0.9rem;"><strong>Example:</strong> "My Grandmother's Journey" - A 4th grader's interview project that became a short documentary about immigration and family resilience.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1596495578065-6e0763fa1178?w=800&h=600&fit=crop" 
+                             alt="Children creating digital art and stories" class="card-image">
+                        <h3 class="card-title">Creative Fiction & Personal Narrative</h3>
+                        <p class="card-description">Participants develop original stories that blend imagination with personal experience, using digital tools to bring their narratives to life through images, audio, and video.</p>
+                        <div style="background-color: var(--bg-alt); padding: 1rem; border-radius: var(--radius-md); margin-top: 1rem; font-style: italic;">
+                            <p style="margin: 0; font-size: 0.9rem;"><strong>Example:</strong> "The Superhero Next Door" - A group collaboration that imagined local community helpers as superheroes, complete with digital comic-style presentation.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&h=600&fit=crop" 
+                             alt="Children playing on playground equipment" class="card-image">
+                        <h3 class="card-title">Community Problem-Solving Stories</h3>
+                        <p class="card-description">Young people identify issues they care about in their neighborhoods and schools, creating stories that explore problems and potential solutions.</p>
+                        <div style="background-color: var(--bg-alt); padding: 1rem; border-radius: var(--radius-md); margin-top: 1rem; font-style: italic;">
+                            <p style="margin: 0; font-size: 0.9rem;"><strong>Example:</strong> "Making Our Playground Better" - A student-led project that documented playground safety concerns and proposed improvements, leading to actual community action.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-lg">
+                    <a href="stories.html" class="btn btn-primary">See More Student Work</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Family Engagement Section -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <i class="fas fa-users section-icon"></i>
+                    <h2>Growing Together Through Shared Learning</h2>
+                    <p class="lead">DSP recognizes that children's learning is strongest when families are engaged as partners rather than just supporters. Our family-inclusive model creates opportunities for everyone to learn, contribute, and grow together.</p>
+                </div>
+                <div class="grid grid-2">
+                    <div class="card">
+                        <h3 class="card-title">How Families Participate</h3>
+                        <ul>
+                            <li><strong>Learning Alongside:</strong> Parents and caregivers participate in workshops as learners, discovering new skills alongside their children</li>
+                            <li><strong>Sharing Expertise:</strong> Family members contribute their own knowledge, experiences, and skills to enrich everyone's learning</li>
+                            <li><strong>Supporting at Home:</strong> Families receive resources and guidance for continuing creative work between sessions</li>
+                            <li><strong>Community Building:</strong> Through shared experiences, families develop supportive relationships with other families in the program</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3 class="card-title">Benefits for Families</h3>
+                        <ul>
+                            <li><strong>Shared Language:</strong> Families develop common vocabulary around creativity, technology, and storytelling</li>
+                            <li><strong>Quality Time:</strong> Structured opportunities for meaningful interaction around shared interests and goals</li>
+                            <li><strong>Skill Development:</strong> Adults often discover new interests and capabilities alongside their children</li>
+                            <li><strong>Community Connection:</strong> Relationships formed in DSP often extend beyond the program into ongoing friendships and support networks</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Learning Outcomes Section -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <i class="fas fa-chart-line section-icon"></i>
+                    <h2>How We Measure Growth and Success</h2>
+                </div>
+                <div class="grid grid-2">
+                    <div class="card">
+                        <h3 class="card-title">Individual Participant Outcomes</h3>
+                        <h4>Creative Confidence:</h4>
+                        <ul>
+                            <li>Willingness to share personal stories and perspectives</li>
+                            <li>Comfort with creative risk-taking and experimentation</li>
+                            <li>Pride in creative work and personal expression</li>
+                        </ul>
+                        <h4>Digital Literacy:</h4>
+                        <ul>
+                            <li>Basic proficiency with age-appropriate creative software</li>
+                            <li>Understanding of digital file management and organization</li>
+                            <li>Knowledge of online safety and digital citizenship principles</li>
+                        </ul>
+                        <h4>Communication Skills:</h4>
+                        <ul>
+                            <li>Clear verbal expression of ideas and experiences</li>
+                            <li>Active listening and respectful engagement with peers</li>
+                            <li>Presentation skills and comfort with public speaking</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3 class="card-title">Family & Community Outcomes</h3>
+                        <h4>Family Engagement:</h4>
+                        <ul>
+                            <li>Increased communication about school and creative interests</li>
+                            <li>Shared vocabulary around technology and storytelling</li>
+                            <li>Continued creative collaboration at home</li>
+                        </ul>
+                        <h4>Community Connection:</h4>
+                        <ul>
+                            <li>Relationships formed with other families in the program</li>
+                            <li>Greater involvement in community storytelling events</li>
+                            <li>Awareness of local history and community resources</li>
+                        </ul>
+                        <h4>Assessment Methods:</h4>
+                        <ul>
+                            <li>Portfolio development with reflection</li>
+                            <li>Regular family feedback sessions</li>
+                            <li>Community presentations and showcases</li>
+                            <li>6-12 month follow-up tracking</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Getting Started Section -->
+        <section class="section" id="getting-started">
+            <div class="container">
+                <div class="section-header">
+                    <i class="fas fa-rocket section-icon"></i>
+                    <h2>Ready to Discover Your Story?</h2>
+                </div>
+                <div class="grid grid-2">
+                    <div class="card">
+                        <h3 class="card-title">Application Process</h3>
+                        <ol style="padding-left: 1.5rem; line-height: 1.6;">
+                            <li><strong>Family Interest Form:</strong> Complete simple online form indicating interest and availability</li>
+                            <li><strong>Brief Phone Conversation:</strong> 10-15 minute call to discuss program fit and answer questions</li>
+                            <li><strong>Orientation Session:</strong> Attend group meeting to learn about program expectations and meet other families</li>
+                            <li><strong>Program Begins:</strong> Start your storytelling journey with supportive community</li>
+                        </ol>
+                    </div>
+                    <div class="card">
+                        <h3 class="card-title">What to Expect</h3>
+                        <h4>Before First Session:</h4>
+                        <ul>
+                            <li>Welcome packet with program overview and supply list</li>
+                            <li>Introduction email connecting you with other participating families</li>
+                            <li>Technical setup support if needed for home devices</li>
+                        </ul>
+                        <h4>During the Program:</h4>
+                        <ul>
+                            <li>Weekly sessions with hands-on learning and peer collaboration</li>
+                            <li>Take-home resources and activities for continued learning</li>
+                            <li>Optional family social events and community connections</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="card mt-lg">
+                    <div class="grid grid-2">
+                        <div>
+                            <h3>Program Investment</h3>
+                            <ul style="font-size: 1rem;">
+                                <li><strong>Workshop Series:</strong> $50-150 sliding scale per family (full scholarships available)</li>
+                                <li><strong>Family Workshop Days:</strong> Free-$25 per family</li>
+                                <li><strong>School Partnerships:</strong> Costs covered by partner organization</li>
+                            </ul>
+                        </div>
+                        <div style="background-color: var(--primary); color: white; padding: 1.5rem; border-radius: var(--radius-md); text-align: center;">
+                            <p style="margin: 0; font-weight: 600; font-size: 1.1rem;">No family is ever turned away due to financial circumstances.</p>
+                            <p style="margin: 0.5rem 0 0 0;">We work with every family to ensure program accessibility.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <i class="fas fa-circle-question section-icon"></i>
+                    <h2>Questions Families Often Ask</h2>
+                </div>
+                <div class="grid grid-2">
+                    <div class="card">
+                        <h4><strong>Q: What if my child isn't interested in technology?</strong></h4>
+                        <p>A: DSP uses technology as a tool for storytelling, not as the focus itself. Many participants who start with limited interest in computers discover they enjoy the creative possibilities when technology serves their desire to share stories.</p>
+                        
+                        <h4><strong>Q: Do parents have to participate in every session?</strong></h4>
+                        <p>A: We encourage family participation but understand busy schedules. At minimum, we ask for parent/caregiver involvement in the first and last sessions, plus the community showcase.</p>
+                        
+                        <h4><strong>Q: What if we don't have computers or tablets at home?</strong></h4>
+                        <p>A: All necessary equipment is provided during sessions. We also have a limited lending library of devices families can borrow for home use during the program.</p>
+                    </div>
+                    <div class="card">
+                        <h4><strong>Q: Can my child continue with E4 Youth after DSP?</strong></h4>
+                        <p>A: Absolutely! DSP is designed as an entry point to our programs. Many participants continue with Get Creative! as they enter middle and high school.</p>
+                        
+                        <h4><strong>Q: What if my child has learning differences or needs accommodations?</strong></h4>
+                        <p>A: We welcome all learners and work with families to ensure every child can participate fully. Please discuss your child's needs during the initial conversation so we can plan appropriate support.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact & Registration Section -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <i class="fas fa-envelope section-icon"></i>
+                    <h2>Let's Start the Conversation</h2>
+                </div>
+                <div class="grid grid-2">
+                    <div class="card">
+                        <h3 class="card-title">Contact Information</h3>
+                        <p><strong>Program Coordinator:</strong> Sarah Johnson<br>
+                        <strong>Direct Line:</strong> (512) 555-0127<br>
+                        <strong>Email:</strong> dsp@e4youth.org</p>
+                        
+                        <h4 style="margin-top: 2rem;">Upcoming Session Dates:</h4>
+                        <ul>
+                            <li><strong>Fall 2024:</strong> Saturdays October 14 - December 2, 10AM-12PM</li>
+                            <li><strong>Spring 2025:</strong> Saturdays February 1 - March 22, 10AM-12PM</li>
+                            <li><strong>Summer Intensive:</strong> July 15-19, 2025, 9AM-3PM (includes lunch)</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3 class="card-title">Information Sessions</h3>
+                        <ul style="list-style: none; padding-left: 0;">
+                            <li><i class="fas fa-check-circle" style="color: var(--primary); margin-right: 0.5rem;"></i> Open to all interested families</li>
+                            <li><i class="fas fa-check-circle" style="color: var(--primary); margin-right: 0.5rem;"></i> No commitment required</li>
+                            <li><i class="fas fa-check-circle" style="color: var(--primary); margin-right: 0.5rem;"></i> Refreshments provided</li>
+                        </ul>
+                        <p><strong>Next Session:</strong> September 28, 2024, 11AM-12PM</p>
+                        
+                        <div class="btn-group mt-lg">
+                            <a href="contact.html" class="btn btn-primary">Register for DSP</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-lg">
+                    <div class="btn-group">
+                        <a href="contact.html" class="btn btn-secondary" style="color: var(--secondary); border-color: var(--secondary);">Attend Information Session</a>
+                        <a href="contact.html" class="btn btn-secondary" style="color: var(--secondary); border-color: var(--secondary);">Schedule Family Conversation</a>
+                        <a href="#" class="btn btn-secondary" style="color: var(--secondary); border-color: var(--secondary);">Download Program Guide</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Programs</h4>
+                    <ul class="footer-links">
+                        <li><a href="programs-dsp.html">Digital Storytelling Program</a></li>
+                        <li><a href="programs-get-creative.html">Get Creative!</a></li>
+                        <li><a href="programs-hip.html">Heritage & Innovation Pathways</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Experiences</h4>
+                    <ul class="footer-links">
+                        <li><a href="experiences-wow.html">What Once Was</a></li>
+                        <li><a href="experiences-heritage-center.html">WOW Heritage Center</a></li>
+                        <li><a href="experiences-live.html">E4 Live</a></li>
+                        <li><a href="experiences-level-up.html">E4 Level Up</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>About</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About E4 Youth</a></li>
+                        <li><a href="stories.html">Stories & Showcases</a></li>
+                        <li><a href="impact.html">Impact & Evaluation</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <ul class="footer-links">
+                        <li><a href="partner.html">Partner With Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="funders.html">For Funders</a></li>
+                    </ul>
+                    <div class="social-links mt-md">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 E4 Youth. All rights reserved. | Made with ❤️ in Austin, TX</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('active');
+        }
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const menuToggle = document.querySelector('.mobile-menu-toggle');
+            
+            if (!menuToggle.contains(event.target) && !mobileMenu.contains(event.target)) {
+                mobileMenu.classList.remove('active');
+            }
+        });
+        
+        // Close mobile menu on escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                document.getElementById('mobileMenu').classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
