@@ -90,20 +90,20 @@ export default function EcosystemCircle() {
           return (
             <motion.div
               key={stage.label}
-              className="absolute text-center cursor-pointer z-10"
+              className={`absolute text-center cursor-pointer ${isHovered ? 'z-[9999]' : 'z-10'}`}
               style={{
                 left: x - 65,
                 top: y - 40,
                 width: 130,
               }}
               initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: isHovered ? 1.1 : 1 }}
+              animate={{ opacity: 1, scale: isHovered ? 1.08 : 1 }}
               transition={{ delay: i * 0.15, duration: 0.3 }}
               onMouseEnter={() => setHoveredIndex(i)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
               <div
-                className={`w-20 h-20 rounded-full mx-auto flex items-center justify-center text-white mb-2 transition-all duration-300 ${isHovered ? 'shadow-xl scale-110' : 'shadow-md'}`}
+                className={`w-20 h-20 rounded-full mx-auto flex items-center justify-center text-white mb-2 transition-all duration-300 ${isHovered ? 'shadow-xl' : 'shadow-md'}`}
                 style={{ backgroundColor: stage.color }}
               >
                 <FontAwesomeIcon icon={stage.icon} className="w-9 h-9" />
@@ -118,8 +118,9 @@ export default function EcosystemCircle() {
                     animate={{ opacity: 1, y: 0, scale: 1 }}
                     exit={{ opacity: 0, y: 10, scale: 0.95 }}
                     transition={{ duration: 0.2 }}
-                    className="absolute z-50 bg-white rounded-2xl shadow-2xl border border-gray-200 p-5 text-left"
+                    className="absolute bg-white rounded-2xl shadow-2xl border border-gray-200 p-5 text-left"
                     style={{
+                      zIndex: 99999,
                       width: 280,
                       left: '50%',
                       transform: 'translateX(-50%)',
