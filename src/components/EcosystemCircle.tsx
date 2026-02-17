@@ -88,22 +88,19 @@ export default function EcosystemCircle() {
           const y = center + labelR * Math.sin(angle - Math.PI / 4)
           const isHovered = hoveredIndex === i
           return (
-            <motion.div
+            <div
               key={stage.label}
-              className={`absolute text-center cursor-pointer ${isHovered ? 'z-[9999]' : 'z-10'}`}
+              className={`absolute text-center cursor-pointer transition-all duration-300 ${isHovered ? 'z-[9999]' : 'z-10'}`}
               style={{
                 left: x - 65,
                 top: y - 40,
                 width: 130,
               }}
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: isHovered ? 1.08 : 1 }}
-              transition={{ delay: i * 0.15, duration: 0.3 }}
               onMouseEnter={() => setHoveredIndex(i)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
               <div
-                className={`w-20 h-20 rounded-full mx-auto flex items-center justify-center text-white mb-2 transition-all duration-300 ${isHovered ? 'shadow-xl' : 'shadow-md'}`}
+                className={`w-20 h-20 rounded-full mx-auto flex items-center justify-center text-white mb-2 transition-all duration-300 ${isHovered ? 'shadow-xl scale-110' : 'shadow-md scale-100'}`}
                 style={{ backgroundColor: stage.color }}
               >
                 <FontAwesomeIcon icon={stage.icon} className="w-9 h-9" />
@@ -152,7 +149,7 @@ export default function EcosystemCircle() {
                   </motion.div>
                 )}
               </AnimatePresence>
-            </motion.div>
+            </div>
           )
         })}
 
