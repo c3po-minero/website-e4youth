@@ -37,6 +37,8 @@ const experiences: Record<string, {
         fullStory: 'Marcus first came to an AR Heritage Tour with his grandmother, who wanted to see her old East Austin neighborhood through the augmented reality experience. That afternoon changed his trajectory. He joined DSP to learn digital storytelling, moved through Get Creative! to build his portfolio, and led a HIP research project documenting heritage sites across the city. Today, Marcus is a paid content producer creating heritage media for a local Austin nonprofit.',
         quote: 'I showed up to an AR tour because my grandmother wanted to see her old neighborhood. Two years later, I\'m producing stories for a living.',
       },
+      storyImage: 'https://images.unsplash.com/photo-1588196749597-9ff075ee6b5b?w=800&q=80',
+      storyImageAlt: 'Young person using augmented reality technology outdoors in Austin — E4Youth AR Heritage Tours',
       howToEngage: [
         { title: 'Experience a Tour', description: 'Check our schedule for upcoming public AR Heritage Tours across Austin.' },
         { title: 'Bring a Tour to Your Site', description: 'Schools, organizations, and community groups can request a tour experience at your location. Our youth-led team brings the technology and the stories.' },
@@ -76,6 +78,8 @@ const experiences: Record<string, {
         fullStory: 'JT joined DSP with no technical background — he didn\'t know what a digital audio workstation was. Through DSP, he discovered a talent for audio production and storytelling. He moved into Get Creative! where he produced original audio content, then led production for E4 Live events. Through E4 Level Up, he connected with an Austin music production studio that offered him an employer-funded audio engineering position.',
         quote: 'I walked into DSP not knowing what a DAW was. Now I\'m engineering sessions for artists I grew up listening to.',
       },
+      storyImage: 'https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=800&q=80',
+      storyImageAlt: 'Young person recording digital audio in a studio — E4Youth Digital Storytelling Program',
       howToEngage: [
         { title: 'Apply', description: 'Applications for DSP cohorts open on a rolling basis. No prior experience needed.' },
         { title: 'Refer a Young Person', description: 'Educators, parents, and community leaders can connect youth to DSP.' },
@@ -115,6 +119,8 @@ const experiences: Record<string, {
         fullStory: 'Destiny first encountered E4Youth at a WOW exhibition and was drawn to the creative technology on display. She moved through DSP and into Get Creative!, where she focused on user experience design. Her portfolio from Get Creative! — including community-centered design projects — caught the attention of an Austin creative agency during a showcase. Through E4 Level Up, she transitioned into an employer-funded UX design role.',
         quote: 'E4Youth didn\'t hand me a job — they helped me build a career I didn\'t know existed.',
       },
+      storyImage: 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800&q=80',
+      storyImageAlt: 'Young creative professional working on design project — E4Youth Get Creative program',
       howToEngage: [
         { title: 'Apply', description: 'Get Creative! accepts participants on a rolling basis. Prior experience in digital media (DSP or equivalent) is recommended.' },
         { title: 'Attend a Showcase', description: 'Community members and industry professionals are invited to portfolio showcases.' },
@@ -154,6 +160,8 @@ const experiences: Record<string, {
         fullStory: 'Kwame\'s HIP project — a feature-length documentary exploring heritage preservation in East Austin — earned community recognition and professional attention. The research skills, production leadership, and community relationships he built through HIP led directly to his current role as a stipend-supported media director, where he produces E4Youth\'s public content and mentors new participants entering the ecosystem.',
         quote: 'I went from holding a camera at an event to directing the whole production. This ecosystem keeps opening doors.',
       },
+      storyImage: 'https://images.unsplash.com/photo-1485846234645-a62644f84728?w=800&q=80',
+      storyImageAlt: 'Documentary filmmaker with camera — E4Youth Heritage Innovation Program',
       howToEngage: [
         { title: 'Apply', description: 'HIP accepts experienced participants ready for leadership-level projects. Prior E4Youth experience or equivalent community-based work is expected.' },
         { title: 'Propose a Heritage Project', description: 'Community organizations and cultural institutions can propose heritage projects for HIP teams to develop.' },
@@ -195,6 +203,8 @@ const experiences: Record<string, {
         fullStory: 'Sofia attended her first WOW exhibition out of curiosity — she was drawn to the creative technology on display but didn\'t see herself in tech. Through DSP, she discovered a talent for storytelling and organization. Her Empower-stage presentations demonstrated natural project leadership. Through E4 Level Up, she connected with a creative technology firm that recognized her skills and offered her an employer-funded project management role.',
         quote: 'My DSP story got me my first interview. My portfolio from Get Creative! got me the offer.',
       },
+      storyImage: 'https://images.unsplash.com/photo-1531545514256-b1400bc00f31?w=800&q=80',
+      storyImageAlt: 'Young professionals at a creative technology showcase event — E4Youth WOW',
       howToEngage: [
         { title: 'Attend a WOW Event', description: 'WOW exhibitions and public events are open to everyone. Check our schedule for upcoming events.' },
         { title: 'Apply for a Position', description: 'Stipend-supported and employer-funded positions are available for experienced E4Youth participants.' },
@@ -235,6 +245,8 @@ const experiences: Record<string, {
         fullStory: 'Linh\'s journey through the ecosystem took shape largely inside the Heritage Center walls. She started as an AR Heritage Tour participant, took Educate workshops on-site, built her photography portfolio through Get Creative!, and became a Heritage Center guide. Today, she leads heritage programming at the Center — designing exhibitions, coordinating events, and mentoring the next generation of Heritage Center staff.',
         quote: 'The Heritage Center became my classroom, my portfolio, and then my workplace.',
       },
+      storyImage: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80',
+      storyImageAlt: 'Cultural heritage center interior with exhibition space — E4Youth WOW Heritage Center',
       howToEngage: [
         { title: 'Visit', description: 'The WOW Heritage Center is open to the public. Come experience heritage exhibitions, attend community events, or simply explore the space.' },
         { title: 'Partner', description: 'Cultural organizations, businesses, and educational institutions can partner with the Heritage Center to co-develop programming, host events, or create workforce opportunities.' },
@@ -277,6 +289,8 @@ const experiences: Record<string, {
         fullStory: 'Destiny entered E4 Level Up with a strong portfolio and clear direction. The Level Up cohort connected her with industry mentors who refined her UX design approach. A paid pilot placement at an Austin creative agency turned into a full employer-funded position. She now returns to E4Youth quarterly to review portfolios and mentor Get Creative! participants.',
         quote: 'E4Youth didn\'t hand me a job — they helped me build a career I didn\'t know existed.',
       },
+      storyImage: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&q=80',
+      storyImageAlt: 'Young professionals collaborating in a modern workspace — E4Youth Level Up career advancement',
       howToEngage: [
         { title: 'Apply', description: 'E4 Level Up accepts experienced E4Youth participants with demonstrated skills and portfolio work.' },
         { title: 'Partner as an Employer', description: 'Austin businesses and organizations can join the Level Up employer network, creating paid pilot placements and employer-funded roles.' },
@@ -317,6 +331,8 @@ const experiences: Record<string, {
         fullStory: 'JT found his stride in E4 Live, where his audio production skills from DSP and Get Creative! translated directly to live sound engineering. Leading E4 Live productions gave him the professional experience and industry connections that made his transition through E4 Level Up into a full-time employer-funded audio engineering role feel natural.',
         quote: 'I walked into DSP not knowing what a DAW was. Now I\'m engineering sessions for artists I grew up listening to.',
       },
+      storyImage: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&q=80',
+      storyImageAlt: 'Live event production with audio equipment and stage lighting — E4Youth E4 Live',
       howToEngage: [
         { title: 'Join E4 Live', description: 'Young people interested in live production can apply to join the E4 Live team.' },
         { title: 'Book E4 Live for Your Event', description: 'Organizations, venues, and community groups can hire the E4 Live team to produce events — supporting youth development while getting professional-quality production.' },
