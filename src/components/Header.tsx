@@ -1,176 +1,133 @@
 'use client'
-import { useState, useEffect, useRef } from 'react'
+
 import Link from 'next/link'
-import Image from 'next/image'
-import Search from './Search'
-import FaIcon from './FaIcon'
+import { useState } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-const ChevronDown = () => (
-  <svg width="10" height="10" viewBox="0 0 10 10" fill="currentColor" style={{marginLeft:4,verticalAlign:'middle'}} aria-hidden="true">
-    <path d="M1 3l4 4 4-4" stroke="currentColor" strokeWidth="1.5" fill="none"/>
-  </svg>
-)
-
-const navItems = [
-  { label: 'Home', href: '/' },
-  {
-    label: 'Programs', href: '/programs', dropdown: [
-      { label: 'All Programs', href: '/programs' },
-      { label: 'Digital Storytelling Program', href: '/programs/dsp' },
-      { label: 'Get Creative!', href: '/programs/get-creative' },
-      { label: 'Heritage & Innovation Pathways', href: '/programs/hip' },
-    ]
-  },
-  {
-    label: 'Experiences', href: '#', dropdown: [
-      { label: 'What Once Was', href: '/experiences/wow' },
-      { label: 'WOW Heritage Center', href: '/experiences/heritage-center' },
-      { label: 'E4 Live', href: '/experiences/live' },
-      { label: 'E4 Level Up', href: '/experiences/level-up' },
-    ]
-  },
-  {
-    label: 'About', href: '#', dropdown: [
-      { label: 'About E4 Youth', href: '/about' },
-      { label: 'Stories & Showcases', href: '/stories' },
-      { label: 'Impact & Evaluation', href: '/impact' },
-    ]
-  },
-  { label: 'Partner With Us', href: '/partner' },
-  { label: 'Contact', href: '/contact' },
+const programs = [
+  { name: 'Digital Storytelling (DSP)', href: '/programs/dsp' },
+  { name: 'Get Creative!', href: '/programs/get-creative' },
+  { name: 'Heritage & Innovation (HIP)', href: '/programs/hip' },
+  { name: 'What Once Was (WOW)', href: '/programs/wow' },
+  { name: 'WOW Heritage Center', href: '/programs/wow-heritage-center' },
+  { name: 'E4 Live', href: '/programs/e4-live' },
+  { name: 'E4 Level Up', href: '/programs/e4-level-up' },
 ]
 
-const mobileLinks = [
-  { label: 'Home', href: '/' },
-  { section: 'Programs' },
-  { label: 'All Programs', href: '/programs' },
-  { label: 'Digital Storytelling Program', href: '/programs/dsp', indent: true },
-  { label: 'Get Creative!', href: '/programs/get-creative', indent: true },
-  { label: 'Heritage & Innovation Pathways', href: '/programs/hip', indent: true },
-  { section: 'Experiences' },
-  { label: 'What Once Was', href: '/experiences/wow' },
-  { label: 'WOW Heritage Center', href: '/experiences/heritage-center' },
-  { label: 'E4 Live', href: '/experiences/live' },
-  { label: 'E4 Level Up', href: '/experiences/level-up' },
-  { section: 'About' },
-  { label: 'About E4 Youth', href: '/about' },
-  { label: 'Stories & Showcases', href: '/stories' },
-  { label: 'Impact & Evaluation', href: '/impact' },
-  { label: 'Partner With Us', href: '/partner' },
-  { label: 'Funders', href: '/funders' },
-  { label: 'Contact', href: '/contact' },
-] as const
+const navLinks = [
+  { name: 'Home', href: '/' },
+  { name: 'Programs', href: '/programs', children: programs },
+  { name: 'Impact', href: '/impact' },
+  { name: 'Stories', href: '/stories' },
+  { name: 'Partners', href: '/partner' },
+  { name: 'About', href: '/about' },
+  { name: 'Contact', href: '/contact' },
+]
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false)
-  const [hidden, setHidden] = useState(false)
-  const lastScrollY = useRef(0)
-
-  useEffect(() => {
-    document.body.style.overflow = mobileOpen ? 'hidden' : ''
-    return () => { document.body.style.overflow = '' }
-  }, [mobileOpen])
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentY = window.scrollY
-      if (currentY > lastScrollY.current && currentY > 100) {
-        setHidden(true)
-      } else {
-        setHidden(false)
-      }
-      lastScrollY.current = currentY
-    }
-    window.addEventListener('scroll', handleScroll, { passive: true })
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
-
-  useEffect(() => {
-    const handleKey = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') setMobileOpen(false)
-    }
-    document.addEventListener('keydown', handleKey)
-    return () => document.removeEventListener('keydown', handleKey)
-  }, [])
+  const [programsOpen, setProgramsOpen] = useState(false)
 
   return (
-    <header className={`header${hidden && !mobileOpen ? ' header-hidden' : ''}`} role="banner">
-      <div className="container">
-        <div className="header-content">
-          <div className="logo">
-            <Link href="/" aria-label="E4 Youth Home">
-              <Image
-                src="https://e4youth.org/wp-content/uploads/2024/06/Copy-of-e4-full-white-logo.png"
-                alt="E4 Youth Logo"
-                width={160}
-                height={40}
-                priority
-              />
-            </Link>
-          </div>
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-sm">
+      <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between" aria-label="Main navigation">
+        <Link href="/" className="flex items-center gap-2 text-2xl font-display font-bold">
+          <span className="gradient-text">E4</span>
+          <span className="text-secondary">Youth</span>
+        </Link>
 
-          <nav className="nav" aria-label="Main navigation">
-            {navItems.map((item) => (
-              <div className="nav-item" key={item.label}>
-                <Link href={item.href} className="nav-link">
-                  {item.label}
-                  {item.dropdown && <ChevronDown />}
-                </Link>
-                {item.dropdown && (
-                  <div className="nav-dropdown">
-                    {item.dropdown.map((d) => (
-                      <Link href={d.href} className="dropdown-link" key={d.href}>{d.label}</Link>
+        {/* Desktop */}
+        <div className="hidden lg:flex items-center gap-8">
+          {navLinks.map((link) => (
+            <div key={link.name} className="relative group">
+              <Link
+                href={link.href}
+                className="text-secondary font-medium hover:text-primary-dark transition-colors flex items-center gap-1"
+              >
+                {link.name}
+                {link.children && (
+                  <FontAwesomeIcon icon="chevron-down" className="w-3 h-3" />
+                )}
+              </Link>
+              {link.children && (
+                <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                  <div className="bg-white rounded-xl shadow-xl border border-gray-100 py-3 min-w-[260px]">
+                    {link.children.map((child) => (
+                      <Link
+                        key={child.href}
+                        href={child.href}
+                        className="block px-5 py-2.5 text-sm text-secondary hover:text-primary-dark hover:bg-primary/5 transition-colors"
+                      >
+                        {child.name}
+                      </Link>
                     ))}
                   </div>
+                </div>
+              )}
+            </div>
+          ))}
+          <Link href="/contact" className="btn-primary text-sm !px-6 !py-2.5">
+            Get Involved
+          </Link>
+        </div>
+
+        {/* Mobile toggle */}
+        <button
+          className="lg:hidden p-2 text-secondary"
+          onClick={() => setMobileOpen(!mobileOpen)}
+          aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
+          aria-expanded={mobileOpen}
+        >
+          <FontAwesomeIcon icon={mobileOpen ? 'times' : 'bars'} className="w-6 h-6" />
+        </button>
+      </nav>
+
+      {/* Mobile menu */}
+      {mobileOpen && (
+        <div className="lg:hidden bg-white border-t border-gray-100 shadow-lg">
+          <div className="px-6 py-4 space-y-1">
+            {navLinks.map((link) => (
+              <div key={link.name}>
+                {link.children ? (
+                  <>
+                    <button
+                      onClick={() => setProgramsOpen(!programsOpen)}
+                      className="w-full flex items-center justify-between py-3 text-secondary font-medium"
+                      aria-expanded={programsOpen}
+                    >
+                      {link.name}
+                      <FontAwesomeIcon icon="chevron-down" className={`w-3 h-3 transition-transform ${programsOpen ? 'rotate-180' : ''}`} />
+                    </button>
+                    {programsOpen && (
+                      <div className="pl-4 space-y-1">
+                        {link.children.map((child) => (
+                          <Link
+                            key={child.href}
+                            href={child.href}
+                            className="block py-2 text-sm text-body hover:text-primary-dark"
+                            onClick={() => setMobileOpen(false)}
+                          >
+                            {child.name}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </>
+                ) : (
+                  <Link
+                    href={link.href}
+                    className="block py-3 text-secondary font-medium hover:text-primary-dark"
+                    onClick={() => setMobileOpen(false)}
+                  >
+                    {link.name}
+                  </Link>
                 )}
               </div>
             ))}
-          </nav>
-
-          <button
-            className="search-toggle"
-            onClick={() => {
-              const event = new KeyboardEvent('keydown', { key: 'k', metaKey: true })
-              window.dispatchEvent(event)
-            }}
-            aria-label="Search the site (Ctrl+K)"
-          >
-            <FaIcon iconClass="fa-solid fa-magnifying-glass" />
-          </button>
-
-          <button
-            className="mobile-menu-toggle"
-            onClick={() => setMobileOpen(!mobileOpen)}
-            aria-expanded={mobileOpen}
-            aria-label="Toggle navigation menu"
-          >
-            <FaIcon iconClass={`fa-solid ${mobileOpen ? 'fa-xmark' : 'fa-bars'}`} />
-          </button>
-        </div>
-      </div>
-      <Search />
-
-      {mobileOpen && (
-        <div className="mobile-menu-panel" role="navigation" aria-label="Mobile navigation">
-          <nav className="mobile-menu-nav">
-            {mobileLinks.map((item, i) => {
-              if ('section' in item) {
-                return (
-                  <p key={i} className="mobile-menu-section">{item.section}</p>
-                )
-              }
-              return (
-                <Link
-                  key={item.href + item.label}
-                  href={item.href!}
-                  className={`mobile-menu-link${'indent' in item && item.indent ? ' mobile-menu-link--indent' : ''}`}
-                  onClick={() => setMobileOpen(false)}
-                >
-                  {item.label}
-                </Link>
-              )
-            })}
-          </nav>
+            <Link href="/contact" className="btn-primary w-full justify-center mt-4 text-sm" onClick={() => setMobileOpen(false)}>
+              Get Involved
+            </Link>
+          </div>
         </div>
       )}
     </header>
