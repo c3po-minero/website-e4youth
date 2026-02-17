@@ -15,6 +15,13 @@ export const searchIndex: SearchItem[] = [
     category: 'Main',
   },
   {
+    title: '4E Ecosystem',
+    description: 'Discover E4Youth\'s circular development model. Four stages — Engage, Educate, Empower, Elevate.',
+    keywords: '4E ecosystem engage educate empower elevate circular model workforce youth development',
+    href: '/ecosystem',
+    category: 'Main',
+  },
+  {
     title: 'Funder & Institutional Partners',
     description: 'Leveraging storytelling as infrastructure for equity, workforce readiness, and intergenerational opportunity.',
     keywords: 'funders institutional partners investment infrastructure workforce readiness grants philanthropy',

@@ -3,7 +3,7 @@ import { MetadataRoute } from 'next'
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://e4youth.org'
   const pages = [
-    '/', '/funders', '/programs', '/programs/dsp', '/programs/get-creative',
+    '/', '/ecosystem', '/funders', '/programs', '/programs/dsp', '/programs/get-creative',
     '/programs/hip', '/programs/wow', '/programs/wow-heritage-center',
     '/programs/e4-live', '/programs/e4-level-up', '/impact', '/stories',
     '/partner', '/about', '/contact',

@@ -81,7 +81,7 @@ export default function FundersClient() {
           </AnimatedSection>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {[
-              { title: 'Walk With History: The Jacob Fontaine AR Tour', desc: 'A location-based augmented reality experience developed with community input that brings Black Austin history into public space through youth-informed storytelling and technology.', icon: faVrCardboard, color: '#9B51E0' },
+              { title: 'AR Heritage Tours', desc: 'A location-based augmented reality experience developed with community input that brings Black Austin history into public space through youth-informed storytelling and technology.', icon: faVrCardboard, color: '#9B51E0' },
               { title: 'Community Showcases and Public Learning Events', desc: 'Live events where emerging creatives present work, portfolios, and research alongside mentors, historians, and partners.', icon: faPeopleGroup, color: '#FCB900' },
               { title: 'Workshops, Labs, and Pilot Programs', desc: 'Immersive learning experiences exploring oral history, digital storytelling, creative technology, and workforce connection.', icon: faLaptopCode, color: '#7BDCB5' },
             ].map((item, i) => (

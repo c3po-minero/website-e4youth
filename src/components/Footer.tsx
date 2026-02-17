@@ -49,6 +49,7 @@ export default function Footer() {
             <h3 className="font-display font-semibold text-lg mb-4">Organization</h3>
             <ul className="space-y-2 text-sm text-gray-300">
               <li><Link href="/about" className="hover:text-primary transition-colors">About Us</Link></li>
+              <li><Link href="/ecosystem" className="hover:text-primary transition-colors">4E Ecosystem</Link></li>
               <li><Link href="/impact" className="hover:text-primary transition-colors">Impact & Evaluation</Link></li>
               <li><Link href="/stories" className="hover:text-primary transition-colors">Stories & Showcases</Link></li>
               <li><Link href="/partner" className="hover:text-primary transition-colors">Partner With Us</Link></li>

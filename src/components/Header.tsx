@@ -19,7 +19,8 @@ const programs = [
 
 const navLinks = [
   { name: 'Home', href: '/' },
-  { name: 'Programs', href: '/programs', children: programs },
+  { name: 'Ecosystem', href: '/ecosystem' },
+  { name: 'Experiences', href: '/programs', children: programs },
   { name: 'Impact', href: '/impact' },
   { name: 'Stories', href: '/stories' },
   { name: 'Partners', href: '/partner' },
