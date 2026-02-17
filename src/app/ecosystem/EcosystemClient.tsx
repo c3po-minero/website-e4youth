@@ -187,19 +187,7 @@ export default function EcosystemClient() {
                       ))}
                     </div>
 
-                    {/* Flow indicator to next stage */}
-                    {i < stages.length - 1 && (
-                      <div className="flex items-center justify-center mt-8 gap-2 text-gray-400">
-                        <div className="w-px h-6 bg-gray-300" />
-                        <span className="text-xs font-semibold uppercase tracking-wider">Next: {stages[i + 1].label}</span>
-                        <div className="w-px h-6 bg-gray-300" />
-                      </div>
-                    )}
-                    {i === stages.length - 1 && (
-                      <div className="flex items-center justify-center mt-8 gap-2" style={{ color: stages[0].color }}>
-                        <span className="text-xs font-semibold uppercase tracking-wider">↻ Feeds back to {stages[0].label}</span>
-                      </div>
-                    )}
+                    {/* Navigation indicators removed per request */}
                   </div>
                 </div>
               </AnimatedSection>
