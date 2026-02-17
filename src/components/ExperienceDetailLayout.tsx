@@ -25,6 +25,8 @@ interface ExperienceDetailProps {
   }
   storyImage?: string
   storyImageAlt?: string
+  storyImage2?: string
+  storyImage2Alt?: string
   howToEngage: { title: string; description: string }[]
 }
 
@@ -43,6 +45,8 @@ export default function ExperienceDetailLayout({
   story,
   storyImage,
   storyImageAlt,
+  storyImage2,
+  storyImage2Alt,
   howToEngage,
 }: ExperienceDetailProps) {
   return (
@@ -131,20 +135,36 @@ export default function ExperienceDetailLayout({
           </AnimatedSection>
           <AnimatedSection delay={0.1}>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start max-w-6xl mx-auto">
-              {/* Left: Image */}
-              <div className="relative">
+              {/* Left: Two-image layered composition */}
+              <div className="relative" style={{ minHeight: 420 }}>
                 {storyImage ? (
-                  <div className="relative rounded-2xl overflow-hidden shadow-lg aspect-[4/3]">
-                    <Image
-                      src={storyImage}
-                      alt={storyImageAlt || `${title} — where this can lead`}
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 1024px) 100vw, 50vw"
-                    />
-                    {/* Accent overlay bar */}
-                    <div className="absolute bottom-0 left-0 right-0 h-1" style={{ backgroundColor: accentColor }} />
-                  </div>
+                  <>
+                    {/* Primary image — larger, top-left */}
+                    <div className="relative rounded-2xl overflow-hidden shadow-lg w-[85%] aspect-[4/3]">
+                      <Image
+                        src={storyImage}
+                        alt={storyImageAlt || `${title} — where this can lead`}
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 1024px) 100vw, 40vw"
+                      />
+                    </div>
+                    {/* Secondary image — smaller, overlapping bottom-right */}
+                    {storyImage2 && (
+                      <div className="absolute bottom-0 right-0 w-[55%] aspect-[4/3] rounded-2xl overflow-hidden shadow-xl border-4 border-white">
+                        <Image
+                          src={storyImage2}
+                          alt={storyImage2Alt || `${title} — outcome`}
+                          fill
+                          className="object-cover"
+                          sizes="(max-width: 1024px) 50vw, 25vw"
+                        />
+                      </div>
+                    )}
+                    {/* Accent dot decoration */}
+                    <div className="absolute -top-3 -right-3 w-8 h-8 rounded-full opacity-40 hidden lg:block" style={{ backgroundColor: accentColor }} />
+                    <div className="absolute -bottom-3 -left-3 w-6 h-6 rounded-full opacity-25 hidden lg:block" style={{ backgroundColor: accentColor }} />
+                  </>
                 ) : (
                   <div className="rounded-2xl overflow-hidden shadow-lg aspect-[4/3] flex items-center justify-center" style={{ backgroundColor: `${accentColor}08` }}>
                     <FontAwesomeIcon icon={faStar} className="w-24 h-24" style={{ color: `${accentColor}25` }} />

@@ -39,6 +39,8 @@ const experiences: Record<string, {
       },
       storyImage: 'https://images.unsplash.com/photo-1588196749597-9ff075ee6b5b?w=800&q=80',
       storyImageAlt: 'Young person using augmented reality technology outdoors in Austin — E4Youth AR Heritage Tours',
+      storyImage2: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&q=80',
+      storyImage2Alt: 'Multigenerational group exploring a historic Austin neighborhood together',
       howToEngage: [
         { title: 'Experience a Tour', description: 'Check our schedule for upcoming public AR Heritage Tours across Austin.' },
         { title: 'Bring a Tour to Your Site', description: 'Schools, organizations, and community groups can request a tour experience at your location. Our youth-led team brings the technology and the stories.' },
@@ -80,6 +82,8 @@ const experiences: Record<string, {
       },
       storyImage: 'https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=800&q=80',
       storyImageAlt: 'Young person recording digital audio in a studio — E4Youth Digital Storytelling Program',
+      storyImage2: 'https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=600&q=80',
+      storyImage2Alt: 'Youth collaborating on a digital storytelling project',
       howToEngage: [
         { title: 'Apply', description: 'Applications for DSP cohorts open on a rolling basis. No prior experience needed.' },
         { title: 'Refer a Young Person', description: 'Educators, parents, and community leaders can connect youth to DSP.' },
@@ -121,6 +125,8 @@ const experiences: Record<string, {
       },
       storyImage: 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800&q=80',
       storyImageAlt: 'Young creative professional working on design project — E4Youth Get Creative program',
+      storyImage2: 'https://images.unsplash.com/photo-1581291518633-83b4eef1d2fa?w=600&q=80',
+      storyImage2Alt: 'Student presenting creative portfolio at a professional showcase',
       howToEngage: [
         { title: 'Apply', description: 'Get Creative! accepts participants on a rolling basis. Prior experience in digital media (DSP or equivalent) is recommended.' },
         { title: 'Attend a Showcase', description: 'Community members and industry professionals are invited to portfolio showcases.' },
@@ -162,6 +168,8 @@ const experiences: Record<string, {
       },
       storyImage: 'https://images.unsplash.com/photo-1485846234645-a62644f84728?w=800&q=80',
       storyImageAlt: 'Documentary filmmaker with camera — E4Youth Heritage Innovation Program',
+      storyImage2: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=600&q=80',
+      storyImage2Alt: 'Community heritage interview and oral history recording session',
       howToEngage: [
         { title: 'Apply', description: 'HIP accepts experienced participants ready for leadership-level projects. Prior E4Youth experience or equivalent community-based work is expected.' },
         { title: 'Propose a Heritage Project', description: 'Community organizations and cultural institutions can propose heritage projects for HIP teams to develop.' },
@@ -205,6 +213,8 @@ const experiences: Record<string, {
       },
       storyImage: 'https://images.unsplash.com/photo-1531545514256-b1400bc00f31?w=800&q=80',
       storyImageAlt: 'Young professionals at a creative technology showcase event — E4Youth WOW',
+      storyImage2: 'https://images.unsplash.com/photo-1560439514-4e9645039924?w=600&q=80',
+      storyImage2Alt: 'Professional networking at a creative industry event',
       howToEngage: [
         { title: 'Attend a WOW Event', description: 'WOW exhibitions and public events are open to everyone. Check our schedule for upcoming events.' },
         { title: 'Apply for a Position', description: 'Stipend-supported and employer-funded positions are available for experienced E4Youth participants.' },
@@ -247,6 +257,8 @@ const experiences: Record<string, {
       },
       storyImage: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80',
       storyImageAlt: 'Cultural heritage center interior with exhibition space — E4Youth WOW Heritage Center',
+      storyImage2: 'https://images.unsplash.com/photo-1577896851231-70ef18881754?w=600&q=80',
+      storyImage2Alt: 'Young person guiding visitors through a heritage exhibition',
       howToEngage: [
         { title: 'Visit', description: 'The WOW Heritage Center is open to the public. Come experience heritage exhibitions, attend community events, or simply explore the space.' },
         { title: 'Partner', description: 'Cultural organizations, businesses, and educational institutions can partner with the Heritage Center to co-develop programming, host events, or create workforce opportunities.' },
@@ -291,6 +303,8 @@ const experiences: Record<string, {
       },
       storyImage: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&q=80',
       storyImageAlt: 'Young professionals collaborating in a modern workspace — E4Youth Level Up career advancement',
+      storyImage2: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=600&q=80',
+      storyImage2Alt: 'Young professional in a creative technology leadership role',
       howToEngage: [
         { title: 'Apply', description: 'E4 Level Up accepts experienced E4Youth participants with demonstrated skills and portfolio work.' },
         { title: 'Partner as an Employer', description: 'Austin businesses and organizations can join the Level Up employer network, creating paid pilot placements and employer-funded roles.' },
@@ -333,6 +347,8 @@ const experiences: Record<string, {
       },
       storyImage: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&q=80',
       storyImageAlt: 'Live event production with audio equipment and stage lighting — E4Youth E4 Live',
+      storyImage2: 'https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=600&q=80',
+      storyImage2Alt: 'Sound engineer working at a professional audio mixing board',
       howToEngage: [
         { title: 'Join E4 Live', description: 'Young people interested in live production can apply to join the E4 Live team.' },
         { title: 'Book E4 Live for Your Event', description: 'Organizations, venues, and community groups can hire the E4 Live team to produce events — supporting youth development while getting professional-quality production.' },
