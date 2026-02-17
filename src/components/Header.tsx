@@ -1,7 +1,9 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { useState } from 'react'
+import { useRouter } from 'next/navigation'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const programs = [
@@ -27,13 +29,24 @@ const navLinks = [
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false)
   const [programsOpen, setProgramsOpen] = useState(false)
+  const [searchOpen, setSearchOpen] = useState(false)
+  const [searchQuery, setSearchQuery] = useState('')
+  const router = useRouter()
+
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault()
+    if (searchQuery.trim()) {
+      router.push(`/search?q=${encodeURIComponent(searchQuery.trim())}`)
+      setSearchOpen(false)
+      setSearchQuery('')
+    }
+  }
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-sm">
       <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between" aria-label="Main navigation">
-        <Link href="/" className="flex items-center gap-2 text-2xl font-display font-bold">
-          <span className="gradient-text">E4</span>
-          <span className="text-secondary">Youth</span>
+        <Link href="/" className="flex items-center gap-2">
+          <Image src="/images/logo-white.png" alt="E4 Youth" width={120} height={36} className="h-8 w-auto invert" priority />
         </Link>
 
         {/* Desktop */}
@@ -66,21 +79,59 @@ export default function Header() {
               )}
             </div>
           ))}
+          <button
+            onClick={() => setSearchOpen(!searchOpen)}
+            className="text-secondary hover:text-primary-dark transition-colors p-2"
+            aria-label="Search"
+          >
+            <FontAwesomeIcon icon="magnifying-glass" className="w-4 h-4" />
+          </button>
           <Link href="/contact" className="btn-primary text-sm !px-6 !py-2.5">
             Get Involved
           </Link>
         </div>
 
         {/* Mobile toggle */}
-        <button
-          className="lg:hidden p-2 text-secondary"
-          onClick={() => setMobileOpen(!mobileOpen)}
-          aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
-          aria-expanded={mobileOpen}
-        >
-          <FontAwesomeIcon icon={mobileOpen ? 'times' : 'bars'} className="w-6 h-6" />
-        </button>
+        <div className="lg:hidden flex items-center gap-2">
+          <button
+            onClick={() => setSearchOpen(!searchOpen)}
+            className="p-2 text-secondary"
+            aria-label="Search"
+          >
+            <FontAwesomeIcon icon="magnifying-glass" className="w-5 h-5" />
+          </button>
+          <button
+            className="p-2 text-secondary"
+            onClick={() => setMobileOpen(!mobileOpen)}
+            aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={mobileOpen}
+          >
+            <FontAwesomeIcon icon={mobileOpen ? 'times' : 'bars'} className="w-6 h-6" />
+          </button>
+        </div>
       </nav>
+
+      {/* Search bar */}
+      {searchOpen && (
+        <div className="bg-white border-t border-gray-100 shadow-lg px-6 py-4">
+          <form onSubmit={handleSearch} className="max-w-2xl mx-auto flex gap-3">
+            <div className="relative flex-1">
+              <FontAwesomeIcon icon="magnifying-glass" className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
+              <input
+                type="text"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                placeholder="Search programs, stories, and more..."
+                className="w-full pl-11 pr-4 py-3 rounded-xl border border-gray-200 focus:border-primary-dark focus:ring-2 focus:ring-primary/20 outline-none transition-all"
+                autoFocus
+              />
+            </div>
+            <button type="submit" className="btn-primary text-sm !px-6 !py-3">
+              Search
+            </button>
+          </form>
+        </div>
+      )}
 
       {/* Mobile menu */}
       {mobileOpen && (

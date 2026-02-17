@@ -85,8 +85,10 @@ export default function FundersClient() {
               { title: 'Workshops, Labs, and Pilot Programs', desc: 'Immersive learning experiences exploring oral history, digital storytelling, creative technology, and workforce connection.', icon: 'laptop-code' as const, color: '#7BDCB5' },
             ].map((item, i) => (
               <AnimatedSection key={item.title} delay={i * 0.1}>
-                <div className="bg-gray-50 rounded-2xl p-8 h-full">
-                  <FontAwesomeIcon icon={item.icon} className="w-8 h-8 mb-4" style={{ color: item.color }} />
+                <div className="bg-gray-50 rounded-2xl p-8 h-full border-l-4" style={{ borderLeftColor: item.color }}>
+                  <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4" style={{ backgroundColor: `${item.color}15` }}>
+                    <FontAwesomeIcon icon={item.icon} className="w-6 h-6" style={{ color: item.color }} />
+                  </div>
                   <h3 className="text-lg font-display font-bold text-secondary mb-3">{item.title}</h3>
                   <p className="text-sm text-body leading-relaxed">{item.desc}</p>
                 </div>

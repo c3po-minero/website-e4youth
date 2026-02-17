@@ -52,7 +52,10 @@ import {
   faLinkedin,
   faTwitter,
   faYoutube,
+  faFacebook,
+  faXTwitter,
 } from '@fortawesome/free-brands-svg-icons'
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 
 config.autoAddCss = false
 
@@ -62,8 +65,8 @@ library.add(
   faChevronRight, faCirclePlay, faClapperboard, faClock, faCode, faCompass,
   faEnvelope, faEye, faGlobe, faGraduationCap, faHandshake, faHeart,
   faLandmark, faLaptopCode, faLightbulb, faLocationDot, faMagicWandSparkles,
-  faMapMarkerAlt, faMicrophone, faMountainSun, faPaintBrush, faPalette,
+  faMagnifyingGlass, faMapMarkerAlt, faMicrophone, faMountainSun, faPaintBrush, faPalette,
   faPeopleGroup, faPhone, faPlay, faQuoteLeft, faRocket, faSchool,
   faSeedling, faStar, faTimes, faUsers, faVideo, faVrCardboard,
-  faInstagram, faLinkedin, faTwitter, faYoutube
+  faFacebook, faInstagram, faLinkedin, faTwitter, faXTwitter, faYoutube
 )

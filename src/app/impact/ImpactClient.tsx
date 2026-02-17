@@ -56,8 +56,10 @@ export default function ImpactClient() {
               { title: 'Opportunity & Pathway Progression', desc: 'Following participants as they move into advanced programs, employment, higher education, and leadership roles in creative industries.', icon: 'rocket' as const, color: '#FCB900' },
             ].map((item, i) => (
               <AnimatedSection key={item.title} delay={i * 0.1}>
-                <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 h-full">
-                  <FontAwesomeIcon icon={item.icon} className="w-8 h-8 mb-4" style={{ color: item.color }} />
+                <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 h-full relative overflow-hidden" style={{ borderTopColor: item.color, borderTopWidth: '3px' }}>
+                  <div className="w-14 h-14 rounded-xl flex items-center justify-center mb-4" style={{ backgroundColor: `${item.color}15` }}>
+                    <FontAwesomeIcon icon={item.icon} className="w-6 h-6" style={{ color: item.color }} />
+                  </div>
                   <h3 className="text-xl font-display font-bold text-secondary mb-3">{item.title}</h3>
                   <p className="text-sm text-body leading-relaxed">{item.desc}</p>
                 </div>

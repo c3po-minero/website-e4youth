@@ -65,17 +65,17 @@ export default function AboutClient() {
           </AnimatedSection>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              { title: 'Stories Are Infrastructure', desc: 'Storytelling is not just enrichment—it is a workforce and civic tool that builds skills, visibility, and opportunity.' },
-              { title: 'Community Comes First', desc: 'Our programs are designed with and for the communities we serve, centering their knowledge, priorities, and voices.' },
-              { title: 'Creativity Is Career-Ready', desc: 'Creative skills are professional skills. We bridge the gap between artistic expression and economic opportunity.' },
-              { title: 'Access Is Non-Negotiable', desc: 'Every young person deserves access to high-quality creative learning, regardless of background or circumstance.' },
-              { title: 'Visibility Matters', desc: 'Being seen, heard, and recognized is a critical step in professional and personal development.' },
-              { title: 'Growth Is a Journey', desc: 'Our ecosystem of programs meets participants where they are and supports growth over time.' },
+              { title: 'Stories Are Infrastructure', desc: 'Storytelling is not just enrichment—it is a workforce and civic tool that builds skills, visibility, and opportunity.', icon: 'book-open' as const, color: '#4DB8FF' },
+              { title: 'Community Comes First', desc: 'Our programs are designed with and for the communities we serve, centering their knowledge, priorities, and voices.', icon: 'people-group' as const, color: '#9B51E0' },
+              { title: 'Creativity Is Career-Ready', desc: 'Creative skills are professional skills. We bridge the gap between artistic expression and economic opportunity.', icon: 'palette' as const, color: '#FCB900' },
+              { title: 'Access Is Non-Negotiable', desc: 'Every young person deserves access to high-quality creative learning, regardless of background or circumstance.', icon: 'globe' as const, color: '#7BDCB5' },
+              { title: 'Visibility Matters', desc: 'Being seen, heard, and recognized is a critical step in professional and personal development.', icon: 'eye' as const, color: '#0072CE' },
+              { title: 'Growth Is a Journey', desc: 'Our ecosystem of programs meets participants where they are and supports growth over time.', icon: 'seedling' as const, color: '#9B51E0' },
             ].map((v, i) => (
               <AnimatedSection key={v.title} delay={i * 0.08}>
-                <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 h-full">
-                  <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-purple flex items-center justify-center mb-4">
-                    <FontAwesomeIcon icon="check" className="w-4 h-4 text-white" />
+                <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 h-full" style={{ borderTopColor: v.color, borderTopWidth: '3px' }}>
+                  <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4" style={{ backgroundColor: `${v.color}15` }}>
+                    <FontAwesomeIcon icon={v.icon} className="w-5 h-5" style={{ color: v.color }} />
                   </div>
                   <h3 className="text-lg font-display font-bold text-secondary mb-2">{v.title}</h3>
                   <p className="text-sm text-body leading-relaxed">{v.desc}</p>

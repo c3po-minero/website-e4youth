@@ -14,6 +14,10 @@ export const metadata: Metadata = {
     template: '%s | E4 Youth',
   },
   description: 'E4 Youth uses the power of storytelling to unlock equity, workforce access, and opportunity across generations.',
+  icons: {
+    icon: '/images/favicon-source.png',
+    apple: '/images/favicon-source.png',
+  },
   metadataBase: new URL('https://e4youth.org'),
   openGraph: {
     type: 'website',

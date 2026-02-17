@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export default function Footer() {
@@ -8,24 +9,21 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div>
-            <Link href="/" className="text-2xl font-display font-bold">
-              <span className="text-primary">E4</span> Youth
+            <Link href="/" className="inline-block">
+              <Image src="/images/logo-white.png" alt="E4 Youth" width={160} height={48} className="h-10 w-auto" />
             </Link>
             <p className="mt-4 text-gray-300 text-sm leading-relaxed">
               Using the power of storytelling to unlock equity, workforce access, and opportunity across generations.
             </p>
             <div className="flex gap-4 mt-6">
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-gray-400 hover:text-primary transition-colors">
+              <a href="https://www.facebook.com/e4youth" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-gray-400 hover:text-primary transition-colors">
+                <FontAwesomeIcon icon={['fab', 'facebook']} className="w-5 h-5" />
+              </a>
+              <a href="https://twitter.com/e4youth" target="_blank" rel="noopener noreferrer" aria-label="X / Twitter" className="text-gray-400 hover:text-primary transition-colors">
+                <FontAwesomeIcon icon={['fab', 'x-twitter']} className="w-5 h-5" />
+              </a>
+              <a href="https://www.instagram.com/e4youth" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-gray-400 hover:text-primary transition-colors">
                 <FontAwesomeIcon icon={['fab', 'instagram']} className="w-5 h-5" />
-              </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="text-gray-400 hover:text-primary transition-colors">
-                <FontAwesomeIcon icon={['fab', 'twitter']} className="w-5 h-5" />
-              </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-gray-400 hover:text-primary transition-colors">
-                <FontAwesomeIcon icon={['fab', 'linkedin']} className="w-5 h-5" />
-              </a>
-              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="text-gray-400 hover:text-primary transition-colors">
-                <FontAwesomeIcon icon={['fab', 'youtube']} className="w-5 h-5" />
               </a>
             </div>
           </div>
