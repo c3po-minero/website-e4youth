@@ -2,81 +2,82 @@
 
 import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHeart, faGraduationCap, faBolt, faRocket, faArrowRight } from '@fortawesome/free-solid-svg-icons'
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import HeroSection from '@/components/HeroSection'
 import AnimatedSection from '@/components/AnimatedSection'
+import EcosystemCircle from '@/components/EcosystemCircle'
+import StoryTile from '@/components/StoryTile'
 
 const stages = [
   {
     label: 'Engage',
     subtitle: 'Discover Your Creative Voice',
-    icon: faHeart,
     color: '#4DB8FF',
-    body: 'Engage is the front door. It\'s the first time a young person or family encounters E4Youth — at a community event, an AR Heritage Tour, or a live showcase. No applications, no prerequisites. Just come as you are.\n\nEngage experiences are designed to spark curiosity, build trust, and connect people to their own stories and communities. For many participants, this is where the journey begins.',
+    body: 'Engage is the front door. It\'s where young people, families, and community members encounter E4Youth for the first time — often without realizing they\'re stepping into a workforce development ecosystem.',
     experiences: [
-      'AR Heritage Tours — Public, youth-created augmented reality tours of Austin\'s cultural history',
-      'E4 Live — Community networking events celebrating creativity and connection',
-      'Community Showcases — Public exhibitions of youth work and storytelling projects',
+      { name: 'AR Heritage Tours', desc: 'Youth-created augmented reality walking tours that bring Austin\'s cultural history to life through immersive storytelling. Open to the public, powered by young people.' },
+      { name: 'Community Showcases', desc: 'Public exhibitions where E4Youth participants present creative work to their neighborhoods, families, and peers.' },
+      { name: 'WOW Experiences', desc: 'Workforce-oriented events and exhibitions that connect attendees to the broader ecosystem of creative technology and opportunity.' },
     ],
+    outcomes: 'Community connection, creative technology exposure, curiosity activated, pathways made visible.',
     story: {
-      title: 'Curiosity to Commitment',
-      description: 'A family attended an AR Heritage Tour during a neighborhood festival. Their daughter was fascinated by the technology and the stories. Three months later, she enrolled in the Digital Storytelling Program — and hasn\'t stopped creating since.',
-      tag: 'Engage → Educate',
+      name: 'Linh Tran',
+      pathway: 'AR Heritage Tours participant → Educate labs → Get Creative! → WOW Heritage Center guide → paid heritage programming lead',
+      quote: 'The Heritage Center became my classroom, my portfolio, and then my workplace.',
     },
   },
   {
     label: 'Educate',
     subtitle: 'Build Skills Through Technology',
-    icon: faGraduationCap,
     color: '#9B51E0',
-    body: 'Educate is where curiosity becomes capability. Through structured, stipend-supported programs, participants build real skills — digital storytelling, creative production, oral history methods, and professional communication. Every program pairs technical training with cultural grounding, so young people learn not just how to use tools but why their stories matter.\n\nEducate experiences are age-appropriate and progressive: younger participants build foundational literacy, while older participants develop portfolio-ready work and professional skills.',
+    body: 'Educate is where curiosity becomes capability. Young people build real, marketable skills in digital media, creative technology, and community storytelling through structured programs and hands-on labs.',
     experiences: [
-      'Digital Storytelling Program (DSP) — Storytelling, digital literacy, and creative expression for school-aged youth and families',
-      'Get Creative — Career exploration connecting storytelling and digital skills to creative and tech pathways (high school)',
-      'Heritage Innovation Pathways (HIP) — Community history, storytelling, and emerging technology for college-aged participants',
+      { name: 'Digital Storytelling Program (DSP)', desc: 'A foundational youth media training experience where participants learn to research, produce, and share digital stories rooted in their communities. DSP builds technical skills in audio, video, photography, and narrative design.' },
+      { name: 'Workshops & Labs', desc: 'Focused skill-building sessions in creative technology disciplines: graphic design, audio production, photography, video editing, AR development, and more.' },
     ],
-    compensation: 'All Educate experiences are stipend-supported.',
+    outcomes: 'Digital media fluency, creative technology skills, storytelling confidence, portfolio foundations, professional communication.',
     story: {
-      title: 'Skills That Transfer',
-      description: 'A Get Creative participant used the video production and digital design skills she built in the program to land a summer internship at a local creative agency — before she\'d even graduated high school.',
-      tag: 'Educate → Empower',
+      name: 'James "JT" Thompson',
+      pathway: 'DSP participant → Get Creative! audio producer → E4 Live production lead → E4 Level Up → employer-funded audio engineer',
+      quote: 'I walked into DSP not knowing what a DAW was. Now I\'m engineering sessions for artists I grew up listening to.',
     },
   },
   {
     label: 'Empower',
     subtitle: 'Create Real Work, Real Impact',
-    icon: faBolt,
     color: '#FCB900',
-    body: 'Empower is where participants stop practicing and start producing. Their work goes public — through exhibitions, digital platforms, employer-connected projects, and community installations. This is real work for real audiences, and it builds the kind of portfolio and professional experience that opens doors.\n\nAt the Empower stage, participants also begin to take on leadership roles within E4Youth — mentoring newer participants, facilitating workshops, and co-designing programming. The work they produce has value beyond the classroom.',
+    body: 'Empower is where skills become visible. Young people produce original creative work, build professional portfolios, and present to real audiences — industry professionals, community stakeholders, and potential employers.',
     experiences: [
-      'What Once Was (WOW) — Public storytelling platform elevating participant work into exhibitions, digital experiences, and public space',
-      'WOW Heritage Center — Physical, place-based hub for storytelling, learning, and community connection',
-      'Workforce Opportunities — Stipend-supported + employer-funded (expanding) positions connecting skills to careers',
+      { name: 'Get Creative!', desc: 'A creative technology education experience where participants develop original projects across design, media, and digital arts. Work produced here feeds directly into professional portfolios.' },
+      { name: 'Portfolio Building', desc: 'Structured support to compile, refine, and present a body of creative work that demonstrates professional readiness.' },
+      { name: 'Public Presentations', desc: 'Opportunities to present work in professional settings, building communication skills and visibility with industry partners and community leaders.' },
     ],
-    compensation: 'Empower experiences are stipend-supported + employer-funded (expanding).',
+    outcomes: 'Professional portfolio, presentation experience, industry visibility, creative confidence, employer-ready work samples.',
     story: {
-      title: 'From Student Project to Public Installation',
-      description: 'A team of HIP participants created an interactive heritage installation that was featured at the WOW Heritage Center for three months — visited by hundreds of community members and cited by a local news outlet.',
-      tag: 'Empower → Elevate',
+      name: 'Sofia Garza-Klein',
+      pathway: 'WOW attendee → DSP → Empower presenter → E4 Level Up → employer-funded project manager',
+      quote: 'My DSP story got me my first interview. My portfolio from Get Creative! got me the offer.',
     },
   },
   {
     label: 'Elevate',
     subtitle: 'Lead, Earn, Transform',
-    icon: faRocket,
     color: '#7BDCB5',
     isElevate: true,
-    body: 'Elevate is where it all comes together. Participants at this stage aren\'t just beneficiaries — they\'re leaders, earners, and ecosystem builders. They hold professional roles, lead programs, mentor peers, and carry forward the cultural knowledge and technical skills they\'ve built.\n\nBut Elevate isn\'t the end. It\'s where the circle closes and reopens. Elevated participants become the mentors, facilitators, and community leaders who bring new people into the Engage stage. They hire from the ecosystem. They advocate for the work. They are the proof that the model works.',
+    body: 'Elevate is where the ecosystem delivers on its promise. This stage is open-access but advanced — designed for participants who have built skills, produced work, and demonstrated readiness across earlier stages.\n\nElevate isn\'t a finish line. It\'s a launchpad into real careers, paid leadership, and lasting community impact. And it\'s where the circle completes: Elevate participants return to the ecosystem as mentors, facilitators, and leaders who power the next generation of Engage experiences.',
     experiences: [
-      'E4 Level Up — Advanced professional development for college-aged, early-career, and established creatives',
-      'Alumni Leadership — Returning participants in mentorship, facilitation, and staff roles',
-      'Employer Pathways — Career placements and professional opportunities through E4Youth\'s partner network',
+      { name: 'Heritage Innovation Program (HIP)', desc: 'Youth-driven heritage research and creative production that preserves community stories through technology. HIP participants lead original projects with real community impact.' },
+      { name: 'E4 Level Up', desc: 'A career advancement experience connecting experienced participants to employer-funded professional opportunities and leadership roles.' },
+      { name: 'Stipend-Supported Cohorts', desc: 'Structured cohort experiences with stipend support, providing financial stability while participants develop advanced professional skills.' },
+      { name: 'Paid Pilot Placements', desc: 'Real-world work placements with partner organizations, bridging the gap between training and employment.' },
+      { name: 'Employer-Funded Roles (Expanding)', desc: 'Full professional positions funded by industry partners across Austin\'s creative technology sector. This pathway is actively growing.' },
     ],
-    compensation: 'Elevate roles are employer-funded, with expanding opportunities.',
-    story: {
-      title: 'The Circle Completes',
-      description: 'One of E4Youth\'s earliest participants — who started in DSP as a high schooler — now works part-time on staff, co-designs curriculum for new cohorts, and mentors youth who remind him of where he started. His career in creative media began here. His impact continues here.',
-      tag: 'Elevate → Engage',
+    outcomes: 'Paid career pathways, visible leadership roles, return-to-ecosystem mentorship, employer relationships, financial stability, professional identity.',
+    spotlight: {
+      name: 'Kwame Asante',
+      pathway: 'E4 Live volunteer → DSP participant → Get Creative! videographer → HIP documentary lead → stipend-supported media director',
+      fullStory: 'Kwame first encountered E4Youth as a volunteer at an E4 Live event, helping set up equipment and run cables. That single afternoon connected him to DSP, where he learned to shoot and edit documentary video. Through Get Creative!, he developed a portfolio of short films about Austin\'s East Side. His HIP project — a feature-length documentary on heritage preservation — earned community recognition and led to his current role as a stipend-supported media director producing E4Youth\'s public content.',
+      quote: 'I went from holding a camera at an event to directing the whole production. This ecosystem keeps opening doors.',
     },
   },
 ]
@@ -86,105 +87,114 @@ export default function EcosystemClient() {
     <>
       <HeroSection
         headline="The 4E Ecosystem — Engage, Educate, Empower, Elevate"
-        subheadline="Not a pipeline. A circle. E4Youth's ecosystem is built so young people can enter at any point, grow through creative technology, and return to strengthen the community that invested in them."
-        primaryCTA={{ text: 'See Our Experiences', href: '/programs' }}
+        subheadline="The 4E Ecosystem is E4Youth's circular youth development model. It's not a pipeline with a start and an end — it's a living system where each stage feeds the next, and the final stage feeds the first."
+        primaryCTA={{ text: 'See Our Experiences', href: '/experiences' }}
         secondaryCTA={{ text: 'Partner With Us', href: '/partner' }}
         gradient="from-purple via-primary-dark to-mint"
       />
 
-      {/* The Model */}
+      {/* Ecosystem Intro */}
       <section className="section-padding bg-white">
         <div className="max-w-3xl mx-auto text-center">
           <AnimatedSection>
             <p className="text-lg text-body leading-relaxed">
-              Most workforce programs move in a straight line: train, place, done. E4Youth works differently. Our 4E Ecosystem is circular — each stage feeds the next, and the final stage, Elevate, feeds right back into Engage.
+              Young people enter through <strong>Engage</strong>: community experiences that spark curiosity and connection. They build skills through <strong>Educate</strong>: structured digital media training and creative technology workshops. They produce real work through <strong>Empower</strong>: portfolio building, public presentations, and creative projects with community impact. And they step into leadership and paid opportunity through <strong>Elevate</strong>: stipend-supported cohorts, paid pilot placements, and employer-funded roles that are expanding across Austin.
             </p>
-            <p className="mt-4 text-body leading-relaxed">
-              This means the young person who once attended a community event as a curious 8th grader can return years later as a mentor, facilitator, or professional — bringing new participants into the same ecosystem that shaped them.
-            </p>
-            <p className="mt-4 text-body leading-relaxed">
-              Every E4Youth experience maps to one or more of these stages. Together, they create a living system that grows stronger with each generation.
+            <p className="mt-6 text-body leading-relaxed">
+              Here&apos;s what makes the model circular: Elevate feeds Engage. Alumni who reach Elevate return as mentors, facilitators, and community leaders — becoming the people who spark the next young person&apos;s entry into the ecosystem. The circle never stops turning.
             </p>
           </AnimatedSection>
         </div>
       </section>
 
-      {/* 4E Circle Visual */}
+      {/* Circle Visual */}
       <section className="section-padding bg-gray-50">
-        <div className="max-w-5xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {stages.map((stage, i) => (
-              <AnimatedSection key={stage.label} delay={i * 0.1}>
-                <div
-                  className={`bg-white rounded-2xl p-8 shadow-sm border border-gray-100 h-full relative overflow-hidden ${stage.isElevate ? 'ring-2 ring-offset-2 ring-emerald-400' : ''}`}
-                >
-                  <div className="absolute top-0 left-0 right-0 h-1" style={{ backgroundColor: stage.color }} />
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="w-14 h-14 rounded-2xl flex items-center justify-center" style={{ backgroundColor: `${stage.color}15` }}>
-                      <FontAwesomeIcon icon={stage.icon} className="w-6 h-6" style={{ color: stage.color }} />
-                    </div>
-                    <div>
-                      <h2 className="text-2xl font-display font-bold text-secondary">{stage.label}</h2>
-                      <p className="text-sm text-body">{stage.subtitle}</p>
-                    </div>
-                  </div>
-                  {stage.body.split('\n\n').map((paragraph, pi) => (
-                    <p key={pi} className="text-sm text-body leading-relaxed mb-3">{paragraph}</p>
-                  ))}
+        <div className="max-w-4xl mx-auto">
+          <AnimatedSection className="flex justify-center">
+            <EcosystemCircle size="large" />
+          </AnimatedSection>
+        </div>
+      </section>
 
-                  <div className="mt-4">
-                    <p className="text-sm font-semibold text-secondary mb-2">Key Experiences:</p>
-                    <ul className="space-y-1">
-                      {stage.experiences.map((exp) => (
-                        <li key={exp} className="text-sm text-body leading-relaxed">• {exp}</li>
-                      ))}
-                    </ul>
-                  </div>
+      {/* Stage Sections */}
+      {stages.map((stage, i) => (
+        <section key={stage.label} className={`section-padding ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}`}>
+          <div className="max-w-4xl mx-auto">
+            <AnimatedSection>
+              <div className={`rounded-2xl p-8 md:p-12 ${stage.isElevate ? 'bg-white shadow-lg ring-2 ring-offset-4' : 'bg-white shadow-sm border border-gray-100'}`} style={stage.isElevate ? { ringColor: stage.color } as React.CSSProperties : {}}>
+                {stage.isElevate && (
+                  <div className="absolute -top-0 left-0 right-0 h-1.5 rounded-t-2xl" style={{ backgroundColor: stage.color }} />
+                )}
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-4 h-4 rounded-full" style={{ backgroundColor: stage.color }} />
+                  <h2 className="text-2xl md:text-3xl font-display font-bold text-secondary">{stage.label} — {stage.subtitle}</h2>
+                </div>
 
-                  {stage.compensation && (
-                    <p className="mt-3 text-xs font-semibold" style={{ color: stage.color }}>{stage.compensation}</p>
-                  )}
+                {stage.body.split('\n\n').map((p, pi) => (
+                  <p key={pi} className="text-body leading-relaxed mb-4">{p}</p>
+                ))}
 
-                  {/* Story tile */}
-                  <div className="mt-6 p-4 rounded-xl" style={{ backgroundColor: `${stage.color}08`, borderLeft: `3px solid ${stage.color}` }}>
-                    <p className="text-xs font-semibold mb-1" style={{ color: stage.color }}>Where This Can Lead</p>
-                    <h3 className="text-sm font-display font-bold text-secondary mb-1">{stage.story.title}</h3>
-                    <p className="text-xs text-body leading-relaxed">{stage.story.description}</p>
-                    <span className="inline-block mt-2 px-2 py-0.5 text-xs font-semibold rounded-full" style={{ backgroundColor: `${stage.color}15`, color: stage.color }}>
-                      {stage.story.tag}
-                    </span>
+                <div className="mt-6">
+                  <p className="font-semibold text-secondary mb-3">Experiences in this stage:</p>
+                  <div className="space-y-3">
+                    {stage.experiences.map((exp) => (
+                      <div key={exp.name} className="pl-4 border-l-2" style={{ borderColor: stage.color }}>
+                        <p className="font-semibold text-secondary text-sm">{exp.name}</p>
+                        <p className="text-sm text-body">{exp.desc}</p>
+                      </div>
+                    ))}
                   </div>
                 </div>
-              </AnimatedSection>
-            ))}
-          </div>
 
-          {/* Arrow indicator: Elevate → Engage */}
-          <AnimatedSection className="text-center mt-8">
-            <div className="inline-flex items-center gap-2 px-6 py-3 bg-white rounded-full shadow-sm border border-gray-100">
-              <span className="text-sm font-semibold" style={{ color: '#7BDCB5' }}>Elevate</span>
-              <FontAwesomeIcon icon={faArrowRight} className="w-4 h-4 text-gray-400" />
-              <span className="text-sm font-semibold" style={{ color: '#4DB8FF' }}>Engage</span>
-              <span className="text-xs text-body ml-2">The circle continues</span>
-            </div>
-          </AnimatedSection>
-        </div>
-      </section>
+                <p className="mt-6 text-sm text-body"><strong>Outcomes:</strong> {stage.outcomes}</p>
+
+                {/* Story Tile */}
+                <div className="mt-8">
+                  <h3 className="text-lg font-display font-bold text-secondary mb-4">Where This Can Lead</h3>
+                  {stage.spotlight ? (
+                    <div className="p-6 rounded-xl" style={{ backgroundColor: `${stage.color}08`, borderLeft: `3px solid ${stage.color}` }}>
+                      <p className="text-xs font-semibold uppercase tracking-wider mb-2" style={{ color: stage.color }}>Featured Spotlight</p>
+                      <h4 className="text-lg font-display font-bold text-secondary mb-1">{stage.spotlight.name}</h4>
+                      <p className="text-sm italic text-body mb-3">{stage.spotlight.pathway}</p>
+                      <p className="text-sm text-body leading-relaxed mb-3">{stage.spotlight.fullStory}</p>
+                      <blockquote className="text-sm italic text-body border-l-2 pl-4" style={{ borderColor: stage.color }}>
+                        &ldquo;{stage.spotlight.quote}&rdquo;
+                      </blockquote>
+                    </div>
+                  ) : (
+                    <div className="p-6 rounded-xl" style={{ backgroundColor: `${stage.color}08`, borderLeft: `3px solid ${stage.color}` }}>
+                      <h4 className="text-base font-display font-bold text-secondary mb-1">{stage.story!.name}</h4>
+                      <p className="text-sm italic text-body mb-2">{stage.story!.pathway}</p>
+                      <blockquote className="text-sm italic text-body">
+                        &ldquo;{stage.story!.quote}&rdquo;
+                      </blockquote>
+                    </div>
+                  )}
+                </div>
+              </div>
+            </AnimatedSection>
+          </div>
+        </section>
+      ))}
 
       {/* The Circle Continues */}
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-gradient-to-br from-primary-dark to-purple text-white">
         <div className="max-w-3xl mx-auto text-center">
           <AnimatedSection>
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-secondary mb-6">The Circle Continues</h2>
-            <p className="text-lg text-body leading-relaxed">
-              The 4E Ecosystem isn&apos;t a one-time journey. It&apos;s a living system that strengthens with each participant, each cohort, each generation. When someone reaches the Elevate stage and comes back to invest in others, the whole ecosystem grows.
+            <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">The Circle Continues</h2>
+            <p className="text-lg text-white/90 leading-relaxed">
+              When Elevate participants return as mentors, facilitators, and community leaders, they become the engine of Engage. They&apos;re the faces young people see first. They&apos;re the proof that the pathway is real. And they&apos;re the reason the 4E Ecosystem isn&apos;t a program — it&apos;s a living, self-sustaining system.
             </p>
-            <p className="mt-4 text-body leading-relaxed">
-              This is what makes E4Youth different. We don&apos;t graduate people out. We build them in.
-            </p>
+            {/* Visual indicator */}
+            <div className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 rounded-full mt-8">
+              <span className="text-sm font-semibold" style={{ color: '#7BDCB5' }}>Elevate</span>
+              <FontAwesomeIcon icon={faArrowRight} className="w-4 h-4 text-white/60" />
+              <span className="text-sm font-semibold" style={{ color: '#4DB8FF' }}>Engage</span>
+              <span className="text-xs text-white/60 ml-2">The circle continues</span>
+            </div>
             <div className="flex flex-wrap justify-center gap-4 mt-8">
-              <Link href="/programs" className="btn-primary">See Our Experiences</Link>
-              <Link href="/impact" className="inline-flex items-center px-8 py-4 border-2 border-primary-dark text-primary-dark font-semibold rounded-full hover:bg-primary-dark hover:text-white transition-all duration-300">View Our Impact</Link>
+              <Link href="/experiences" className="btn-gold">See Our Experiences</Link>
+              <Link href="/impact" className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-secondary transition-all duration-300">View Our Impact</Link>
             </div>
           </AnimatedSection>
         </div>

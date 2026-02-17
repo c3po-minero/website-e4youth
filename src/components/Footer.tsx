@@ -15,7 +15,7 @@ export default function Footer() {
               <Image src="/images/logo-white.png" alt="E4 Youth" width={160} height={48} className="h-10 w-auto" />
             </Link>
             <p className="mt-4 text-gray-300 text-sm leading-relaxed">
-              Using the power of storytelling to unlock equity, workforce access, and opportunity across generations.
+              Building multi-generational pathways through creative technology. Engage, Educate, Empower, Elevate.
             </p>
             <div className="flex gap-4 mt-6">
               <a href="https://www.facebook.com/e4youth" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-gray-400 hover:text-primary transition-colors">
@@ -30,17 +30,18 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Programs */}
+          {/* Experiences */}
           <div>
-            <h3 className="font-display font-semibold text-lg mb-4">Programs</h3>
+            <h3 className="font-display font-semibold text-lg mb-4">Experiences</h3>
             <ul className="space-y-2 text-sm text-gray-300">
-              <li><Link href="/programs/dsp" className="hover:text-primary transition-colors">Digital Storytelling (DSP)</Link></li>
-              <li><Link href="/programs/get-creative" className="hover:text-primary transition-colors">Get Creative!</Link></li>
-              <li><Link href="/programs/hip" className="hover:text-primary transition-colors">Heritage & Innovation (HIP)</Link></li>
-              <li><Link href="/programs/wow" className="hover:text-primary transition-colors">What Once Was (WOW)</Link></li>
-              <li><Link href="/programs/wow-heritage-center" className="hover:text-primary transition-colors">WOW Heritage Center</Link></li>
-              <li><Link href="/programs/e4-live" className="hover:text-primary transition-colors">E4 Live</Link></li>
-              <li><Link href="/programs/e4-level-up" className="hover:text-primary transition-colors">E4 Level Up</Link></li>
+              <li><Link href="/experiences/ar-heritage-tours" className="hover:text-primary transition-colors">AR Heritage Tours</Link></li>
+              <li><Link href="/experiences/digital-storytelling" className="hover:text-primary transition-colors">Digital Storytelling (DSP)</Link></li>
+              <li><Link href="/experiences/get-creative" className="hover:text-primary transition-colors">Get Creative!</Link></li>
+              <li><Link href="/experiences/hip" className="hover:text-primary transition-colors">Heritage Innovation (HIP)</Link></li>
+              <li><Link href="/experiences/wow" className="hover:text-primary transition-colors">WOW — Workforce Opportunity</Link></li>
+              <li><Link href="/experiences/wow-heritage-center" className="hover:text-primary transition-colors">WOW Heritage Center</Link></li>
+              <li><Link href="/experiences/e4-live" className="hover:text-primary transition-colors">E4 Live</Link></li>
+              <li><Link href="/experiences/e4-level-up" className="hover:text-primary transition-colors">E4 Level Up</Link></li>
             </ul>
           </div>
 
@@ -48,12 +49,12 @@ export default function Footer() {
           <div>
             <h3 className="font-display font-semibold text-lg mb-4">Organization</h3>
             <ul className="space-y-2 text-sm text-gray-300">
-              <li><Link href="/about" className="hover:text-primary transition-colors">About Us</Link></li>
               <li><Link href="/ecosystem" className="hover:text-primary transition-colors">4E Ecosystem</Link></li>
-              <li><Link href="/impact" className="hover:text-primary transition-colors">Impact & Evaluation</Link></li>
-              <li><Link href="/stories" className="hover:text-primary transition-colors">Stories & Showcases</Link></li>
+              <li><Link href="/experiences" className="hover:text-primary transition-colors">Experiences</Link></li>
+              <li><Link href="/impact" className="hover:text-primary transition-colors">Impact</Link></li>
               <li><Link href="/partner" className="hover:text-primary transition-colors">Partner With Us</Link></li>
-              <li><Link href="/funders" className="hover:text-primary transition-colors">For Funders</Link></li>
+              <li><Link href="/about" className="hover:text-primary transition-colors">About Us</Link></li>
+              <li><Link href="/stories" className="hover:text-primary transition-colors">Stories</Link></li>
               <li><Link href="/contact" className="hover:text-primary transition-colors">Contact</Link></li>
             </ul>
           </div>

@@ -7,30 +7,30 @@ import { useRouter } from 'next/navigation'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronDown, faMagnifyingGlass, faTimes, faBars } from '@fortawesome/free-solid-svg-icons'
 
-const programs = [
-  { name: 'Digital Storytelling (DSP)', href: '/programs/dsp' },
-  { name: 'Get Creative!', href: '/programs/get-creative' },
-  { name: 'Heritage & Innovation (HIP)', href: '/programs/hip' },
-  { name: 'What Once Was (WOW)', href: '/programs/wow' },
-  { name: 'WOW Heritage Center', href: '/programs/wow-heritage-center' },
-  { name: 'E4 Live', href: '/programs/e4-live' },
-  { name: 'E4 Level Up', href: '/programs/e4-level-up' },
+const experiences = [
+  { name: 'AR Heritage Tours', href: '/experiences/ar-heritage-tours' },
+  { name: 'Digital Storytelling (DSP)', href: '/experiences/digital-storytelling' },
+  { name: 'Get Creative!', href: '/experiences/get-creative' },
+  { name: 'Heritage Innovation (HIP)', href: '/experiences/hip' },
+  { name: 'WOW — Workforce Opportunity', href: '/experiences/wow' },
+  { name: 'WOW Heritage Center', href: '/experiences/wow-heritage-center' },
+  { name: 'E4 Live', href: '/experiences/e4-live' },
+  { name: 'E4 Level Up', href: '/experiences/e4-level-up' },
 ]
 
 const navLinks = [
   { name: 'Home', href: '/' },
-  { name: 'Ecosystem', href: '/ecosystem' },
-  { name: 'Experiences', href: '/programs', children: programs },
+  { name: '4E Ecosystem', href: '/ecosystem' },
+  { name: 'Experiences', href: '/experiences', children: experiences },
   { name: 'Impact', href: '/impact' },
-  { name: 'Stories', href: '/stories' },
-  { name: 'Partners', href: '/partner' },
+  { name: 'Partner', href: '/partner' },
   { name: 'About', href: '/about' },
   { name: 'Contact', href: '/contact' },
 ]
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false)
-  const [programsOpen, setProgramsOpen] = useState(false)
+  const [experiencesOpen, setExperiencesOpen] = useState(false)
   const [searchOpen, setSearchOpen] = useState(false)
   const [searchQuery, setSearchQuery] = useState('')
   const router = useRouter()
@@ -123,7 +123,7 @@ export default function Header() {
                 type="text"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="Search programs, stories, and more..."
+                placeholder="Search experiences, stories, and more..."
                 className="w-full pl-11 pr-4 py-3 rounded-xl border border-gray-200 focus:border-primary-dark focus:ring-2 focus:ring-primary/20 outline-none transition-all"
                 autoFocus
               />
@@ -144,14 +144,14 @@ export default function Header() {
                 {link.children ? (
                   <>
                     <button
-                      onClick={() => setProgramsOpen(!programsOpen)}
+                      onClick={() => setExperiencesOpen(!experiencesOpen)}
                       className="w-full flex items-center justify-between py-3 text-secondary font-medium"
-                      aria-expanded={programsOpen}
+                      aria-expanded={experiencesOpen}
                     >
                       {link.name}
-                      <FontAwesomeIcon icon={faChevronDown} className={`w-3 h-3 transition-transform ${programsOpen ? 'rotate-180' : ''}`} />
+                      <FontAwesomeIcon icon={faChevronDown} className={`w-3 h-3 transition-transform ${experiencesOpen ? 'rotate-180' : ''}`} />
                     </button>
-                    {programsOpen && (
+                    {experiencesOpen && (
                       <div className="pl-4 space-y-1">
                         {link.children.map((child) => (
                           <Link

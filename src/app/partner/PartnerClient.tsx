@@ -5,68 +5,62 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHeart, faGraduationCap, faBolt, faRocket } from '@fortawesome/free-solid-svg-icons'
 import HeroSection from '@/components/HeroSection'
 import AnimatedSection from '@/components/AnimatedSection'
+import EcosystemCircle from '@/components/EcosystemCircle'
 
 const partnerStages = [
   {
     title: 'Engage Partners',
-    subtitle: 'Community organizations, schools, neighborhood groups, cultural venues',
+    subtitle: 'Schools, community organizations, cultural institutions, neighborhood associations',
     icon: faHeart,
     color: '#4DB8FF',
-    body: 'Engage Partners help us reach young people and families. You host events, connect us to communities, and create the first touchpoints that bring people into the ecosystem. If you run a school, community center, church, or cultural organization in Austin — you\'re an Engage Partner.',
+    body: 'Engage partners help E4Youth reach young people and communities who haven\'t yet connected with the ecosystem. They host AR Heritage Tours, bring students to community showcases, share opportunities with their networks, and open doors to new neighborhoods and populations.',
     items: [
-      'Hosting AR Heritage Tours or E4 Live events at your venue',
-      'Co-promoting community showcases and public programs',
-      'Connecting youth and families to E4Youth experiences',
-      'Participating in community advisory and co-design sessions',
+      'Host an AR Heritage Tour at your school or organization',
+      'Co-promote community showcases and public events',
+      'Refer young people to E4Youth experiences',
+      'Provide space for community engagement programming',
     ],
   },
   {
     title: 'Educate Partners',
-    subtitle: 'Technology providers, curriculum collaborators, educational institutions',
+    subtitle: 'Technology providers, curriculum partners, educational institutions, media organizations',
     icon: faGraduationCap,
     color: '#9B51E0',
-    body: 'Educate Partners invest in skill-building. You provide tools, platforms, expertise, and curriculum support that help E4Youth participants develop real, marketable skills. If you\'re a tech company, school district, university, or education nonprofit — you\'re an Educate Partner.',
+    body: 'Educate partners strengthen the learning experiences that build real skills. They provide technology, curriculum expertise, professional mentorship, and access to industry-standard tools and platforms.',
     items: [
-      'Providing software, hardware, or platform access for learning experiences',
-      'Co-developing curriculum tied to industry-relevant skills',
-      'Guest instruction, workshops, or mentorship sessions',
-      'Supporting evaluation and assessment of learning outcomes',
+      'Provide technology, software, or equipment for learning experiences',
+      'Co-develop curriculum with E4Youth facilitators',
+      'Offer guest instruction or professional mentorship',
+      'Host workshops or lab sessions at your facility',
     ],
   },
   {
     title: 'Empower Partners',
-    subtitle: 'Project sponsors, venue partners, media and exhibition partners',
+    subtitle: 'Project sponsors, exhibition venues, creative agencies, community organizations',
     icon: faBolt,
     color: '#FCB900',
-    body: 'Empower Partners create platforms for participant work to be seen. You sponsor exhibitions, host installations, publish youth work, and create opportunities for participants to build public-facing portfolios. If you operate a gallery, media outlet, event space, or public venue — you\'re an Empower Partner.',
+    body: 'Empower partners amplify the work young people create. They provide venues for showcases, sponsor creative projects, host portfolio reviews, and connect participants with real audiences and professional feedback.',
     items: [
-      'Sponsoring or hosting public exhibitions and showcases',
-      'Publishing or featuring participant work in your channels',
-      'Providing venue space for community installations',
-      'Co-producing public programs and events',
+      'Host or sponsor a portfolio showcase or creative exhibition',
+      'Provide professional portfolio review and feedback',
+      'Commission creative projects from E4Youth participants',
+      'Offer presentation opportunities at industry events',
     ],
   },
   {
     title: 'Elevate Partners',
-    subtitle: 'Employers, funders, foundations, workforce development organizations',
+    subtitle: 'Employers, workforce development organizations, funders, industry leaders',
     icon: faRocket,
     color: '#7BDCB5',
-    body: 'Elevate Partners close the loop. You hire emerging talent, fund professional development, and invest in the long-term sustainability of the ecosystem. When you hire from E4Youth, you\'re not just filling a role — you\'re validating the entire pipeline. If you\'re an employer, foundation, or workforce organization — you\'re an Elevate Partner.',
+    body: 'Elevate partners create the paid pathways that make the ecosystem sustainable. They hire E4Youth participants, fund stipend-supported positions, create employer-funded roles, and invest in the long-term career trajectory of emerging creative technology professionals.',
     items: [
-      'Hiring E4Youth alumni and participants for paid positions',
-      'Funding stipends, professional development, and program expansion',
-      'Sponsoring E4 Level Up cohorts and advanced experiences',
-      'Investing in evaluation, research, and ecosystem growth',
+      'Create employer-funded positions for E4Youth talent',
+      'Host paid pilot placements at your organization',
+      'Fund stipend-supported cohort positions',
+      'Join the E4 Level Up employer network',
+      'Invest in the expansion of employer-funded pathways across Austin',
     ],
   },
-]
-
-const partnershipModels = [
-  'Program Sponsorship — Fund a specific experience, cohort, or initiative',
-  'In-Kind Support — Provide tools, space, expertise, or professional development',
-  'Employer Partnership — Hire from the E4Youth ecosystem and invest in workforce pipelines',
-  'Multi-Year Investment — Support organizational growth, evaluation, and long-term sustainability',
-  'Co-Design Collaboration — Build new programs or experiences together',
 ]
 
 export default function PartnerClient() {
@@ -74,27 +68,29 @@ export default function PartnerClient() {
     <>
       <HeroSection
         headline="Partner With E4Youth"
-        subheadline="E4Youth partners with schools, employers, funders, and community organizations to expand access to creative learning and opportunity. Every partnership maps to our 4E Ecosystem — so your investment connects directly to outcomes."
-        primaryCTA={{ text: 'Explore Partnership Options', href: '#4e-partners' }}
-        secondaryCTA={{ text: 'Start a Conversation', href: '/contact' }}
+        subheadline="Schools, workforce and industry partners, and funders all have a role in the 4E Ecosystem. Whether you're looking to connect with emerging talent, support community impact, or invest in youth workforce development — there's a partnership model built for you."
+        primaryCTA={{ text: 'Become a Partner', href: '/contact' }}
+        secondaryCTA={{ text: 'Contact Us', href: '/contact' }}
         gradient="from-primary-dark via-gold to-purple"
       />
 
-      {/* 4E Circle intro */}
+      {/* The Model */}
       <section className="section-padding bg-white">
-        <div className="max-w-3xl mx-auto text-center">
+        <div className="max-w-4xl mx-auto text-center">
           <AnimatedSection>
-            <span className="inline-block px-4 py-1.5 bg-purple/10 text-purple font-semibold text-sm rounded-full mb-4">The 4E Ecosystem</span>
             <h2 className="text-3xl md:text-4xl font-display font-bold text-secondary mb-4">The 4E Circle — Where Partners Fit</h2>
-            <p className="text-body leading-relaxed">
-              Every E4Youth partner plays a role in the ecosystem. Whether you&apos;re bringing young people in the door, supporting skill-building, sponsoring real-world projects, or hiring emerging talent — your contribution maps to a specific stage and creates measurable impact.
+            <p className="text-body leading-relaxed mb-10">
+              The 4E Ecosystem works because it&apos;s supported at every stage by partners who bring resources, expertise, access, and opportunity. Here&apos;s how different partners connect:
             </p>
+          </AnimatedSection>
+          <AnimatedSection className="flex justify-center" delay={0.2}>
+            <EcosystemCircle />
           </AnimatedSection>
         </div>
       </section>
 
       {/* Partner stages */}
-      <section id="4e-partners" className="section-padding bg-gray-50">
+      <section className="section-padding bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {partnerStages.map((stage, i) => (
@@ -110,7 +106,7 @@ export default function PartnerClient() {
                     </div>
                   </div>
                   <p className="text-sm text-body leading-relaxed mb-4">{stage.body}</p>
-                  <p className="text-sm font-semibold text-secondary mb-2">What this looks like:</p>
+                  <p className="text-sm font-semibold text-secondary mb-2">How to partner at this stage:</p>
                   <ul className="space-y-1">
                     {stage.items.map((item) => (
                       <li key={item} className="text-sm text-body leading-relaxed">• {item}</li>
@@ -123,37 +119,19 @@ export default function PartnerClient() {
         </div>
       </section>
 
-      {/* Partnership Models */}
-      <section className="section-padding bg-white">
-        <div className="max-w-3xl mx-auto">
-          <AnimatedSection className="text-center mb-10">
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-secondary mb-4">Partnership Models</h2>
-            <p className="text-body leading-relaxed">
-              There are many ways to partner with E4Youth. We work with organizations of all sizes and design partnerships that align with your mission and capacity.
-            </p>
-          </AnimatedSection>
-          <AnimatedSection>
-            <ul className="space-y-3">
-              {partnershipModels.map((model) => (
-                <li key={model} className="flex items-start gap-3 text-body">
-                  <span className="text-primary-dark mt-1">•</span>
-                  <span>{model}</span>
-                </li>
-              ))}
-            </ul>
-          </AnimatedSection>
-        </div>
-      </section>
-
       {/* CTA */}
       <section className="section-padding bg-gradient-to-r from-gold to-purple text-white">
         <div className="max-w-4xl mx-auto text-center">
           <AnimatedSection>
             <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">Ready to Partner?</h2>
-            <p className="text-lg text-white/90 mb-8">Let us explore how we can work together to expand access to creative learning and opportunity.</p>
-            <Link href="/contact" className="inline-flex items-center px-8 py-4 bg-white text-secondary font-bold rounded-full hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5">
-              Start a Conversation
-            </Link>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link href="/contact" className="inline-flex items-center px-8 py-4 bg-white text-secondary font-bold rounded-full hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5">
+                Become a Partner
+              </Link>
+              <Link href="/contact" className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-secondary transition-all duration-300">
+                Contact Us
+              </Link>
+            </div>
           </AnimatedSection>
         </div>
       </section>
