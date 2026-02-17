@@ -1,5 +1,6 @@
 'use client'
 import { useState, useEffect, useRef } from 'react'
+import { createPortal } from 'react-dom'
 import Link from 'next/link'
 import Search from './Search'
 
@@ -59,8 +60,10 @@ const mobileLinks = [
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false)
   const [hidden, setHidden] = useState(false)
+  const [mounted, setMounted] = useState(false)
   const lastScrollY = useRef(0)
-  const menuRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => { setMounted(true) }, [])
 
   useEffect(() => {
     document.body.style.overflow = mobileOpen ? 'hidden' : ''
@@ -82,86 +85,105 @@ export default function Header() {
   }, [])
 
   useEffect(() => {
-    const handleClick = (e: MouseEvent) => {
-      if (menuRef.current && !menuRef.current.contains(e.target as Node)) {
-        setMobileOpen(false)
-      }
-    }
     const handleKey = (e: KeyboardEvent) => {
       if (e.key === 'Escape') setMobileOpen(false)
     }
-    document.addEventListener('click', handleClick)
     document.addEventListener('keydown', handleKey)
-    return () => {
-      document.removeEventListener('click', handleClick)
-      document.removeEventListener('keydown', handleKey)
-    }
+    return () => document.removeEventListener('keydown', handleKey)
   }, [])
 
+  const mobileMenu = (
+    <>
+      {mobileOpen && (
+        <div
+          className="mobile-menu-overlay"
+          onClick={() => setMobileOpen(false)}
+          aria-hidden="true"
+        />
+      )}
+      <div
+        className={`mobile-menu${mobileOpen ? ' active' : ''}`}
+        role="navigation"
+        aria-label="Mobile navigation"
+      >
+        <div className="mobile-menu-header">
+          <span style={{ color: 'var(--secondary)', fontWeight: 700, fontSize: '1.1rem' }}>Menu</span>
+          <button
+            onClick={() => setMobileOpen(false)}
+            aria-label="Close menu"
+            style={{ background: 'none', border: 'none', fontSize: '1.5rem', cursor: 'pointer', color: 'var(--secondary)', padding: '4px 8px' }}
+          >
+            <i className="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        {mobileLinks.map((link) => (
+          <Link href={link.href} className="mobile-nav-link" key={link.href + link.label} onClick={() => setMobileOpen(false)}>
+            {link.label}
+          </Link>
+        ))}
+      </div>
+    </>
+  )
+
   return (
-    <header className={`header${hidden ? ' header-hidden' : ''}`} role="banner">
-      <div className="container">
-        <div className="header-content" ref={menuRef}>
-          <div className="logo">
-            <Link href="/" aria-label="E4 Youth Home">
-              <img
-                src="https://e4youth.org/wp-content/uploads/2024/06/Copy-of-e4-full-white-logo.png"
-                alt="E4 Youth Logo"
-                width={160}
-                height={40}
-              />
-            </Link>
-          </div>
-
-          <nav className="nav" aria-label="Main navigation">
-            {navItems.map((item) => (
-              <div className="nav-item" key={item.label}>
-                <Link href={item.href} className="nav-link">
-                  {item.label}
-                  {item.dropdown && <ChevronDown />}
-                </Link>
-                {item.dropdown && (
-                  <div className="nav-dropdown">
-                    {item.dropdown.map((d) => (
-                      <Link href={d.href} className="dropdown-link" key={d.href}>{d.label}</Link>
-                    ))}
-                  </div>
-                )}
-              </div>
-            ))}
-          </nav>
-
-          <button
-            className="search-toggle"
-            onClick={() => {
-              const event = new KeyboardEvent('keydown', { key: 'k', metaKey: true })
-              window.dispatchEvent(event)
-            }}
-            aria-label="Search the site (Ctrl+K)"
-          >
-            <i className="fa-solid fa-magnifying-glass"></i>
-          </button>
-
-          <button
-            className="mobile-menu-toggle"
-            onClick={() => setMobileOpen(!mobileOpen)}
-            aria-expanded={mobileOpen}
-            aria-label="Toggle navigation menu"
-            style={{ zIndex: 10000, position: 'relative' }}
-          >
-            <i className={`fa-solid ${mobileOpen ? 'fa-xmark' : 'fa-bars'}`}></i>
-          </button>
-
-          <div className={`mobile-menu${mobileOpen ? ' active' : ''}`} role="navigation" aria-label="Mobile navigation">
-            {mobileLinks.map((link) => (
-              <Link href={link.href} className="mobile-nav-link" key={link.href + link.label} onClick={() => setMobileOpen(false)}>
-                {link.label}
+    <>
+      <header className={`header${hidden && !mobileOpen ? ' header-hidden' : ''}`} role="banner">
+        <div className="container">
+          <div className="header-content">
+            <div className="logo">
+              <Link href="/" aria-label="E4 Youth Home">
+                <img
+                  src="https://e4youth.org/wp-content/uploads/2024/06/Copy-of-e4-full-white-logo.png"
+                  alt="E4 Youth Logo"
+                  width={160}
+                  height={40}
+                />
               </Link>
-            ))}
+            </div>
+
+            <nav className="nav" aria-label="Main navigation">
+              {navItems.map((item) => (
+                <div className="nav-item" key={item.label}>
+                  <Link href={item.href} className="nav-link">
+                    {item.label}
+                    {item.dropdown && <ChevronDown />}
+                  </Link>
+                  {item.dropdown && (
+                    <div className="nav-dropdown">
+                      {item.dropdown.map((d) => (
+                        <Link href={d.href} className="dropdown-link" key={d.href}>{d.label}</Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ))}
+            </nav>
+
+            <button
+              className="search-toggle"
+              onClick={() => {
+                const event = new KeyboardEvent('keydown', { key: 'k', metaKey: true })
+                window.dispatchEvent(event)
+              }}
+              aria-label="Search the site (Ctrl+K)"
+            >
+              <i className="fa-solid fa-magnifying-glass"></i>
+            </button>
+
+            <button
+              className="mobile-menu-toggle"
+              onClick={(e) => { e.stopPropagation(); setMobileOpen(!mobileOpen) }}
+              aria-expanded={mobileOpen}
+              aria-label="Toggle navigation menu"
+              style={{ zIndex: 10000, position: 'relative' }}
+            >
+              <i className={`fa-solid ${mobileOpen ? 'fa-xmark' : 'fa-bars'}`}></i>
+            </button>
           </div>
         </div>
-      </div>
-      <Search />
-    </header>
+        <Search />
+      </header>
+      {mounted && createPortal(mobileMenu, document.body)}
+    </>
   )
 }
