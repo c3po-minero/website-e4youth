@@ -1,3 +1,5 @@
+import Image from 'next/image'
+import FaIcon from '@/components/FaIcon'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Hero from '@/components/Hero'
@@ -23,7 +25,7 @@ export default function PartnerPage() {
             </ul>
           </div>
           <div>
-            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=600&fit=crop" alt="Diverse group collaborating" className="card-image" width={800} height={600} loading="lazy" />
+            <Image src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=600&fit=crop" alt="Diverse group collaborating" className="card-image" width={800} height={600} loading="lazy" />
           </div>
         </div>
         <div className="text-center mt-lg"><Link href="/impact" className="btn btn-accent">See Our Community Impact Results</Link></div>
@@ -38,7 +40,7 @@ export default function PartnerPage() {
             { icon: 'fa-solid fa-coins', title: 'Funding and Foundation Partnerships', desc: 'Program support, evaluation development, field-building initiatives', partners: ['Austin Community Foundation', 'National Arts & Humanities Foundations', 'Local Business & Corporate Funders'] },
           ].map(c => (
             <div className="card" key={c.title}>
-              <span className="card-icon"><i className={c.icon}></i></span>
+              <span className="card-icon"><FaIcon iconClass={c.icon} /></span>
               <h3 className="card-title">{c.title}</h3>
               <p className="card-description">{c.desc}</p>
               <strong>Current Partners:</strong>
@@ -64,7 +66,7 @@ export default function PartnerPage() {
             { icon: 'fa-solid fa-compass', title: 'Step 1: Partnership Exploration', desc: '1-2 months — Initial meetings to explore alignment and mutual interest.' },
             { icon: 'fa-solid fa-seedling', title: 'Step 2: Pilot Project Development', desc: '3-6 months — Small-scale collaboration to test the partnership model.' },
             { icon: 'fa-solid fa-handshake', title: 'Step 3: Formal Partnership Agreement', desc: 'Ongoing with annual review — Collaborative development of structure and expectations.' },
-          ].map(c => <div className="card" key={c.title}><span className="card-icon"><i className={c.icon}></i></span><h3 className="card-title">{c.title}</h3><p className="card-description">{c.desc}</p></div>)}
+          ].map(c => <div className="card" key={c.title}><span className="card-icon"><FaIcon iconClass={c.icon} /></span><h3 className="card-title">{c.title}</h3><p className="card-description">{c.desc}</p></div>)}
         </div>
       </Section>
 

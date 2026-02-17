@@ -1,3 +1,4 @@
+import FaIcon from '@/components/FaIcon'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Hero from '@/components/Hero'
@@ -19,9 +20,9 @@ export default function GetCreativePage() {
 
       <Section icon="fa-solid fa-tools" title="Professional Skills & Industry Tools">
         <div className="grid grid-3">
-          <div className="card"><span className="card-icon"><i className="fa-solid fa-laptop-code"></i></span><h3>Technical Skills</h3><ul><li>Adobe Creative Suite mastery</li><li>Web development basics</li><li>Video production &amp; editing</li><li>Digital photography</li></ul></div>
-          <div className="card"><span className="card-icon"><i className="fa-solid fa-chart-bar"></i></span><h3>Professional Skills</h3><ul><li>Client communication</li><li>Project management</li><li>Portfolio presentation</li><li>Interview skills</li></ul></div>
-          <div className="card"><span className="card-icon"><i className="fa-solid fa-handshake"></i></span><h3>Career Pathways</h3><ul><li>Creative industry connections</li><li>Internship opportunities</li><li>College program alignment</li><li>Professional mentorship</li></ul></div>
+          <div className="card"><span className="card-icon"><FaIcon iconClass="fa-solid fa-laptop-code" /></span><h3>Technical Skills</h3><ul><li>Adobe Creative Suite mastery</li><li>Web development basics</li><li>Video production &amp; editing</li><li>Digital photography</li></ul></div>
+          <div className="card"><span className="card-icon"><FaIcon iconClass="fa-solid fa-chart-bar" /></span><h3>Professional Skills</h3><ul><li>Client communication</li><li>Project management</li><li>Portfolio presentation</li><li>Interview skills</li></ul></div>
+          <div className="card"><span className="card-icon"><FaIcon iconClass="fa-solid fa-handshake" /></span><h3>Career Pathways</h3><ul><li>Creative industry connections</li><li>Internship opportunities</li><li>College program alignment</li><li>Professional mentorship</li></ul></div>
         </div>
       </Section>
 

@@ -1,3 +1,5 @@
+import Image from 'next/image'
+import FaIcon from '@/components/FaIcon'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Hero from '@/components/Hero'
@@ -17,15 +19,15 @@ export default function ProgramsPage() {
             { icon: 'fa-solid fa-chart-line', title: 'Progressive Skill Building', desc: 'Each program level prepares participants for the next stage of learning and opportunity' },
             { icon: 'fa-solid fa-users', title: 'Community Connection', desc: 'Older participants mentor younger ones, creating sustainable learning communities' },
             { icon: 'fa-solid fa-briefcase', title: 'Real-World Application', desc: 'Every program connects to authentic opportunities for growth and contribution' },
-          ].map(c => <div className="card" key={c.title}><span className="card-icon"><i className={c.icon}></i></span><h3 className="card-title">{c.title}</h3><p className="card-description">{c.desc}</p></div>)}
+          ].map(c => <div className="card" key={c.title}><span className="card-icon"><FaIcon iconClass={c.icon} /></span><h3 className="card-title">{c.title}</h3><p className="card-description">{c.desc}</p></div>)}
         </div>
       </Section>
 
       <Section icon="fa-solid fa-map" title="Three Core Programs, Endless Possibilities" id="program-pathways">
         <div className="grid grid-3">
           <div className="card">
-            <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&h=600&fit=crop" alt="Young students in digital storytelling workshop" className="card-image" width={800} height={600} loading="lazy" />
-            <span className="card-icon"><i className="fa-solid fa-seedling"></i></span>
+            <Image src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&h=600&fit=crop" alt="Young students in digital storytelling workshop" className="card-image" width={800} height={600} loading="lazy" />
+            <span className="card-icon"><FaIcon iconClass="fa-solid fa-seedling" /></span>
             <h3 className="card-title">Foundation Level: Digital Storytelling Program (DSP)</h3>
             <p><strong>Ages:</strong> Elementary and middle school students, families</p>
             <p><strong>Duration:</strong> 6-8 week sessions, ongoing workshops</p>
@@ -34,8 +36,8 @@ export default function ProgramsPage() {
             <div className="card-cta"><Link href="/programs/dsp" className="btn btn-primary">Learn More About DSP</Link></div>
           </div>
           <div className="card">
-            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=600&fit=crop" alt="High school students in creative workshop" className="card-image" width={800} height={600} loading="lazy" />
-            <span className="card-icon"><i className="fa-solid fa-palette"></i></span>
+            <Image src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=600&fit=crop" alt="High school students in creative workshop" className="card-image" width={800} height={600} loading="lazy" />
+            <span className="card-icon"><FaIcon iconClass="fa-solid fa-palette" /></span>
             <h3 className="card-title">Development Level: Get Creative!</h3>
             <p><strong>Ages:</strong> High school students</p>
             <p><strong>Duration:</strong> Semester-long programs, summer intensives</p>
@@ -44,8 +46,8 @@ export default function ProgramsPage() {
             <div className="card-cta"><Link href="/programs/get-creative" className="btn btn-primary">Explore Get Creative!</Link></div>
           </div>
           <div className="card">
-            <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=800&h=600&fit=crop" alt="College students leading community projects" className="card-image" width={800} height={600} loading="lazy" />
-            <span className="card-icon"><i className="fa-solid fa-mountain"></i></span>
+            <Image src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=800&h=600&fit=crop" alt="College students leading community projects" className="card-image" width={800} height={600} loading="lazy" />
+            <span className="card-icon"><FaIcon iconClass="fa-solid fa-mountain" /></span>
             <h3 className="card-title">Leadership Level: Heritage &amp; Innovation Pathways (HIP)</h3>
             <p><strong>Ages:</strong> College students and emerging adults</p>
             <p><strong>Duration:</strong> Year-long commitments, project-based work</p>
@@ -81,7 +83,7 @@ export default function ProgramsPage() {
             { icon: 'fa-solid fa-handshake', title: 'For Community Partners', steps: ['Explore collaboration opportunities', 'Meet with staff to discuss partnership models', 'Develop agreement that benefits all parties', 'Implement partnership with shared learning'] },
           ].map(c => (
             <div className="card" key={c.title}>
-              <span className="card-icon"><i className={c.icon}></i></span>
+              <span className="card-icon"><FaIcon iconClass={c.icon} /></span>
               <h3 className="card-title">{c.title}</h3>
               <ol style={{ textAlign: 'left', paddingLeft: '1.5rem', lineHeight: 1.6 }}>
                 {c.steps.map(s => <li key={s}>{s}</li>)}

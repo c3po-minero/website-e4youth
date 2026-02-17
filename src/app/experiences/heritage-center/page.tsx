@@ -1,3 +1,5 @@
+import Image from 'next/image'
+import FaIcon from '@/components/FaIcon'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Hero from '@/components/Hero'
@@ -12,10 +14,10 @@ export default function HeritageCenterPage() {
 
       <Section icon="fa-solid fa-house-chimney" title="More Than a Building - A Community Home" lead="The WOW Heritage Center operates as both a neighborhood gathering place and a specialized hub for community storytelling work.">
         <div className="grid grid-2">
-          <div className="card"><span className="card-icon"><i className="fa-solid fa-users"></i></span><h3 className="card-title">Community Gathering Space</h3><p className="card-description">Free, accessible venue for neighborhood meetings, celebrations, and informal connection</p></div>
-          <div className="card"><span className="card-icon"><i className="fa-solid fa-video"></i></span><h3 className="card-title">Storytelling Production Hub</h3><p className="card-description">Professional-grade equipment and technical support for community story creation</p></div>
-          <div className="card"><span className="card-icon"><i className="fa-solid fa-graduation-cap"></i></span><h3 className="card-title">Learning &amp; Workshop Center</h3><p className="card-description">Regular programming in digital literacy, creative skills, and community engagement</p></div>
-          <div className="card"><span className="card-icon"><i className="fa-solid fa-book"></i></span><h3 className="card-title">Community Archive &amp; Resource Center</h3><p className="card-description">Physical and digital archives accessible to community members and researchers</p></div>
+          <div className="card"><span className="card-icon"><FaIcon iconClass="fa-solid fa-users" /></span><h3 className="card-title">Community Gathering Space</h3><p className="card-description">Free, accessible venue for neighborhood meetings, celebrations, and informal connection</p></div>
+          <div className="card"><span className="card-icon"><FaIcon iconClass="fa-solid fa-video" /></span><h3 className="card-title">Storytelling Production Hub</h3><p className="card-description">Professional-grade equipment and technical support for community story creation</p></div>
+          <div className="card"><span className="card-icon"><FaIcon iconClass="fa-solid fa-graduation-cap" /></span><h3 className="card-title">Learning &amp; Workshop Center</h3><p className="card-description">Regular programming in digital literacy, creative skills, and community engagement</p></div>
+          <div className="card"><span className="card-icon"><FaIcon iconClass="fa-solid fa-book" /></span><h3 className="card-title">Community Archive &amp; Resource Center</h3><p className="card-description">Physical and digital archives accessible to community members and researchers</p></div>
         </div>
       </Section>
 
@@ -28,16 +30,16 @@ export default function HeritageCenterPage() {
             { img: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&h=600&fit=crop', title: 'Kitchen & Hospitality Space', desc: 'Full kitchen facilities for event catering, cooking workshops, and community meals.' },
             { img: 'https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=800&h=600&fit=crop', title: 'Flexible Workshop Rooms', desc: 'Two rooms that can be combined or separate. 12-15 people each. Moveable furniture.' },
             { img: 'https://images.unsplash.com/photo-1541746972996-4e0b0f93e586?w=800&h=600&fit=crop', title: 'Outdoor Community Space', desc: 'Covered pavilion, garden areas, performance space, children\'s play area.' },
-          ].map(c => <div className="card" key={c.title}><img src={c.img} alt={c.title} className="card-image" width={800} height={600} loading="lazy" /><h3 className="card-title">{c.title}</h3><p className="card-description">{c.desc}</p></div>)}
+          ].map(c => <div className="card" key={c.title}><Image src={c.img} alt={c.title} className="card-image" width={800} height={600} loading="lazy" /><h3 className="card-title">{c.title}</h3><p className="card-description">{c.desc}</p></div>)}
         </div>
       </Section>
 
       <Section icon="fa-solid fa-key" title="Your Community Space - Use It!" lead="The WOW Heritage Center prioritizes community use and keeps rental costs low to ensure accessibility." id="rental">
         <div className="grid grid-2">
-          <div className="card"><span className="card-icon"><i className="fa-solid fa-users"></i></span><h3 className="card-title">Community Organization Meetings</h3><p className="card-description"><strong>Rate:</strong> Free for registered community organizations<br /><strong>Includes:</strong> Basic room setup, AV equipment, kitchen access</p></div>
-          <div className="card"><span className="card-icon"><i className="fa-solid fa-cake-candles"></i></span><h3 className="card-title">Private Community Events</h3><p className="card-description"><strong>Rate:</strong> $50-150 sliding scale<br /><strong>Includes:</strong> Space rental, basic setup, kitchen access</p></div>
-          <div className="card"><span className="card-icon"><i className="fa-solid fa-graduation-cap"></i></span><h3 className="card-title">Nonprofit &amp; Educational Events</h3><p className="card-description"><strong>Rate:</strong> $25-100 sliding scale<br /><strong>Includes:</strong> Space, AV support, promotional support</p></div>
-          <div className="card"><span className="card-icon"><i className="fa-solid fa-briefcase"></i></span><h3 className="card-title">Small Business &amp; Professional Use</h3><p className="card-description"><strong>Rate:</strong> Market rate ($150-300)<br /><strong>Includes:</strong> Professional space rental with full AV and hospitality support</p></div>
+          <div className="card"><span className="card-icon"><FaIcon iconClass="fa-solid fa-users" /></span><h3 className="card-title">Community Organization Meetings</h3><p className="card-description"><strong>Rate:</strong> Free for registered community organizations<br /><strong>Includes:</strong> Basic room setup, AV equipment, kitchen access</p></div>
+          <div className="card"><span className="card-icon"><FaIcon iconClass="fa-solid fa-cake-candles" /></span><h3 className="card-title">Private Community Events</h3><p className="card-description"><strong>Rate:</strong> $50-150 sliding scale<br /><strong>Includes:</strong> Space rental, basic setup, kitchen access</p></div>
+          <div className="card"><span className="card-icon"><FaIcon iconClass="fa-solid fa-graduation-cap" /></span><h3 className="card-title">Nonprofit &amp; Educational Events</h3><p className="card-description"><strong>Rate:</strong> $25-100 sliding scale<br /><strong>Includes:</strong> Space, AV support, promotional support</p></div>
+          <div className="card"><span className="card-icon"><FaIcon iconClass="fa-solid fa-briefcase" /></span><h3 className="card-title">Small Business &amp; Professional Use</h3><p className="card-description"><strong>Rate:</strong> Market rate ($150-300)<br /><strong>Includes:</strong> Professional space rental with full AV and hospitality support</p></div>
         </div>
         <div className="text-center mt-lg"><Link href="#contact" className="btn btn-primary">Reserve Community Space</Link></div>
       </Section>
@@ -51,7 +53,7 @@ export default function HeritageCenterPage() {
             <p><strong>Monday-Friday:</strong> 10:00AM - 8:00PM<br /><strong>Saturday:</strong> 9:00AM - 6:00PM<br /><strong>Sunday:</strong> 12:00PM - 6:00PM</p>
           </div>
           <div>
-            <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?w=800&h=600&fit=crop" alt="WOW Heritage Center" style={{ width: '100%', borderRadius: 'var(--radius-lg)', marginBottom: 'var(--spacing-md)' }} />
+            <Image src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?w=800&h=600&fit=crop" alt="WOW Heritage Center" width={800} height={600} style={{ width: '100%', borderRadius: 'var(--radius-lg)', marginBottom: 'var(--spacing-md)' }} />
             <h4>Contact &amp; Questions</h4>
             <p><strong>General:</strong> heritage@e4youth.org<br /><strong>Space Rental:</strong> events@e4youth.org<br /><strong>Archive:</strong> archive@e4youth.org<br /><strong>Volunteering:</strong> volunteer@e4youth.org</p>
             <div className="btn-group mt-md"><Link href="/contact" className="btn btn-accent">Contact Us</Link></div>

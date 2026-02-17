@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Hero from '@/components/Hero'
@@ -23,7 +24,7 @@ export default function HIPPage() {
             { img: 'https://images.unsplash.com/photo-1617791160588-241658c0f566?w=800&h=600&fit=crop', title: 'What Once Was AR Experience', desc: 'Leading the development and community engagement for our augmented reality historical walking tour.' },
             { img: 'https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=800&h=600&fit=crop', title: 'Heritage Documentation Initiative', desc: 'Partnering with community elders to create multimedia archives of neighborhood stories.' },
             { img: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=800&h=600&fit=crop', title: 'Youth Program Leadership', desc: 'Designing and facilitating workshops for DSP and Get Creative! participants.' },
-          ].map(c => <div className="card" key={c.title}><img src={c.img} alt={c.title} className="card-image" width={800} height={600} loading="lazy" /><h3>{c.title}</h3><p className="card-description">{c.desc}</p></div>)}
+          ].map(c => <div className="card" key={c.title}><Image src={c.img} alt={c.title} className="card-image" width={800} height={600} loading="lazy" /><h3>{c.title}</h3><p className="card-description">{c.desc}</p></div>)}
         </div>
       </Section>
 

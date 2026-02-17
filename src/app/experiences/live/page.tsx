@@ -1,3 +1,5 @@
+import Image from 'next/image'
+import FaIcon from '@/components/FaIcon'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Hero from '@/components/Hero'
@@ -17,7 +19,7 @@ export default function LivePage() {
             { icon: 'fa-solid fa-people-group', title: 'Intergenerational', desc: 'Young creatives connect directly with established professionals' },
             { icon: 'fa-solid fa-map-pin', title: 'Community-Rooted', desc: 'Events highlight local culture, venues, and creative ecosystems' },
             { icon: 'fa-solid fa-arrow-right', title: 'Action-Oriented', desc: 'Conversations lead to concrete next steps and opportunities' },
-          ].map(c => <div className="card" key={c.title}><span className="card-icon"><i className={c.icon}></i></span><h3 className="card-title">{c.title}</h3><p className="card-description">{c.desc}</p></div>)}
+          ].map(c => <div className="card" key={c.title}><span className="card-icon"><FaIcon iconClass={c.icon} /></span><h3 className="card-title">{c.title}</h3><p className="card-description">{c.desc}</p></div>)}
         </div>
       </Section>
 
@@ -30,7 +32,7 @@ export default function LivePage() {
             { icon: 'fa-solid fa-rocket', title: 'Professional Speed Mentoring', desc: 'Established professionals rotate through brief mentoring conversations.' },
             { icon: 'fa-solid fa-map-pin', title: 'Community Resource Fair', desc: 'Local organizations share information about opportunities and resources.' },
             { icon: 'fa-solid fa-lightbulb', title: 'Collaborative Project Launching', desc: 'Idea-sharing sessions where attendees can pitch collaborative projects.' },
-          ].map(c => <div className="card" key={c.title}><span className="card-icon"><i className={c.icon}></i></span><h3 className="card-title">{c.title}</h3><p className="card-description">{c.desc}</p></div>)}
+          ].map(c => <div className="card" key={c.title}><span className="card-icon"><FaIcon iconClass={c.icon} /></span><h3 className="card-title">{c.title}</h3><p className="card-description">{c.desc}</p></div>)}
         </div>
       </Section>
 
@@ -55,13 +57,13 @@ export default function LivePage() {
       <Section icon="fa-solid fa-calendar-days" title="Upcoming E4 Live Events" id="upcoming">
         <div className="grid grid-2">
           <div className="card">
-            <img src="https://images.unsplash.com/photo-1559223607-a43c990c692c?w=800&h=600&fit=crop" alt="Creative Tech Showcase" className="card-image" width={800} height={600} loading="lazy" />
+            <Image src="https://images.unsplash.com/photo-1559223607-a43c990c692c?w=800&h=600&fit=crop" alt="Creative Tech Showcase" className="card-image" width={800} height={600} loading="lazy" />
             <h3 className="card-title">Creative Tech Showcase</h3>
             <p className="card-description"><strong>Date:</strong> March 15, 2025 | 6:00PM - 8:30PM<br /><strong>Location:</strong> Capital Factory, Austin<br /><strong>Focus:</strong> Digital storytelling meets emerging technology</p>
             <div className="card-cta"><Link href="/contact" className="btn btn-primary">Register Now</Link></div>
           </div>
           <div className="card">
-            <img src="https://images.unsplash.com/photo-1531545514256-b1400bc00f31?w=800&h=600&fit=crop" alt="Stories for Change" className="card-image" width={800} height={600} loading="lazy" />
+            <Image src="https://images.unsplash.com/photo-1531545514256-b1400bc00f31?w=800&h=600&fit=crop" alt="Stories for Change" className="card-image" width={800} height={600} loading="lazy" />
             <h3 className="card-title">Stories for Change: Community Impact Edition</h3>
             <p className="card-description"><strong>Date:</strong> April 12, 2025 | 5:30PM - 8:00PM<br /><strong>Location:</strong> WOW Heritage Center<br /><strong>Focus:</strong> Storytelling for social justice and community organizing</p>
             <div className="card-cta"><Link href="/contact" className="btn btn-primary">Register Now</Link></div>
@@ -74,9 +76,9 @@ export default function LivePage() {
 
       <Section icon="fa-solid fa-handshake" title="Partner With Us on E4 Live" id="partnership">
         <div className="grid grid-3">
-          <div className="card"><span className="card-icon"><i className="fa-solid fa-building"></i></span><h3 className="card-title">Corporate Partners</h3><p className="card-description">Connect with emerging talent and support community development.</p><div className="card-cta"><Link href="/partner" className="btn btn-accent">Explore Partnership</Link></div></div>
-          <div className="card"><span className="card-icon"><i className="fa-solid fa-palette"></i></span><h3 className="card-title">Creative Professionals</h3><p className="card-description">Join as a mentor, presenter, or workshop leader.</p><div className="card-cta"><Link href="/contact" className="btn btn-accent">Become a Mentor</Link></div></div>
-          <div className="card"><span className="card-icon"><i className="fa-solid fa-map-pin"></i></span><h3 className="card-title">Venue Partners</h3><p className="card-description">Host an E4 Live event at your space.</p><div className="card-cta"><Link href="/contact" className="btn btn-accent">Host an Event</Link></div></div>
+          <div className="card"><span className="card-icon"><FaIcon iconClass="fa-solid fa-building" /></span><h3 className="card-title">Corporate Partners</h3><p className="card-description">Connect with emerging talent and support community development.</p><div className="card-cta"><Link href="/partner" className="btn btn-accent">Explore Partnership</Link></div></div>
+          <div className="card"><span className="card-icon"><FaIcon iconClass="fa-solid fa-palette" /></span><h3 className="card-title">Creative Professionals</h3><p className="card-description">Join as a mentor, presenter, or workshop leader.</p><div className="card-cta"><Link href="/contact" className="btn btn-accent">Become a Mentor</Link></div></div>
+          <div className="card"><span className="card-icon"><FaIcon iconClass="fa-solid fa-map-pin" /></span><h3 className="card-title">Venue Partners</h3><p className="card-description">Host an E4 Live event at your space.</p><div className="card-cta"><Link href="/contact" className="btn btn-accent">Host an Event</Link></div></div>
         </div>
       </Section>
     </>

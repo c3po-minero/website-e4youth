@@ -1,3 +1,5 @@
+import Image from 'next/image'
+import FaIcon from '@/components/FaIcon'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Hero from '@/components/Hero'
@@ -27,7 +29,7 @@ export default function AboutPage() {
             <p>From day one, we&apos;ve operated on the principle that <strong>storytelling is workforce and civic infrastructure</strong>—not just personal expression, but a fundamental tool for communication, professional development, community building, and social change.</p>
           </div>
           <div>
-            <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?w=800&h=600&fit=crop" alt="Diverse group collaborating on storytelling projects" className="card-image" width={800} height={600} loading="lazy" />
+            <Image src="https://images.unsplash.com/photo-1529390079861-591de354faf5?w=800&h=600&fit=crop" alt="Diverse group collaborating on storytelling projects" className="card-image" width={800} height={600} loading="lazy" />
             <h3>Our community-centered approach means:</h3>
             <ul className="check-list">
               <li><strong>Youth leadership</strong> in program design and evaluation</li>
@@ -52,7 +54,7 @@ export default function AboutPage() {
             { icon: 'fa-solid fa-rocket', title: 'Elevate: Clear Pathways to Opportunity', desc: 'Participants leave our programs with more than skills and confidence—they have concrete next steps.', items: ['College readiness with portfolios and scholarship connections', 'Career preparation through internships and professional networks', 'Community leadership opportunities'] },
           ].map((e) => (
             <div className="card" key={e.title}>
-              <span className="card-icon"><i className={e.icon}></i></span>
+              <span className="card-icon"><FaIcon iconClass={e.icon} /></span>
               <h3 className="card-title">{e.title}</h3>
               <p className="card-description">{e.desc}</p>
               <div className="card-cta">
@@ -102,13 +104,13 @@ export default function AboutPage() {
       <Section icon="fa-solid fa-door-open" title="Join Our Community: There's a Place for Everyone">
         <div className="grid grid-2">
           <div className="card">
-            <span className="card-icon"><i className="fa-solid fa-users"></i></span>
+            <span className="card-icon"><FaIcon iconClass="fa-solid fa-users" /></span>
             <h3 className="card-title">For Young People &amp; Families</h3>
             <p className="card-description"><strong>Ages 12-18:</strong> Explore Digital Storytelling Program, Get Creative!, or community workshops<br /><strong>Ages 18-25:</strong> Engage with Heritage &amp; Innovation Pathways, E4 Level Up, or mentorship opportunities<br /><strong>All Ages:</strong> Attend E4 Live events, community showcases, and family programming</p>
             <div className="card-cta"><Link href="/programs" className="btn btn-primary">Explore Program Options</Link></div>
           </div>
           <div className="card">
-            <span className="card-icon"><i className="fa-solid fa-handshake"></i></span>
+            <span className="card-icon"><FaIcon iconClass="fa-solid fa-handshake" /></span>
             <h3 className="card-title">For Community Members &amp; Organizations</h3>
             <p className="card-description"><strong>Professionals:</strong> Provide mentorship, internship opportunities, or professional development workshops<br /><strong>Organizations:</strong> Collaborate on curriculum development, resource sharing, and community capacity building<br /><strong>Community Leaders:</strong> Share knowledge through oral history projects and cultural preservation initiatives</p>
             <div className="card-cta"><Link href="/partner" className="btn btn-primary">Explore Partnership Opportunities</Link></div>

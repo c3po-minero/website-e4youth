@@ -1,3 +1,5 @@
+import Image from 'next/image'
+import FaIcon from '@/components/FaIcon'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Hero from '@/components/Hero'
@@ -51,9 +53,9 @@ export default function DSPPage() {
 
       <Section icon="fa-solid fa-calendar-days" title="Flexible Learning That Fits Your Life" id="program-structure">
         <div className="grid grid-3">
-          <div className="card"><span className="card-icon"><i className="fa-solid fa-calendar-week"></i></span><h3 className="card-title">Workshop Series Format</h3><p style={{ fontSize: '0.9rem', color: 'var(--accent)' }}>(Most Common)</p><ul style={{ fontSize: '0.9rem' }}><li><strong>Duration:</strong> 6-8 weeks, 2 hours per session</li><li><strong>Group Size:</strong> 12-15 participants plus family members</li><li><strong>Schedule:</strong> Saturdays 10AM-12PM or weekday after-school options</li><li><strong>Cost:</strong> Sliding scale $50-150 per family (scholarships available)</li></ul></div>
-          <div className="card"><span className="card-icon"><i className="fa-solid fa-clock"></i></span><h3 className="card-title">Family Workshop Days</h3><ul style={{ fontSize: '0.9rem' }}><li><strong>Duration:</strong> Single-day events, 4-6 hours with breaks</li><li><strong>Format:</strong> Drop-in style with multiple activity stations</li><li><strong>Focus:</strong> Accessible introduction for whole families</li><li><strong>Cost:</strong> Free or low-cost ($10-25 per family)</li></ul></div>
-          <div className="card"><span className="card-icon"><i className="fa-solid fa-school"></i></span><h3 className="card-title">School &amp; Organization Partnerships</h3><ul style={{ fontSize: '0.9rem' }}><li><strong>Duration:</strong> Customized to fit academic calendar</li><li><strong>Format:</strong> In-school residencies, after-school programs, or summer camps</li><li><strong>Support:</strong> E4 Youth provides curriculum, training, and consultation</li><li><strong>Cost:</strong> Varies based on partnership scope</li></ul></div>
+          <div className="card"><span className="card-icon"><FaIcon iconClass="fa-solid fa-calendar-week" /></span><h3 className="card-title">Workshop Series Format</h3><p style={{ fontSize: '0.9rem', color: 'var(--accent)' }}>(Most Common)</p><ul style={{ fontSize: '0.9rem' }}><li><strong>Duration:</strong> 6-8 weeks, 2 hours per session</li><li><strong>Group Size:</strong> 12-15 participants plus family members</li><li><strong>Schedule:</strong> Saturdays 10AM-12PM or weekday after-school options</li><li><strong>Cost:</strong> Sliding scale $50-150 per family (scholarships available)</li></ul></div>
+          <div className="card"><span className="card-icon"><FaIcon iconClass="fa-solid fa-clock" /></span><h3 className="card-title">Family Workshop Days</h3><ul style={{ fontSize: '0.9rem' }}><li><strong>Duration:</strong> Single-day events, 4-6 hours with breaks</li><li><strong>Format:</strong> Drop-in style with multiple activity stations</li><li><strong>Focus:</strong> Accessible introduction for whole families</li><li><strong>Cost:</strong> Free or low-cost ($10-25 per family)</li></ul></div>
+          <div className="card"><span className="card-icon"><FaIcon iconClass="fa-solid fa-school" /></span><h3 className="card-title">School &amp; Organization Partnerships</h3><ul style={{ fontSize: '0.9rem' }}><li><strong>Duration:</strong> Customized to fit academic calendar</li><li><strong>Format:</strong> In-school residencies, after-school programs, or summer camps</li><li><strong>Support:</strong> E4 Youth provides curriculum, training, and consultation</li><li><strong>Cost:</strong> Varies based on partnership scope</li></ul></div>
         </div>
       </Section>
 
@@ -65,7 +67,7 @@ export default function DSPPage() {
             { img: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&h=600&fit=crop', title: 'Community Problem-Solving Stories', desc: 'Young people identify issues they care about and create stories exploring solutions.', example: '"Making Our Playground Better" - A student-led project that led to actual community action.' },
           ].map(c => (
             <div className="card" key={c.title}>
-              <img src={c.img} alt={c.title} className="card-image" width={800} height={600} loading="lazy" />
+              <Image src={c.img} alt={c.title} className="card-image" width={800} height={600} loading="lazy" />
               <h3 className="card-title">{c.title}</h3>
               <p className="card-description">{c.desc}</p>
               <div className="example-box"><p style={{ margin: 0, fontSize: '0.9rem' }}><strong>Example:</strong> {c.example}</p></div>

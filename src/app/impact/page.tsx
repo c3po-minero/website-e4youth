@@ -1,3 +1,4 @@
+import FaIcon from '@/components/FaIcon'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Hero from '@/components/Hero'
@@ -17,14 +18,14 @@ export default function ImpactPage() {
             { icon: 'fa-solid fa-users', title: 'Community-Defined', desc: 'Impact indicators reflect community values' },
             { icon: 'fa-solid fa-chart-line', title: 'Longitudinal Tracking', desc: 'We measure growth over time' },
             { icon: 'fa-solid fa-folder-open', title: 'Portfolio-Based', desc: 'Participants document their own learning' },
-          ].map(c => <div className="card" key={c.title}><span className="card-icon"><i className={c.icon}></i></span><h3 className="card-title">{c.title}</h3><p className="card-description">{c.desc}</p></div>)}
+          ].map(c => <div className="card" key={c.title}><span className="card-icon"><FaIcon iconClass={c.icon} /></span><h3 className="card-title">{c.title}</h3><p className="card-description">{c.desc}</p></div>)}
         </div>
       </Section>
 
       <Section icon="fa-solid fa-cubes" title="Learning, Visibility, and Opportunity">
         <div className="grid grid-3">
           <div className="card">
-            <span className="card-icon"><i className="fa-solid fa-graduation-cap"></i></span>
+            <span className="card-icon"><FaIcon iconClass="fa-solid fa-graduation-cap" /></span>
             <h3 className="card-title">Learning</h3>
             <ul className="check-list" style={{ fontSize: '0.9rem' }}>
               <li>92% demonstrate improvement in 3+ technical skill areas</li>
@@ -33,7 +34,7 @@ export default function ImpactPage() {
             </ul>
           </div>
           <div className="card">
-            <span className="card-icon"><i className="fa-solid fa-bullhorn"></i></span>
+            <span className="card-icon"><FaIcon iconClass="fa-solid fa-bullhorn" /></span>
             <h3 className="card-title">Visibility</h3>
             <ul className="check-list" style={{ fontSize: '0.9rem' }}>
               <li>Work presented to 2,500+ community members</li>
@@ -42,7 +43,7 @@ export default function ImpactPage() {
             </ul>
           </div>
           <div className="card">
-            <span className="card-icon"><i className="fa-solid fa-door-open"></i></span>
+            <span className="card-icon"><FaIcon iconClass="fa-solid fa-door-open" /></span>
             <h3 className="card-title">Opportunity</h3>
             <ul className="check-list" style={{ fontSize: '0.9rem' }}>
               <li>89% enroll in post-secondary education within 12 months</li>
@@ -60,7 +61,7 @@ export default function ImpactPage() {
             { icon: 'fa-solid fa-comments', title: 'Community Feedback Integration', desc: 'Family members, community partners, and mentor networks provide regular feedback on participant growth.' },
             { icon: 'fa-solid fa-microphone', title: 'Longitudinal Participant Interviews', desc: 'Annual interviews use storytelling methodologies to document learning experiences and community connections.' },
             { icon: 'fa-solid fa-handshake', title: 'Partner Organization Evaluation', desc: 'Schools, employers, and community organizations provide feedback on readiness levels and ongoing contribution.' },
-          ].map(c => <div className="card" key={c.title}><span className="card-icon"><i className={c.icon}></i></span><h3 className="card-title">{c.title}</h3><p className="card-description">{c.desc}</p></div>)}
+          ].map(c => <div className="card" key={c.title}><span className="card-icon"><FaIcon iconClass={c.icon} /></span><h3 className="card-title">{c.title}</h3><p className="card-description">{c.desc}</p></div>)}
         </div>
       </Section>
 

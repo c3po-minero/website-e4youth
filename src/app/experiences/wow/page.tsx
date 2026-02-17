@@ -1,3 +1,4 @@
+import FaIcon from '@/components/FaIcon'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Hero from '@/components/Hero'
@@ -12,9 +13,9 @@ export default function WOWPage() {
 
       <Section icon="fa-solid fa-map-pin" title="Experience History Where It Happened" lead="Using your smartphone, discover historical markers that come alive with stories, images, and voices from Austin's Black community leaders and historians." id="tour-info">
         <div className="grid grid-3">
-          <div className="card"><span className="card-icon"><i className="fa-solid fa-mobile-screen"></i></span><h3>How It Works</h3><ol><li>Download the WOW app</li><li>Visit participating locations</li><li>Point your phone at AR markers</li><li>Experience immersive stories</li></ol></div>
-          <div className="card"><span className="card-icon"><i className="fa-solid fa-map"></i></span><h3>Featured Locations</h3><ul><li>Historic East Austin neighborhoods</li><li>Former Blackshear School site</li><li>Victory Grill and music venues</li><li>Community gathering spaces</li></ul></div>
-          <div className="card"><span className="card-icon"><i className="fa-solid fa-users"></i></span><h3>Community Voices</h3><ul><li>Elder community storytellers</li><li>Local historians and researchers</li><li>Youth documentarians</li><li>Neighborhood residents</li></ul></div>
+          <div className="card"><span className="card-icon"><FaIcon iconClass="fa-solid fa-mobile-screen" /></span><h3>How It Works</h3><ol><li>Download the WOW app</li><li>Visit participating locations</li><li>Point your phone at AR markers</li><li>Experience immersive stories</li></ol></div>
+          <div className="card"><span className="card-icon"><FaIcon iconClass="fa-solid fa-map" /></span><h3>Featured Locations</h3><ul><li>Historic East Austin neighborhoods</li><li>Former Blackshear School site</li><li>Victory Grill and music venues</li><li>Community gathering spaces</li></ul></div>
+          <div className="card"><span className="card-icon"><FaIcon iconClass="fa-solid fa-users" /></span><h3>Community Voices</h3><ul><li>Elder community storytellers</li><li>Local historians and researchers</li><li>Youth documentarians</li><li>Neighborhood residents</li></ul></div>
         </div>
       </Section>
 

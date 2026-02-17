@@ -1,4 +1,5 @@
 import { ReactNode } from 'react'
+import FaIcon from './FaIcon'
 
 interface SectionProps {
   icon?: string
@@ -14,7 +15,7 @@ export default function Section({ icon, title, lead, children, id }: SectionProp
       <div className="container">
         {(icon || title || lead) && (
           <div className="section-header">
-            {icon && <span className="section-icon"><i className={icon}></i></span>}
+            {icon && <span className="section-icon"><FaIcon iconClass={icon} /></span>}
             {title && <h2>{title}</h2>}
             {lead && <p className="lead">{lead}</p>}
           </div>

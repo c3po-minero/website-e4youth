@@ -1,3 +1,5 @@
+import Image from 'next/image'
+import FaIcon from '@/components/FaIcon'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Hero from '@/components/Hero'
@@ -17,7 +19,7 @@ export default function LevelUpPage() {
             { icon: 'fa-solid fa-industry', title: 'Industry Integration', desc: 'Working professionals co-facilitate workshops' },
             { icon: 'fa-solid fa-folder-open', title: 'Portfolio Development', desc: 'Participants leave with tangible work samples' },
             { icon: 'fa-solid fa-chess', title: 'Strategic Thinking', desc: 'Technical skills training integrates business strategy' },
-          ].map(c => <div className="card" key={c.title}><span className="card-icon"><i className={c.icon}></i></span><h3 className="card-title">{c.title}</h3><p className="card-description">{c.desc}</p></div>)}
+          ].map(c => <div className="card" key={c.title}><span className="card-icon"><FaIcon iconClass={c.icon} /></span><h3 className="card-title">{c.title}</h3><p className="card-description">{c.desc}</p></div>)}
         </div>
       </Section>
 
@@ -30,7 +32,7 @@ export default function LevelUpPage() {
             { img: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=800&h=600&fit=crop', title: 'Community-Centered Research Methods', duration: '10-week program', tools: 'Complete community research project', items: ['Ethical community engagement methods', 'Oral history collection and archive development', 'Community asset mapping', 'Grant writing and program evaluation'] },
           ].map(c => (
             <div className="card" key={c.title}>
-              <img src={c.img} alt={c.title} className="card-image" width={800} height={600} loading="lazy" />
+              <Image src={c.img} alt={c.title} className="card-image" width={800} height={600} loading="lazy" />
               <h3 className="card-title">{c.title}</h3>
               <p><strong>Duration:</strong> {c.duration}</p>
               <ul style={{ fontSize: '0.9rem', marginBottom: '1rem' }}>{c.items.map(i => <li key={i}>{i}</li>)}</ul>
@@ -61,8 +63,8 @@ export default function LevelUpPage() {
 
       <Section icon="fa-solid fa-handshake" title="Industry Partners Make Level Up Possible" id="partnership">
         <div className="grid grid-2">
-          <div className="card"><span className="card-icon"><i className="fa-solid fa-building"></i></span><h3 className="card-title">Corporate Training Partners</h3><p className="card-description">Creative agencies and technology companies provide guest instruction and internship opportunities.</p><div className="card-cta"><Link href="/partner" className="btn btn-accent">Become a Training Partner</Link></div></div>
-          <div className="card"><span className="card-icon"><i className="fa-solid fa-chalkboard-user"></i></span><h3 className="card-title">Professional Mentors</h3><p className="card-description">Working professionals co-facilitate workshops and provide ongoing mentorship.</p><div className="card-cta"><Link href="/contact" className="btn btn-accent">Join as a Mentor</Link></div></div>
+          <div className="card"><span className="card-icon"><FaIcon iconClass="fa-solid fa-building" /></span><h3 className="card-title">Corporate Training Partners</h3><p className="card-description">Creative agencies and technology companies provide guest instruction and internship opportunities.</p><div className="card-cta"><Link href="/partner" className="btn btn-accent">Become a Training Partner</Link></div></div>
+          <div className="card"><span className="card-icon"><FaIcon iconClass="fa-solid fa-chalkboard-user" /></span><h3 className="card-title">Professional Mentors</h3><p className="card-description">Working professionals co-facilitate workshops and provide ongoing mentorship.</p><div className="card-cta"><Link href="/contact" className="btn btn-accent">Join as a Mentor</Link></div></div>
         </div>
       </Section>
 

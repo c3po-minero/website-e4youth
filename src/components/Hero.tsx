@@ -1,6 +1,8 @@
 'use client'
 import { useState, useEffect, useCallback } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
+import FaIcon from './FaIcon'
 
 interface HeroSlide {
   title: string
@@ -35,16 +37,28 @@ export default function Hero({ title, lead, bgImage, buttons, icon, slides }: He
   const slide = allSlides[current]
 
   return (
-    <section
-      className="hero"
-      style={{
-        backgroundImage: `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('${slide.bgImage}')`,
-        transition: 'background-image 0.8s ease-in-out',
-      }}
-    >
-      <div className="container">
+    <section className="hero" aria-label="Hero banner">
+      {/* Background images - preload first slide */}
+      {allSlides.map((s, i) => (
+        <Image
+          key={s.bgImage}
+          src={s.bgImage}
+          alt=""
+          fill
+          sizes="100vw"
+          style={{
+            objectFit: 'cover',
+            opacity: i === current ? 1 : 0,
+            transition: 'opacity 0.8s ease-in-out',
+          }}
+          priority={i === 0}
+          quality={80}
+        />
+      ))}
+      <div className="hero-overlay" />
+      <div className="container" style={{ position: 'relative', zIndex: 2 }}>
         <div className="hero-content" key={current} style={{ animation: 'heroFadeIn 0.6s ease' }}>
-          {icon && <div className="hero-icon"><i className={icon}></i></div>}
+          {icon && <div className="hero-icon"><FaIcon iconClass={icon} /></div>}
           <h1>{slide.title}</h1>
           <p className="lead">{slide.lead}</p>
           <div className="btn-group">
@@ -58,7 +72,7 @@ export default function Hero({ title, lead, bgImage, buttons, icon, slides }: He
         {isSlider && (
           <div className="hero-controls">
             <button className="hero-arrow hero-prev" onClick={prev} aria-label="Previous slide">
-              <i className="fa-solid fa-chevron-left"></i>
+              <FaIcon iconClass="fa-solid fa-chevron-left" />
             </button>
             <div className="hero-dots">
               {allSlides.map((_, i) => (
@@ -71,7 +85,7 @@ export default function Hero({ title, lead, bgImage, buttons, icon, slides }: He
               ))}
             </div>
             <button className="hero-arrow hero-next" onClick={next} aria-label="Next slide">
-              <i className="fa-solid fa-chevron-right"></i>
+              <FaIcon iconClass="fa-solid fa-chevron-right" />
             </button>
           </div>
         )}

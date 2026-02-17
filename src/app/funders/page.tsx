@@ -1,3 +1,4 @@
+import FaIcon from '@/components/FaIcon'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Hero from '@/components/Hero'
@@ -17,7 +18,7 @@ export default function FundersPage() {
             { icon: 'fa-solid fa-laptop', title: 'Digital Divide', desc: 'Unequal access to professional-grade creative technology and mentorship' },
             { icon: 'fa-solid fa-folder-open', title: 'Portfolio Gap', desc: 'Students graduate without compelling evidence of their capabilities' },
             { icon: 'fa-solid fa-link', title: 'Network Isolation', desc: 'Limited connections between emerging talent and established professionals' },
-          ].map(c => <div className="card" key={c.title}><span className="card-icon"><i className={c.icon}></i></span><h3 className="card-title">{c.title}</h3><p className="card-description">{c.desc}</p></div>)}
+          ].map(c => <div className="card" key={c.title}><span className="card-icon"><FaIcon iconClass={c.icon} /></span><h3 className="card-title">{c.title}</h3><p className="card-description">{c.desc}</p></div>)}
         </div>
       </Section>
 
@@ -46,7 +47,7 @@ export default function FundersPage() {
             { icon: 'fa-solid fa-calendar', title: 'Public Showcase & Event Sponsorship', desc: 'Support community events celebrating participant work', timeline: 'Quarterly showcases, annual celebration', investment: '$2,500-15,000' },
           ].map(c => (
             <div className="card" key={c.title}>
-              <span className="card-icon"><i className={c.icon}></i></span>
+              <span className="card-icon"><FaIcon iconClass={c.icon} /></span>
               <h3 className="card-title">{c.title}</h3>
               <p className="card-description">{c.desc}</p>
               <ul style={{ fontSize: '0.9rem', marginTop: '1rem' }}>

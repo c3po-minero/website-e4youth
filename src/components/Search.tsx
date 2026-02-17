@@ -2,6 +2,7 @@
 import { useState, useEffect, useRef, useMemo } from 'react'
 import Fuse from 'fuse.js'
 import Link from 'next/link'
+import FaIcon from './FaIcon'
 
 interface SearchItem {
   title: string
@@ -13,20 +14,20 @@ interface SearchItem {
 
 const searchData: SearchItem[] = [
   { title: 'Home', description: 'Transform your voice into your future with E4 Youth', href: '/', category: 'Pages', keywords: 'home main landing storytelling youth' },
-  { title: 'Digital Storytelling Program (DSP)', description: 'Foundation program for children ages 8-14 and families. Creative confidence, digital literacy, storytelling fundamentals.', href: '/programs/dsp', category: 'Programs', keywords: 'dsp digital storytelling kids children elementary middle school family workshop' },
-  { title: 'Get Creative!', description: 'High school students explore creative careers through hands-on projects, industry mentorship, and portfolio development.', href: '/programs/get-creative', category: 'Programs', keywords: 'get creative high school teens career portfolio design adobe' },
-  { title: 'Heritage & Innovation Pathways (HIP)', description: 'College students and emerging adults lead community projects while building advanced professional skills.', href: '/programs/hip', category: 'Programs', keywords: 'hip heritage innovation pathways college leadership community projects' },
-  { title: 'All Programs', description: 'Explore our connected ecosystem of learning opportunities for ages 8-25.', href: '/programs', category: 'Programs', keywords: 'programs all overview ecosystem pathway' },
-  { title: 'What Once Was: AR Experience', description: 'Augmented reality walking tour of Black Austin history. Download the app and explore.', href: '/experiences/wow', category: 'Experiences', keywords: 'what once was AR augmented reality history tour walking black austin jacob fontaine' },
-  { title: 'WOW Heritage Center', description: 'Community hub for storytelling, workshops, events, and community gathering. Space rental available.', href: '/experiences/heritage-center', category: 'Experiences', keywords: 'heritage center community space rental venue workshops archive' },
-  { title: 'E4 Live', description: 'Monthly networking events celebrating creativity, connection, and community.', href: '/experiences/live', category: 'Experiences', keywords: 'live events networking showcase monthly creative community' },
-  { title: 'E4 Level Up', description: 'Advanced workshops and professional development for early-career and established creatives.', href: '/experiences/level-up', category: 'Experiences', keywords: 'level up workshops professional development career advanced training' },
-  { title: 'About E4 Youth', description: 'Community-rooted organization using storytelling to unlock equity and opportunity across generations.', href: '/about', category: 'About', keywords: 'about mission vision values community austin texas four es engage educate empower elevate' },
-  { title: 'Stories & Showcases', description: 'Real stories and community portfolios from E4 Youth participants and alumni.', href: '/stories', category: 'About', keywords: 'stories showcases testimonials alumni success portfolio documentary' },
-  { title: 'Impact & Evaluation', description: 'Measurable outcomes across learning, visibility, and opportunity. Impact reports and data.', href: '/impact', category: 'About', keywords: 'impact evaluation data metrics outcomes statistics results report' },
-  { title: 'Partner With Us', description: 'Schools, workforce partners, and community organizations — explore collaboration opportunities.', href: '/partner', category: 'Get Involved', keywords: 'partner partnership collaborate schools workforce industry mentor volunteer' },
-  { title: 'For Funders', description: 'Investment opportunities, strategic funding priorities, and partnership models for foundations.', href: '/funders', category: 'Get Involved', keywords: 'funders foundations grants funding investment donate sponsor' },
-  { title: 'Contact Us', description: 'Get in touch, find your path, and connect with the right team member.', href: '/contact', category: 'Get Involved', keywords: 'contact email phone address get involved apply register sign up' },
+  { title: 'Digital Storytelling Program (DSP)', description: 'Foundation program for children ages 8-14 and families.', href: '/programs/dsp', category: 'Programs', keywords: 'dsp digital storytelling kids children' },
+  { title: 'Get Creative!', description: 'High school students explore creative careers through hands-on projects.', href: '/programs/get-creative', category: 'Programs', keywords: 'get creative high school teens career' },
+  { title: 'Heritage & Innovation Pathways (HIP)', description: 'College students and emerging adults lead community projects.', href: '/programs/hip', category: 'Programs', keywords: 'hip heritage innovation pathways college' },
+  { title: 'All Programs', description: 'Explore our connected ecosystem of learning opportunities.', href: '/programs', category: 'Programs', keywords: 'programs all overview' },
+  { title: 'What Once Was: AR Experience', description: 'Augmented reality walking tour of Black Austin history.', href: '/experiences/wow', category: 'Experiences', keywords: 'what once was AR augmented reality' },
+  { title: 'WOW Heritage Center', description: 'Community hub for storytelling and workshops.', href: '/experiences/heritage-center', category: 'Experiences', keywords: 'heritage center community space' },
+  { title: 'E4 Live', description: 'Monthly networking events celebrating creativity.', href: '/experiences/live', category: 'Experiences', keywords: 'live events networking' },
+  { title: 'E4 Level Up', description: 'Advanced workshops and professional development.', href: '/experiences/level-up', category: 'Experiences', keywords: 'level up workshops professional' },
+  { title: 'About E4 Youth', description: 'Community-rooted organization using storytelling.', href: '/about', category: 'About', keywords: 'about mission vision' },
+  { title: 'Stories & Showcases', description: 'Real stories from E4 Youth participants.', href: '/stories', category: 'About', keywords: 'stories showcases testimonials' },
+  { title: 'Impact & Evaluation', description: 'Measurable outcomes and impact reports.', href: '/impact', category: 'About', keywords: 'impact evaluation data' },
+  { title: 'Partner With Us', description: 'Explore collaboration opportunities.', href: '/partner', category: 'Get Involved', keywords: 'partner partnership collaborate' },
+  { title: 'For Funders', description: 'Investment opportunities for foundations.', href: '/funders', category: 'Get Involved', keywords: 'funders foundations grants' },
+  { title: 'Contact Us', description: 'Get in touch with E4 Youth.', href: '/contact', category: 'Get Involved', keywords: 'contact email phone' },
 ]
 
 const popularSearches = [
@@ -85,10 +86,10 @@ export default function Search() {
   if (!open) return null
 
   return (
-    <div className="search-overlay" onClick={close}>
+    <div className="search-overlay" onClick={close} role="dialog" aria-label="Search">
       <div className="search-modal" onClick={e => e.stopPropagation()}>
         <div className="search-input-wrap">
-          <i className="fa-solid fa-magnifying-glass search-input-icon"></i>
+          <FaIcon iconClass="fa-solid fa-magnifying-glass" className="search-input-icon" />
           <input
             ref={inputRef}
             type="text"
@@ -108,7 +109,7 @@ export default function Search() {
               <div className="search-popular">
                 {popularSearches.map(s => (
                   <Link href={s.href} key={s.href} className="search-popular-item" onClick={close}>
-                    <i className="fa-solid fa-arrow-trend-up"></i> {s.label}
+                    <FaIcon iconClass="fa-solid fa-arrow-trend-up" /> {s.label}
                   </Link>
                 ))}
               </div>
@@ -133,7 +134,7 @@ export default function Search() {
             </div>
           ) : (
             <div className="search-empty">
-              <i className="fa-solid fa-magnifying-glass" style={{ fontSize: '2rem', color: 'var(--border)', marginBottom: '1rem' }}></i>
+              <FaIcon iconClass="fa-solid fa-magnifying-glass" style={{ fontSize: '2rem', color: 'var(--border)', marginBottom: '1rem' }} />
               <p>No results for &quot;{query}&quot;</p>
               <p style={{ fontSize: '0.85rem', color: 'var(--text)' }}>Try searching for programs, experiences, or topics</p>
             </div>

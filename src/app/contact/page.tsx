@@ -1,4 +1,5 @@
 'use client'
+import FaIcon from '@/components/FaIcon'
 import { useState } from 'react'
 import Link from 'next/link'
 import Hero from '@/components/Hero'
@@ -20,7 +21,7 @@ export default function ContactPage() {
             { icon: 'fa-solid fa-link', title: '"I represent an organization"', desc: 'Explore collaboration opportunities with schools, businesses, and foundations.', href: '/partner', cta: 'Explore Partnership Options' },
           ].map(c => (
             <div className="card" key={c.title}>
-              <span className="card-icon"><i className={c.icon}></i></span>
+              <span className="card-icon"><FaIcon iconClass={c.icon} /></span>
               <h3 className="card-title">{c.title}</h3>
               <p className="card-description">{c.desc}</p>
               <div className="card-cta"><Link href={c.href} className="btn btn-primary">{c.cta}</Link></div>
@@ -34,7 +35,7 @@ export default function ContactPage() {
           <div>
             {submitted ? (
               <div className="card" style={{ textAlign: 'center', padding: 'var(--spacing-xl)' }}>
-                <span style={{ fontSize: '3rem', color: 'var(--primary)' }}><i className="fa-solid fa-circle-check"></i></span>
+                <span style={{ fontSize: '3rem', color: 'var(--primary)' }}><FaIcon iconClass="fa-solid fa-circle-check" /></span>
                 <h3>Message Sent!</h3>
                 <p>Thank you for reaching out. We typically respond within 48-72 hours.</p>
               </div>
@@ -61,14 +62,14 @@ export default function ContactPage() {
                 </div>
                 <div className="form-group"><label htmlFor="organization" className="form-label">Organization/School (If applicable)</label><input type="text" id="organization" className="form-input" /></div>
                 <div className="form-group"><label htmlFor="message" className="form-label">Tell us more *</label><textarea id="message" className="form-textarea" rows={5} required placeholder="Share details about your interest in E4 Youth..." /></div>
-                <div className="form-group"><button type="submit" className="btn btn-primary btn-full"><i className="fa-solid fa-paper-plane"></i> Send Message</button></div>
+                <div className="form-group"><button type="submit" className="btn btn-primary btn-full"><FaIcon iconClass="fa-solid fa-paper-plane" /> Send Message</button></div>
                 <p style={{ fontSize: '0.8rem', color: 'var(--text)', textAlign: 'center' }}>We typically respond within 48-72 hours. For urgent inquiries, call (512) 555-0123.</p>
               </form>
             )}
           </div>
           <div>
             <div className="card card-compact">
-              <h3><i className="fa-solid fa-clock"></i> Response Timeline</h3>
+              <h3><FaIcon iconClass="fa-solid fa-clock" /> Response Timeline</h3>
               <ul className="check-list">
                 <li><strong>General inquiries:</strong> 48-72 hours</li>
                 <li><strong>Program applications:</strong> 1 week</li>
@@ -77,7 +78,7 @@ export default function ContactPage() {
               </ul>
             </div>
             <div className="card card-compact mt-md">
-              <h3><i className="fa-solid fa-list-check"></i> What Happens Next?</h3>
+              <h3><FaIcon iconClass="fa-solid fa-list-check" /> What Happens Next?</h3>
               <ol style={{ paddingLeft: '1.5rem', fontSize: '0.9rem', lineHeight: 1.6, margin: 0 }}>
                 <li>We&apos;ll review your message and interests</li>
                 <li>Connect you with the right team member</li>
@@ -87,7 +88,7 @@ export default function ContactPage() {
               </ol>
             </div>
             <div className="card card-compact mt-md">
-              <h3><i className="fa-solid fa-universal-access"></i> Accessibility Support</h3>
+              <h3><FaIcon iconClass="fa-solid fa-universal-access" /> Accessibility Support</h3>
               <p style={{ fontSize: '0.85rem', margin: 0 }}>We offer: Spanish language support, extended response times, phone and video call options, in-person meetings, and alternative communication formats.</p>
             </div>
           </div>
@@ -105,7 +106,7 @@ export default function ContactPage() {
             { icon: 'fa-solid fa-school', title: 'Educational Partnerships', desc: 'Email: schools@e4youth.org\nDr. Maria Rodriguez, Educational Collaboration Director' },
           ].map(c => (
             <div className="card" key={c.title}>
-              <span className="card-icon"><i className={c.icon}></i></span>
+              <span className="card-icon"><FaIcon iconClass={c.icon} /></span>
               <h3 className="card-title">{c.title}</h3>
               <p className="card-description" style={{ whiteSpace: 'pre-line' }}>{c.desc}</p>
             </div>
@@ -115,9 +116,9 @@ export default function ContactPage() {
 
       <Section icon="fa-solid fa-calendar" title="Join Us: Regular Community Events" id="family-engagement">
         <div className="grid grid-3">
-          <div className="card"><span className="card-icon"><i className="fa-solid fa-users"></i></span><h3 className="card-title">E4 Live Networking Events</h3><p className="card-description"><strong>When:</strong> First Thursday of each month, 6:00-8:00 PM<br /><strong>Cost:</strong> Free, no registration required</p></div>
-          <div className="card"><span className="card-icon"><i className="fa-solid fa-star"></i></span><h3 className="card-title">Quarterly Community Showcases</h3><p className="card-description"><strong>When:</strong> End of each program session<br /><strong>Duration:</strong> 2-3 hours with flexible arrival</p></div>
-          <div className="card"><span className="card-icon"><i className="fa-solid fa-heart"></i></span><h3 className="card-title">Annual Community Celebration</h3><p className="card-description"><strong>When:</strong> Early summer (date announced annually)<br /><strong>Special Features:</strong> Intergenerational community connection</p></div>
+          <div className="card"><span className="card-icon"><FaIcon iconClass="fa-solid fa-users" /></span><h3 className="card-title">E4 Live Networking Events</h3><p className="card-description"><strong>When:</strong> First Thursday of each month, 6:00-8:00 PM<br /><strong>Cost:</strong> Free, no registration required</p></div>
+          <div className="card"><span className="card-icon"><FaIcon iconClass="fa-solid fa-star" /></span><h3 className="card-title">Quarterly Community Showcases</h3><p className="card-description"><strong>When:</strong> End of each program session<br /><strong>Duration:</strong> 2-3 hours with flexible arrival</p></div>
+          <div className="card"><span className="card-icon"><FaIcon iconClass="fa-solid fa-heart" /></span><h3 className="card-title">Annual Community Celebration</h3><p className="card-description"><strong>When:</strong> Early summer (date announced annually)<br /><strong>Special Features:</strong> Intergenerational community connection</p></div>
         </div>
       </Section>
 

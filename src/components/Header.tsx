@@ -1,10 +1,12 @@
 'use client'
 import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import Search from './Search'
+import FaIcon from './FaIcon'
 
 const ChevronDown = () => (
-  <svg width="10" height="10" viewBox="0 0 10 10" fill="currentColor" style={{marginLeft:4,verticalAlign:'middle'}}>
+  <svg width="10" height="10" viewBox="0 0 10 10" fill="currentColor" style={{marginLeft:4,verticalAlign:'middle'}} aria-hidden="true">
     <path d="M1 3l4 4 4-4" stroke="currentColor" strokeWidth="1.5" fill="none"/>
   </svg>
 )
@@ -97,11 +99,12 @@ export default function Header() {
         <div className="header-content">
           <div className="logo">
             <Link href="/" aria-label="E4 Youth Home">
-              <img
+              <Image
                 src="https://e4youth.org/wp-content/uploads/2024/06/Copy-of-e4-full-white-logo.png"
                 alt="E4 Youth Logo"
                 width={160}
                 height={40}
+                priority
               />
             </Link>
           </div>
@@ -132,7 +135,7 @@ export default function Header() {
             }}
             aria-label="Search the site (Ctrl+K)"
           >
-            <i className="fa-solid fa-magnifying-glass"></i>
+            <FaIcon iconClass="fa-solid fa-magnifying-glass" />
           </button>
 
           <button
@@ -141,13 +144,12 @@ export default function Header() {
             aria-expanded={mobileOpen}
             aria-label="Toggle navigation menu"
           >
-            <i className={`fa-solid ${mobileOpen ? 'fa-xmark' : 'fa-bars'}`}></i>
+            <FaIcon iconClass={`fa-solid ${mobileOpen ? 'fa-xmark' : 'fa-bars'}`} />
           </button>
         </div>
       </div>
       <Search />
 
-      {/* Mobile menu — inline like Crosslake, no portal */}
       {mobileOpen && (
         <div className="mobile-menu-panel" role="navigation" aria-label="Mobile navigation">
           <nav className="mobile-menu-nav">

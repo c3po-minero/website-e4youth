@@ -1,3 +1,5 @@
+import Image from 'next/image'
+import FaIcon from '@/components/FaIcon'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Hero from '@/components/Hero'
@@ -17,21 +19,21 @@ export default function StoriesPage() {
             { icon: 'fa-solid fa-users', title: 'Community Context', desc: 'Individual growth is always connected to broader community relationships' },
             { icon: 'fa-solid fa-road', title: 'Ongoing Journey', desc: 'We highlight progress and learning rather than just completion moments' },
             { icon: 'fa-solid fa-star', title: 'Diverse Outcomes', desc: 'Success takes many forms, from creative confidence to career advancement' },
-          ].map(c => <div className="card" key={c.title}><span className="card-icon"><i className={c.icon}></i></span><h3 className="card-title">{c.title}</h3><p className="card-description">{c.desc}</p></div>)}
+          ].map(c => <div className="card" key={c.title}><span className="card-icon"><FaIcon iconClass={c.icon} /></span><h3 className="card-title">{c.title}</h3><p className="card-description">{c.desc}</p></div>)}
         </div>
       </Section>
 
       <Section icon="fa-solid fa-users" title="Voices From Our Community" id="stories">
         <div className="grid grid-2">
           <div className="card" style={{ padding: 'var(--spacing-xl)' }}>
-            <img src="https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?w=800&h=600&fit=crop" alt="Young woman with camera" className="card-image" width={800} height={600} loading="lazy" />
+            <Image src="https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?w=800&h=600&fit=crop" alt="Young woman with camera" className="card-image" width={800} height={600} loading="lazy" />
             <h3 className="card-title">Maria&apos;s Story: From Shy Student to Community Documentary Filmmaker</h3>
             <p style={{ fontSize: '0.9rem' }}><strong>Program:</strong> DSP → Get Creative! → HIP<br /><strong>Timeline:</strong> 4 years with E4 Youth<br /><strong>Current:</strong> College sophomore studying Media Arts</p>
             <blockquote className="blockquote">&quot;I started DSP in middle school because my mom thought it would help me make friends. I was really shy. The first day, we learned how to interview our family members about their immigration stories, and suddenly I realized my quiet listening skills were actually superpowers for storytelling.&quot;</blockquote>
             <p style={{ fontSize: '0.9rem', fontWeight: 600, color: 'var(--primary)' }}>Recent Work: &quot;Vanishing Austin: Small Business Stories&quot; - 6-part documentary series featured in local film festival</p>
           </div>
           <div className="card" style={{ padding: 'var(--spacing-xl)' }}>
-            <img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?w=800&h=600&fit=crop" alt="Young person working on UX design" className="card-image" width={800} height={600} loading="lazy" />
+            <Image src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?w=800&h=600&fit=crop" alt="Young person working on UX design" className="card-image" width={800} height={600} loading="lazy" />
             <h3 className="card-title">Jordan&apos;s Story: Creative Technology Career Through Community Connection</h3>
             <p style={{ fontSize: '0.9rem' }}><strong>Program:</strong> Get Creative! → E4 Level Up Workshops<br /><strong>Timeline:</strong> 2 years with E4 Youth<br /><strong>Current:</strong> UX Designer at local tech company, volunteer mentor</p>
             <blockquote className="blockquote">&quot;I came to Get Creative! thinking I wanted to be a graphic designer, but I had no idea how many different creative careers existed. The program introduced me to UX design, and suddenly I understood how creativity could solve real problems for people.&quot;</blockquote>
@@ -59,7 +61,7 @@ export default function StoriesPage() {
             { img: 'https://images.unsplash.com/photo-1556075798-4825dfaaf498?w=800&h=600&fit=crop', title: 'Austin History AR Experience', desc: 'Level Up workshop participants created an augmented reality tour highlighting overlooked Austin history.', impact: 'Downloaded 500+ times, used by schools' },
           ].map(c => (
             <div className="card" key={c.title}>
-              <img src={c.img} alt={c.title} className="card-image" width={800} height={600} loading="lazy" />
+              <Image src={c.img} alt={c.title} className="card-image" width={800} height={600} loading="lazy" />
               <h3 className="card-title">{c.title}</h3>
               <p className="card-description">{c.desc}</p>
               <p style={{ fontSize: '0.9rem', fontWeight: 600, marginBottom: '1rem' }}>Impact: {c.impact}</p>
@@ -78,9 +80,9 @@ export default function StoriesPage() {
 
       <Section icon="fa-solid fa-hands-clapping" title="Be Part of the Story">
         <div className="grid grid-3">
-          <div className="card"><span className="card-icon"><i className="fa-solid fa-plus"></i></span><h3 className="card-title">Share Your Story</h3><p className="card-description">Current and former participants can contribute their stories.</p><div className="card-cta"><Link href="/contact" className="btn btn-accent">Submit Your Story</Link></div></div>
-          <div className="card"><span className="card-icon"><i className="fa-solid fa-calendar"></i></span><h3 className="card-title">Attend Showcases</h3><p className="card-description">Join community events to see participant work and support youth voices.</p><div className="card-cta"><Link href="/contact" className="btn btn-accent">View Event Calendar</Link></div></div>
-          <div className="card"><span className="card-icon"><i className="fa-solid fa-handshake"></i></span><h3 className="card-title">Support Community Voices</h3><p className="card-description">Professional mentors and organizations can support showcase events.</p><div className="card-cta"><Link href="/partner" className="btn btn-accent">Partner With Us</Link></div></div>
+          <div className="card"><span className="card-icon"><FaIcon iconClass="fa-solid fa-plus" /></span><h3 className="card-title">Share Your Story</h3><p className="card-description">Current and former participants can contribute their stories.</p><div className="card-cta"><Link href="/contact" className="btn btn-accent">Submit Your Story</Link></div></div>
+          <div className="card"><span className="card-icon"><FaIcon iconClass="fa-solid fa-calendar" /></span><h3 className="card-title">Attend Showcases</h3><p className="card-description">Join community events to see participant work and support youth voices.</p><div className="card-cta"><Link href="/contact" className="btn btn-accent">View Event Calendar</Link></div></div>
+          <div className="card"><span className="card-icon"><FaIcon iconClass="fa-solid fa-handshake" /></span><h3 className="card-title">Support Community Voices</h3><p className="card-description">Professional mentors and organizations can support showcase events.</p><div className="card-cta"><Link href="/partner" className="btn btn-accent">Partner With Us</Link></div></div>
         </div>
       </Section>
 

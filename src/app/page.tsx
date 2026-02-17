@@ -1,6 +1,8 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import Hero from '@/components/Hero'
 import Section from '@/components/Section'
+import FaIcon from '@/components/FaIcon'
 
 export default function Home() {
   return (
@@ -59,8 +61,8 @@ export default function Home() {
             { icon: 'fa-solid fa-link', title: 'Elevate', desc: 'Participants leave our programs not just with skills, but with portfolios, networks, and clear pathways to their next opportunities.', img: 'https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=600&h=400&fit=crop' },
           ].map((e) => (
             <div className="card" key={e.title}>
-              <img src={e.img} alt={e.title} className="card-image" width={600} height={400} loading="lazy" />
-              <span className="card-icon"><i className={e.icon}></i></span>
+              <Image src={e.img} alt={`${e.title} - youth engagement`} className="card-image" width={600} height={400} loading="lazy" />
+              <span className="card-icon"><FaIcon iconClass={e.icon} /></span>
               <h3 className="card-title">{e.title}</h3>
               <p className="card-description">{e.desc}</p>
             </div>
@@ -122,7 +124,7 @@ export default function Home() {
             },
           ].map((c) => (
             <div className="card" key={c.title}>
-              <img src={c.img} alt={c.alt} className="card-image" width={800} height={600} loading="lazy" />
+              <Image src={c.img} alt={c.alt} className="card-image" width={800} height={600} loading="lazy" />
               <h3 className="card-title">{c.title}</h3>
               <p className="card-description">{c.desc}</p>
               <div className="card-cta">
