@@ -50,18 +50,13 @@ export default function ProgramPageLayout({
         <section className="section-padding bg-white">
           <div className="max-w-7xl mx-auto">
             <AnimatedSection>
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-12 h-12 rounded-xl flex items-center justify-center" style={{ backgroundColor: `${accentColor}15` }}>
-                  <FontAwesomeIcon icon="users" className="w-5 h-5" style={{ color: accentColor }} />
-                </div>
-                <div>
-                  <span className="text-sm font-semibold uppercase tracking-wider" style={{ color: accentColor }}>Who This Is For</span>
-                  <p className="text-xl font-display font-bold text-secondary">{whoFor}</p>
-                </div>
+              <div className="text-center max-w-3xl mx-auto">
+                <span className="text-sm font-semibold uppercase tracking-wider" style={{ color: accentColor }}>Who This Is For</span>
+                <p className="text-2xl md:text-3xl font-display font-bold text-secondary mt-3">{whoFor}</p>
+                {expandedOverview && (
+                  <p className="text-lg text-body leading-relaxed mt-6">{expandedOverview}</p>
+                )}
               </div>
-              {expandedOverview && (
-                <p className="text-body leading-relaxed max-w-3xl mt-4">{expandedOverview}</p>
-              )}
             </AnimatedSection>
           </div>
         </section>

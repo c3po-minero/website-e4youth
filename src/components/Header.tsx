@@ -81,7 +81,7 @@ export default function Header() {
           ))}
           <button
             onClick={() => setSearchOpen(!searchOpen)}
-            className="text-secondary hover:text-primary-dark transition-colors p-2"
+            className="text-gray-800 hover:text-primary-dark transition-colors p-2"
             aria-label="Search"
           >
             <FontAwesomeIcon icon="magnifying-glass" className="w-4 h-4" />
@@ -95,13 +95,13 @@ export default function Header() {
         <div className="lg:hidden flex items-center gap-2">
           <button
             onClick={() => setSearchOpen(!searchOpen)}
-            className="p-2 text-secondary"
+            className="p-2 text-gray-800"
             aria-label="Search"
           >
             <FontAwesomeIcon icon="magnifying-glass" className="w-5 h-5" />
           </button>
           <button
-            className="p-2 text-secondary"
+            className="p-2 text-gray-800"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
             aria-expanded={mobileOpen}

@@ -7,11 +7,11 @@ import AnimatedSection from '@/components/AnimatedSection'
 import ProgramCard from '@/components/ProgramCard'
 
 const programs = [
-  { title: 'Digital Storytelling (DSP)', description: 'Introduces young people to storytelling, digital literacy, and creative expression through workshops and community learning.', href: '/programs/dsp', icon: 'video' as const, color: '#4DB8FF' },
-  { title: 'Get Creative!', description: 'Career exploration and applied learning helping high school students connect storytelling to creative and tech pathways.', href: '/programs/get-creative', icon: 'palette' as const, color: '#9B51E0' },
-  { title: 'Heritage & Innovation (HIP)', description: 'Connects community history and emerging tech to applied learning, research, and professional pathways.', href: '/programs/hip', icon: 'landmark' as const, color: '#FCB900' },
-  { title: 'What Once Was (WOW)', description: 'Public storytelling platform elevating participant work into exhibitions, digital experiences, and public space.', href: '/programs/wow', icon: 'globe' as const, color: '#7BDCB5' },
-  { title: 'WOW Heritage Center', description: 'Physical, place-based hub for storytelling, learning, and community connection.', href: '/programs/wow-heritage-center', icon: 'landmark' as const, color: '#0072CE' },
+  { title: 'Digital Storytelling (DSP)', description: 'Introduces young people to storytelling, digital literacy, and creative expression through workshops and community learning.', href: '/programs/dsp', icon: 'book-open' as const, color: '#4DB8FF' },
+  { title: 'Get Creative!', description: 'Career exploration and applied learning helping high school students connect storytelling to creative and tech pathways.', href: '/programs/get-creative', icon: 'lightbulb' as const, color: '#9B51E0' },
+  { title: 'Heritage & Innovation (HIP)', description: 'Connects community history and emerging tech to applied learning, research, and professional pathways.', href: '/programs/hip', icon: 'compass' as const, color: '#FCB900' },
+  { title: 'What Once Was (WOW)', description: 'Public storytelling platform elevating participant work into exhibitions, digital experiences, and public space.', href: '/programs/wow', icon: 'landmark' as const, color: '#7BDCB5' },
+  { title: 'WOW Heritage Center', description: 'Physical, place-based hub for storytelling, learning, and community connection.', href: '/programs/wow-heritage-center', icon: 'school' as const, color: '#0072CE' },
   { title: 'E4 Live', description: 'Dynamic in-person networking events celebrating creativity, connection, and community.', href: '/programs/e4-live', icon: 'microphone' as const, color: '#9B51E0' },
   { title: 'E4 Level Up', description: 'Advanced workshop and professional development for college-aged, early-career, and established creatives.', href: '/programs/e4-level-up', icon: 'rocket' as const, color: '#FCB900' },
 ]
@@ -32,7 +32,7 @@ const experiences = [
   {
     title: 'Workshops, Labs, and Pilot Programs',
     description: 'Immersive learning experiences exploring oral history, digital storytelling, creative technology, and workforce connection.',
-    icon: 'laptop-code' as const,
+    icon: 'magic-wand-sparkles' as const,
     color: '#7BDCB5',
   },
 ]
