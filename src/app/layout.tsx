@@ -25,11 +25,18 @@ export const metadata: Metadata = {
     siteName: 'E4 Youth',
     title: 'E4 Youth — Storytelling for Equity & Opportunity',
     description: 'E4 Youth uses the power of storytelling to unlock equity, workforce access, and opportunity across generations.',
+    images: [{
+      url: 'https://website-e4youth-repo.vercel.app/images/og-image.png',
+      width: 1200,
+      height: 630,
+      alt: 'E4 Youth — Storytelling for Equity & Opportunity',
+    }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'E4 Youth — Storytelling for Equity & Opportunity',
     description: 'E4 Youth uses the power of storytelling to unlock equity, workforce access, and opportunity across generations.',
+    images: ['https://website-e4youth-repo.vercel.app/images/og-image.png'],
   },
   robots: { index: true, follow: true },
 }
