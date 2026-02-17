@@ -7,7 +7,7 @@ import type { IconDefinition } from '@fortawesome/fontawesome-svg-core'
 import HeroSection from '@/components/HeroSection'
 import AnimatedSection from '@/components/AnimatedSection'
 import EcosystemCircle from '@/components/EcosystemCircle'
-import StoryTile from '@/components/StoryTile'
+// StoryTile removed — using inline quote layout
 
 const stages = [
   {
@@ -121,71 +121,92 @@ export default function EcosystemClient() {
         </div>
       </section>
 
-      {/* Stage Sections — 2x2 Grid */}
-      <section className="section-padding bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {stages.map((stage, i) => (
-              <AnimatedSection key={stage.label} delay={i * 0.1}>
-                <div className={`rounded-2xl p-8 md:p-10 h-full ${stage.isElevate ? 'bg-white shadow-lg ring-2 ring-offset-4' : 'bg-white shadow-sm border border-gray-100'}`} style={stage.isElevate ? { ringColor: stage.color } as React.CSSProperties : {}}>
-                  {/* Large icon header — alternate left/right */}
-                  <div className={`flex ${i % 2 === 1 ? 'flex-row-reverse' : 'flex-row'} items-start gap-6 mb-6`}>
-                    <div className="w-20 h-20 md:w-24 md:h-24 rounded-2xl flex-shrink-0 flex items-center justify-center" style={{ backgroundColor: `${stage.color}15` }}>
-                      <FontAwesomeIcon icon={stage.icon} className="w-10 h-10 md:w-12 md:h-12" style={{ color: stage.color }} />
+      {/* Stage Sections — Two-Column Layout */}
+      {stages.map((stage, i) => {
+        const storyData = stage.spotlight || stage.story!
+        return (
+          <section key={stage.label} className={`section-padding ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}`}>
+            <div className="max-w-7xl mx-auto">
+              <AnimatedSection>
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+                  {/* Left Column: Title, Description, Quote */}
+                  <div>
+                    {/* Stage badge */}
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ backgroundColor: `${stage.color}15` }}>
+                        <FontAwesomeIcon icon={stage.icon} className="w-5 h-5" style={{ color: stage.color }} />
+                      </div>
+                      <span className="text-sm font-semibold uppercase tracking-wider" style={{ color: stage.color }}>{stage.label}</span>
                     </div>
-                    <div>
-                      <h2 className="text-xl md:text-2xl font-display font-bold text-secondary">{stage.label}</h2>
-                      <p className="text-sm font-semibold mt-1" style={{ color: stage.color }}>{stage.subtitle}</p>
+
+                    {/* Title */}
+                    <h2 className="text-3xl md:text-4xl font-display font-bold text-secondary mb-2">
+                      {stage.subtitle}
+                    </h2>
+                    <div className="w-16 h-1 rounded-full mb-6" style={{ backgroundColor: stage.color }} />
+
+                    {/* Description */}
+                    {stage.body.split('\n\n').map((p, pi) => (
+                      <p key={pi} className="text-body leading-relaxed mb-4">{p}</p>
+                    ))}
+
+                    {/* Outcomes */}
+                    <p className="text-sm text-body mt-2 mb-8"><strong className="text-secondary">Outcomes:</strong> {stage.outcomes}</p>
+
+                    {/* Quote */}
+                    <div className="border-l-4 pl-5 py-2" style={{ borderColor: stage.color }}>
+                      <blockquote className="text-lg italic text-secondary leading-relaxed mb-3">
+                        &ldquo;{storyData.quote}&rdquo;
+                      </blockquote>
+                      <div>
+                        <p className="font-display font-bold text-secondary text-sm">{storyData.name}</p>
+                        <p className="text-xs text-body italic">{storyData.pathway}</p>
+                      </div>
                     </div>
                   </div>
 
-                  {stage.body.split('\n\n').map((p, pi) => (
-                    <p key={pi} className="text-sm text-body leading-relaxed mb-3">{p}</p>
-                  ))}
-
-                  <div className="mt-5">
-                    <p className="font-semibold text-secondary text-sm mb-3">Experiences in this stage:</p>
-                    <div className="space-y-3">
-                      {stage.experiences.map((exp) => (
-                        <div key={exp.name} className="pl-4 border-l-2" style={{ borderColor: stage.color }}>
-                          <p className="font-semibold text-secondary text-sm">{exp.name}</p>
-                          <p className="text-xs text-body">{exp.desc}</p>
+                  {/* Right Column: Experiences in this stage */}
+                  <div>
+                    <h3 className="text-lg font-display font-bold text-secondary mb-6">Experiences in this stage</h3>
+                    <div className="space-y-4">
+                      {stage.experiences.map((exp, ei) => (
+                        <div
+                          key={exp.name}
+                          className="bg-white rounded-xl p-5 shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300"
+                        >
+                          <div className="flex items-start gap-4">
+                            <div className="w-8 h-8 rounded-lg flex-shrink-0 flex items-center justify-center mt-0.5 text-white font-bold text-xs" style={{ backgroundColor: stage.color }}>
+                              {ei + 1}
+                            </div>
+                            <div>
+                              <h4 className="font-display font-bold text-secondary mb-1">{exp.name}</h4>
+                              <p className="text-sm text-body leading-relaxed">{exp.desc}</p>
+                            </div>
+                          </div>
                         </div>
                       ))}
                     </div>
-                  </div>
 
-                  <p className="mt-5 text-xs text-body"><strong>Outcomes:</strong> {stage.outcomes}</p>
-
-                  {/* Story Tile */}
-                  <div className="mt-6">
-                    <h3 className="text-sm font-display font-bold text-secondary mb-3">Where This Can Lead</h3>
-                    {stage.spotlight ? (
-                      <div className="p-5 rounded-xl" style={{ backgroundColor: `${stage.color}08`, borderLeft: `3px solid ${stage.color}` }}>
-                        <p className="text-xs font-semibold uppercase tracking-wider mb-2" style={{ color: stage.color }}>Featured Spotlight</p>
-                        <h4 className="text-base font-display font-bold text-secondary mb-1">{stage.spotlight.name}</h4>
-                        <p className="text-xs italic text-body mb-2">{stage.spotlight.pathway}</p>
-                        <p className="text-xs text-body leading-relaxed mb-2">{stage.spotlight.fullStory}</p>
-                        <blockquote className="text-xs italic text-body border-l-2 pl-3" style={{ borderColor: stage.color }}>
-                          &ldquo;{stage.spotlight.quote}&rdquo;
-                        </blockquote>
+                    {/* Flow indicator to next stage */}
+                    {i < stages.length - 1 && (
+                      <div className="flex items-center justify-center mt-8 gap-2 text-gray-400">
+                        <div className="w-px h-6 bg-gray-300" />
+                        <span className="text-xs font-semibold uppercase tracking-wider">Next: {stages[i + 1].label}</span>
+                        <div className="w-px h-6 bg-gray-300" />
                       </div>
-                    ) : (
-                      <div className="p-5 rounded-xl" style={{ backgroundColor: `${stage.color}08`, borderLeft: `3px solid ${stage.color}` }}>
-                        <h4 className="text-sm font-display font-bold text-secondary mb-1">{stage.story!.name}</h4>
-                        <p className="text-xs italic text-body mb-2">{stage.story!.pathway}</p>
-                        <blockquote className="text-xs italic text-body">
-                          &ldquo;{stage.story!.quote}&rdquo;
-                        </blockquote>
+                    )}
+                    {i === stages.length - 1 && (
+                      <div className="flex items-center justify-center mt-8 gap-2" style={{ color: stages[0].color }}>
+                        <span className="text-xs font-semibold uppercase tracking-wider">↻ Feeds back to {stages[0].label}</span>
                       </div>
                     )}
                   </div>
                 </div>
               </AnimatedSection>
-            ))}
-          </div>
-        </div>
-      </section>
+            </div>
+          </section>
+        )
+      })}
 
       {/* The Circle Continues */}
       <section className="section-padding bg-gradient-to-br from-primary-dark to-purple text-white">
