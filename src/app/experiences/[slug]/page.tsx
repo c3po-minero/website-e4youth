@@ -123,9 +123,9 @@ const experiences: Record<string, {
         fullStory: 'Destiny first encountered E4Youth at a WOW exhibition and was drawn to the creative technology on display. She moved through DSP and into Get Creative!, where she focused on user experience design. Her portfolio from Get Creative! — including community-centered design projects — caught the attention of an Austin creative agency during a showcase. Through E4 Level Up, she transitioned into an employer-funded UX design role.',
         quote: 'E4Youth didn\'t hand me a job — they helped me build a career I didn\'t know existed.',
       },
-      storyImage: 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800&q=80',
+      storyImage: 'https://images.unsplash.com/photo-1542744094-3a31f272c490?w=800&q=80',
       storyImageAlt: 'Young creative professional working on design project — E4Youth Get Creative program',
-      storyImage2: 'https://images.unsplash.com/photo-1581291518633-83b4eef1d2fa?w=600&q=80',
+      storyImage2: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&q=80',
       storyImage2Alt: 'Student presenting creative portfolio at a professional showcase',
       howToEngage: [
         { title: 'Apply', description: 'Get Creative! accepts participants on a rolling basis. Prior experience in digital media (DSP or equivalent) is recommended.' },
