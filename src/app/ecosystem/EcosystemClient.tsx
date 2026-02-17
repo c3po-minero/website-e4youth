@@ -116,7 +116,7 @@ export default function EcosystemClient() {
       <section className="section-padding bg-gray-50">
         <div className="max-w-4xl mx-auto">
           <AnimatedSection className="flex justify-center">
-            <EcosystemCircle size="large" />
+            <EcosystemCircle />
           </AnimatedSection>
         </div>
       </section>

@@ -6,7 +6,7 @@ import AnimatedSection from '@/components/AnimatedSection'
 import EcosystemCircle from '@/components/EcosystemCircle'
 import StoryTile from '@/components/StoryTile'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowRight, faHeart, faGraduationCap, faBolt, faRocket } from '@fortawesome/free-solid-svg-icons'
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 
 export default function HomeClient() {
   return (
@@ -39,25 +39,6 @@ export default function HomeClient() {
           <AnimatedSection className="flex justify-center mb-10" delay={0.2}>
             <EcosystemCircle />
           </AnimatedSection>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
-            {[
-              { label: 'Engage', color: '#4DB8FF', icon: faHeart, desc: 'Discover creative technology through community experiences' },
-              { label: 'Educate', color: '#9B51E0', icon: faGraduationCap, desc: 'Build real skills through hands-on digital media training' },
-              { label: 'Empower', color: '#FCB900', icon: faBolt, desc: 'Create original work, build portfolios, present to real audiences' },
-              { label: 'Elevate', color: '#7BDCB5', icon: faRocket, desc: 'Step into stipend-supported cohorts, paid pilot placements, and employer-funded roles (expanding)' },
-            ].map((e, i) => (
-              <AnimatedSection key={e.label} delay={i * 0.1}>
-                <div className="text-center p-4">
-                  <div className="w-12 h-12 rounded-xl mx-auto mb-3 flex items-center justify-center" style={{ backgroundColor: `${e.color}15` }}>
-                    <FontAwesomeIcon icon={e.icon} className="w-5 h-5" style={{ color: e.color }} />
-                  </div>
-                  <p className="font-display font-bold text-secondary text-sm">{e.label}</p>
-                  <p className="text-xs text-body mt-1">{e.desc}</p>
-                </div>
-              </AnimatedSection>
-            ))}
-          </div>
 
           <AnimatedSection className="text-center">
             <Link href="/ecosystem" className="inline-flex items-center gap-2 text-primary-dark font-semibold hover:gap-3 transition-all">
