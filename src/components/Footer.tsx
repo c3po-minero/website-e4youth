@@ -85,7 +85,8 @@ export default function Footer() {
           <div className="flex items-center gap-1 text-gray-300">
             Powered by{' '}
             <a href="https://minero.io" target="_blank" rel="noopener noreferrer" className="inline-flex items-center">
-              <Image src="/images/minero-logo.webp" alt="Minero" width={56} height={14} className="h-3.5 w-auto opacity-60 brightness-0 invert" />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/images/minero-logo.svg" alt="Minero" className="h-3 w-auto opacity-60 invert" />
             </a>
             {' '}+ <span>🤖</span>
           </div>
