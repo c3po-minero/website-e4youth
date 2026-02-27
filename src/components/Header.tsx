@@ -70,12 +70,12 @@ export default function Header() {
         </Link>
 
         {/* Desktop */}
-        <div className="hidden lg:flex items-center gap-4 xl:gap-6">
+        <div className="hidden lg:flex items-center gap-8">
           {navLinks.map((link) => (
             <div key={link.name} className="relative group">
               <Link
                 href={link.href}
-                className="text-secondary font-medium text-sm hover:text-primary-dark transition-colors flex items-center gap-1 whitespace-nowrap"
+                className="text-secondary font-medium hover:text-primary-dark transition-colors flex items-center gap-1"
               >
                 {link.name}
                 {link.hasDropdown && (

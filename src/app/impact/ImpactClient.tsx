@@ -79,9 +79,9 @@ const metricSections: {
     tag: 'Elevate',
     title: 'Elevate Metrics',
     color: '#7BDCB5',
-    image: '/images/e4youth/alumni__a4a2020_1.webp',
+    image: '/images/e4youth/_a4a1944.webp',
     imageAlt: 'Young professionals collaborating in leadership roles',
-    image2: '/images/e4youth/alumni__a4a2027_1.webp',
+    image2: '/images/e4youth/_a4a1947_1.webp',
     image2Alt: 'Young professional in a creative technology leadership position',
     imagePosition: 'right',
     metrics: [
