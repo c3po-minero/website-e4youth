@@ -94,6 +94,9 @@ export default function PartnerClient() {
       {/* Partner stages */}
       <section className="section-padding bg-gray-50">
         <div className="max-w-7xl mx-auto">
+          <AnimatedSection>
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-secondary text-center mb-10">Investment Entry Points</h2>
+          </AnimatedSection>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {partnerStages.map((stage, i) => (
               <AnimatedSection key={stage.title} delay={i * 0.1}>

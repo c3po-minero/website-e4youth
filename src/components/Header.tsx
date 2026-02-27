@@ -70,12 +70,12 @@ export default function Header() {
         </Link>
 
         {/* Desktop */}
-        <div className="hidden lg:flex items-center gap-8">
+        <div className="hidden lg:flex items-center gap-4 xl:gap-6">
           {navLinks.map((link) => (
             <div key={link.name} className="relative group">
               <Link
                 href={link.href}
-                className="text-secondary font-medium hover:text-primary-dark transition-colors flex items-center gap-1"
+                className="text-secondary font-medium text-sm hover:text-primary-dark transition-colors flex items-center gap-1 whitespace-nowrap"
               >
                 {link.name}
                 {link.hasDropdown && (
@@ -116,7 +116,7 @@ export default function Header() {
           >
             <FontAwesomeIcon icon={faMagnifyingGlass} className="w-4 h-4" />
           </button>
-          <Link href="/contact" className="btn-primary text-sm !px-6 !py-2.5">
+          <Link href="/contact" className="btn-primary text-sm !px-6 !py-2.5 hidden min-[1180px]:inline-flex">
             Get Involved
           </Link>
         </div>
