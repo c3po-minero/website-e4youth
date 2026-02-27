@@ -7,21 +7,38 @@ import { useRouter } from 'next/navigation'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronDown, faMagnifyingGlass, faTimes, faBars } from '@fortawesome/free-solid-svg-icons'
 
-const experiences = [
-  { name: 'AR Heritage Tours', href: '/experiences/ar-heritage-tours' },
-  { name: 'Digital Storytelling (DSP)', href: '/experiences/digital-storytelling' },
-  { name: 'Get Creative!', href: '/experiences/get-creative' },
-  { name: 'Heritage Innovation (HIP)', href: '/experiences/hip' },
-  { name: 'WOW — Workforce Opportunity', href: '/experiences/wow' },
-
-  { name: 'E4 Live', href: '/experiences/e4-live' },
-  { name: 'E4 Level Up', href: '/experiences/e4-level-up' },
+const experienceGroups = [
+  {
+    label: 'Public Experiences',
+    href: '/experiences/public',
+    items: [
+      { name: 'AR Heritage Tours', href: '/experiences/ar-heritage-tours' },
+      { name: 'Community Showcases', href: '/experiences' },
+      { name: 'WOW Public Events', href: '/experiences/wow' },
+    ],
+  },
+  {
+    label: 'Learning Experiences',
+    href: '/experiences/learning',
+    items: [
+      { name: 'Digital Storytelling (DSP)', href: '/experiences/digital-storytelling' },
+      { name: 'Workshops & Labs', href: '/experiences' },
+    ],
+  },
+  {
+    label: 'Professional Experiences',
+    href: '/experiences/professional',
+    items: [
+      { name: 'Get Creative!', href: '/experiences/get-creative' },
+      { name: 'Heritage Innovation (HIP)', href: '/experiences/hip' },
+      { name: 'E4 Level Up', href: '/experiences/e4-level-up' },
+    ],
+  },
 ]
 
 const navLinks = [
-  { name: 'Home', href: '/' },
-  { name: '4E Ecosystem', href: '/ecosystem' },
-  { name: 'Experiences', href: '/experiences', children: experiences },
+  { name: 'E4 Ecosystem', href: '/e4-ecosystem' },
+  { name: 'Experiences', href: '/experiences', hasDropdown: true },
   { name: 'Impact', href: '/impact' },
   { name: 'Partner', href: '/partner' },
   { name: 'WOW Heritage Center', href: '/wow-heritage-center' },
@@ -61,21 +78,31 @@ export default function Header() {
                 className="text-secondary font-medium hover:text-primary-dark transition-colors flex items-center gap-1"
               >
                 {link.name}
-                {link.children && (
+                {link.hasDropdown && (
                   <FontAwesomeIcon icon={faChevronDown} className="w-3 h-3" />
                 )}
               </Link>
-              {link.children && (
+              {link.hasDropdown && (
                 <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                  <div className="bg-white rounded-xl shadow-xl border border-gray-100 py-3 min-w-[260px]">
-                    {link.children.map((child) => (
-                      <Link
-                        key={child.href}
-                        href={child.href}
-                        className="block px-5 py-2.5 text-sm text-secondary hover:text-primary-dark hover:bg-primary/5 transition-colors"
-                      >
-                        {child.name}
-                      </Link>
+                  <div className="bg-white rounded-xl shadow-xl border border-gray-100 py-4 min-w-[320px]">
+                    {experienceGroups.map((group, gi) => (
+                      <div key={group.label} className={gi > 0 ? 'mt-3 pt-3 border-t border-gray-100' : ''}>
+                        <Link
+                          href={group.href}
+                          className="block px-5 py-1.5 text-xs font-semibold uppercase tracking-wider text-primary-dark hover:underline"
+                        >
+                          {group.label}
+                        </Link>
+                        {group.items.map((child) => (
+                          <Link
+                            key={child.href + child.name}
+                            href={child.href}
+                            className="block px-5 py-2 text-sm text-secondary hover:text-primary-dark hover:bg-primary/5 transition-colors"
+                          >
+                            {child.name}
+                          </Link>
+                        ))}
+                      </div>
                     ))}
                   </div>
                 </div>
@@ -142,7 +169,7 @@ export default function Header() {
           <div className="px-6 py-4 space-y-1">
             {navLinks.map((link) => (
               <div key={link.name}>
-                {link.children ? (
+                {link.hasDropdown ? (
                   <>
                     <button
                       onClick={() => setExperiencesOpen(!experiencesOpen)}
@@ -154,15 +181,26 @@ export default function Header() {
                     </button>
                     {experiencesOpen && (
                       <div className="pl-4 space-y-1">
-                        {link.children.map((child) => (
-                          <Link
-                            key={child.href}
-                            href={child.href}
-                            className="block py-2 text-sm text-body hover:text-primary-dark"
-                            onClick={() => setMobileOpen(false)}
-                          >
-                            {child.name}
-                          </Link>
+                        {experienceGroups.map((group) => (
+                          <div key={group.label}>
+                            <Link
+                              href={group.href}
+                              className="block py-2 text-xs font-semibold uppercase tracking-wider text-primary-dark"
+                              onClick={() => setMobileOpen(false)}
+                            >
+                              {group.label}
+                            </Link>
+                            {group.items.map((child) => (
+                              <Link
+                                key={child.href + child.name}
+                                href={child.href}
+                                className="block py-2 pl-3 text-sm text-body hover:text-primary-dark"
+                                onClick={() => setMobileOpen(false)}
+                              >
+                                {child.name}
+                              </Link>
+                            ))}
+                          </div>
                         ))}
                       </div>
                     )}

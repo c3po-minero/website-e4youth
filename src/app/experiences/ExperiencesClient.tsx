@@ -82,8 +82,8 @@ export default function ExperiencesClient() {
     <>
       <HeroSection
         headline="Youth Experiences in Creative Technology"
-        subheadline="E4Youth offers a range of creative technology experiences across every stage of the 4E Ecosystem. Whether you're exploring for the first time, building skills, producing professional work, or stepping into a paid career — there's an experience for where you are right now."
-        primaryCTA={{ text: 'Explore the 4E Ecosystem', href: '/ecosystem' }}
+        subheadline="E4Youth offers a range of creative technology experiences across every stage of the E4 Ecosystem. Whether you're exploring for the first time, building skills, producing professional work, or stepping into a paid career — there's an experience for where you are right now."
+        primaryCTA={{ text: 'Explore the E4 Ecosystem', href: '/e4-ecosystem' }}
         secondaryCTA={{ text: 'Partner With Us', href: '/partner' }}
         gradient="from-primary-dark via-purple to-gold"
         backgroundImage="/images/e4youth/e4y_creative_clubs-64_1.webp"

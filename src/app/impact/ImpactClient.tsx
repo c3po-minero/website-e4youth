@@ -100,8 +100,8 @@ export default function ImpactClient() {
   return (
     <>
       <HeroSection
-        headline="Impact Across the 4E Ecosystem"
-        subheadline="Every stage of the 4E Ecosystem produces measurable outcomes — for young people, for communities, and for Austin's creative economy. Here's what the numbers look like."
+        headline="Impact Across the E4 Ecosystem"
+        subheadline="Every stage of the E4 Ecosystem produces measurable outcomes — for young people, for communities, and for Austin's creative economy. Here's what the numbers look like."
         primaryCTA={{ text: 'View Impact Highlights', href: '#metrics' }}
         secondaryCTA={{ text: 'Partner on Evaluation', href: '/partner' }}
         gradient="from-gold via-purple to-primary-dark"

@@ -16,7 +16,7 @@ export default function HomeClient() {
       <HeroSection
         headline="We use storytelling to engage, empower, educate, and elevate across generations."
         subheadline="Through the E4 Ecosystem, we connect young creatives, community leaders, and industry partners in pathways that transform stories into skills, opportunity, and visible leadership."
-        primaryCTA={{ text: 'Explore the E4 Ecosystem', href: '/ecosystem' }}
+        primaryCTA={{ text: 'Explore the E4 Ecosystem', href: '/e4-ecosystem' }}
         secondaryCTA={{ text: 'Join an Experience', href: '/experiences' }}
         backgroundImage="/images/e4youth/_a4a2514.webp"
         backgroundImageAlt="E4Youth participants engaged in creative technology storytelling"
@@ -28,14 +28,14 @@ export default function HomeClient() {
         </div>
       </HeroSection>
 
-      {/* 4E Ecosystem Circle */}
+      {/* E4 Ecosystem Circle */}
       <section className="section-padding bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <AnimatedSection className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-secondary">The 4E Ecosystem</h2>
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-secondary">The E4 Ecosystem</h2>
             <h3 className="text-lg md:text-xl text-body mt-2">Story &gt; Skill &gt; Opportunity &gt; Leadership</h3>
             <p className="mt-4 max-w-3xl mx-auto text-body leading-relaxed">
-              We use the 4E&apos;s to build the E4 Ecosystem — a circular pathway that transforms storytelling into opportunity.
+              We use the E4&apos;s to build the E4 Ecosystem — a circular pathway that transforms storytelling into opportunity.
             </p>
           </AnimatedSection>
 
@@ -57,7 +57,7 @@ export default function HomeClient() {
           </div>
 
           <AnimatedSection className="text-center">
-            <Link href="/ecosystem" className="inline-flex items-center gap-2 text-primary-dark font-semibold hover:gap-3 transition-all">
+            <Link href="/e4-ecosystem" className="inline-flex items-center gap-2 text-primary-dark font-semibold hover:gap-3 transition-all">
               See How the Ecosystem Works <FontAwesomeIcon icon={faArrowRight} className="w-4 h-4" />
             </Link>
           </AnimatedSection>

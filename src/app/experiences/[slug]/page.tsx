@@ -18,7 +18,7 @@ const experiences: Record<string, {
       secondaryCTA: { text: 'Bring a Tour to Your Site', href: '/partner' },
       gradient: 'from-primary via-primary-dark to-purple',
       accentColor: '#4DB8FF',
-      whoFor: 'AR Heritage Tours are open to everyone — families, students, educators, tourists, and community members. The tours are designed and led by young people, making them a powerful entry point into the 4E Ecosystem for both participants and audiences. If you\'re curious about Austin\'s cultural heritage and want to experience it through the eyes of the people who live it, this is for you.',
+      whoFor: 'AR Heritage Tours are open to everyone — families, students, educators, tourists, and community members. The tours are designed and led by young people, making them a powerful entry point into the E4 Ecosystem for both participants and audiences. If you\'re curious about Austin\'s cultural heritage and want to experience it through the eyes of the people who live it, this is for you.',
       whatHappens: [
         'Each AR Heritage Tour is a guided, location-based walking experience through Austin neighborhoods rich in cultural history. Using augmented reality technology on mobile devices, participants see historical imagery, hear community voices, and interact with layered digital stories anchored to real places.',
         'Every tour is researched, scripted, designed, and produced by E4Youth participants — young people trained in digital storytelling, AR development, and community-based research. Tours typically run 60–90 minutes and cover 4–8 heritage sites within a walkable area.',
@@ -59,10 +59,10 @@ const experiences: Record<string, {
       title: 'Digital Storytelling Program (DSP)',
       subtitle: 'The foundational youth media training experience — learn to research, produce, and share digital stories rooted in your community.',
       primaryCTA: { text: 'Apply to DSP', href: '/contact' },
-      secondaryCTA: { text: 'Learn More', href: '/ecosystem' },
+      secondaryCTA: { text: 'Learn More', href: '/e4-ecosystem' },
       gradient: 'from-primary via-primary-dark to-purple',
       accentColor: '#4DB8FF',
-      whoFor: 'DSP is for young people in Austin who want to learn digital media skills through community storytelling. No prior experience required. If you have a story to tell — about your neighborhood, your family, your culture, or your community — DSP gives you the tools and training to tell it professionally. DSP is also a natural entry point into the broader 4E Ecosystem for youth ready to build real skills.',
+      whoFor: 'DSP is for young people in Austin who want to learn digital media skills through community storytelling. No prior experience required. If you have a story to tell — about your neighborhood, your family, your culture, or your community — DSP gives you the tools and training to tell it professionally. DSP is also a natural entry point into the broader E4 Ecosystem for youth ready to build real skills.',
       whatHappens: [
         'DSP is a structured, cohort-based experience in digital storytelling. Participants learn the full arc of media production: research, scripting, interviewing, audio recording, video production, photography, and post-production editing. Every project is rooted in community — participants tell stories about the people, places, and histories that matter to them.',
         'The program runs in cohorts with regular sessions over multiple weeks. Participants work individually and in teams, receiving mentorship from experienced facilitators and E4Youth alumni. Final stories are shared at public showcases and community events.',
@@ -152,7 +152,7 @@ const experiences: Record<string, {
       secondaryCTA: { text: 'View Heritage Projects', href: '/stories' },
       gradient: 'from-gold via-purple to-primary-dark',
       accentColor: '#FCB900',
-      whoFor: 'HIP is for participants who are ready to lead. It\'s designed for young people and community members with experience in digital media and community-based work who want to take on original heritage research and creative production projects. HIP sits in the Elevate stage of the 4E Ecosystem — it\'s advanced, leadership-oriented, and connected to stipend-supported pathways.',
+      whoFor: 'HIP is for participants who are ready to lead. It\'s designed for young people and community members with experience in digital media and community-based work who want to take on original heritage research and creative production projects. HIP sits in the Elevate stage of the E4 Ecosystem — it\'s advanced, leadership-oriented, and connected to stipend-supported pathways.',
       whatHappens: [
         'HIP participants lead original research and creative production projects focused on Austin\'s cultural heritage. Projects might include documentary films, AR experiences, oral history archives, community installations, or digital publications. Each project is community-centered — developed in partnership with heritage organizations, neighborhood leaders, and cultural institutions.',
         'Participants work in small teams with structured mentorship from experienced researchers, media professionals, and E4Youth alumni. Projects are designed to have lasting community value and professional-quality output.',
@@ -197,7 +197,7 @@ const experiences: Record<string, {
       secondaryCTA: { text: 'Partner as an Employer', href: '/partner' },
       gradient: 'from-primary-dark via-gold to-purple',
       accentColor: '#FCB900',
-      whoFor: 'WOW is for young people across multiple stages of the 4E Ecosystem — from public-facing workforce events that are open to everyone, to professional placements that connect experienced participants with real employers. Whether you\'re attending your first WOW exhibition or stepping into a paid placement, WOW meets you where you are.',
+      whoFor: 'WOW is for young people across multiple stages of the E4 Ecosystem — from public-facing workforce events that are open to everyone, to professional placements that connect experienced participants with real employers. Whether you\'re attending your first WOW exhibition or stepping into a paid placement, WOW meets you where you are.',
       whatHappens: [
         'WOW operates across the ecosystem as both public experience and professional pathway:',
         'WOW Exhibitions & Public Events — Open-access events showcasing creative technology work, connecting attendees to the broader E4Youth ecosystem and workforce opportunities.',
@@ -239,14 +239,14 @@ const experiences: Record<string, {
     },
     props: {
       title: 'WOW Heritage Center',
-      subtitle: 'The physical hub of the 4E Ecosystem — where heritage, creative technology, and workforce development come together under one roof.',
+      subtitle: 'The physical hub of the E4 Ecosystem — where heritage, creative technology, and workforce development come together under one roof.',
       primaryCTA: { text: 'Visit the Center', href: '/contact' },
       secondaryCTA: { text: 'Partner With the Heritage Center', href: '/partner' },
       gradient: 'from-primary via-primary-dark to-mint',
       accentColor: '#0072CE',
-      whoFor: 'The WOW Heritage Center serves everyone in the E4Youth ecosystem and the broader Austin community. It\'s a place for young people to learn, create, and work. It\'s a place for community members to experience heritage programming. It\'s a place for partners and employers to connect with emerging creative technology talent. If you\'re part of the 4E Ecosystem — or want to be — the Heritage Center is where it all comes together.',
+      whoFor: 'The WOW Heritage Center serves everyone in the E4Youth ecosystem and the broader Austin community. It\'s a place for young people to learn, create, and work. It\'s a place for community members to experience heritage programming. It\'s a place for partners and employers to connect with emerging creative technology talent. If you\'re part of the E4 Ecosystem — or want to be — the Heritage Center is where it all comes together.',
       whatHappens: [
-        'The WOW Heritage Center is a physical space that supports every stage of the 4E Ecosystem:',
+        'The WOW Heritage Center is a physical space that supports every stage of the E4 Ecosystem:',
         'Engage in Place — Public heritage exhibitions, AR Heritage Tour launch points, community events, and open-access creative technology demonstrations bring people into the ecosystem through the Center\'s doors.',
         'Educate in Place — DSP cohorts, workshops, and creative technology labs run on-site, giving participants access to professional equipment, studio space, and dedicated learning environments.',
         'Empower in Place — Portfolio showcases, public presentations, and creative exhibitions happen at the Center, giving participants a professional venue to present work to community and industry audiences.',
@@ -274,7 +274,7 @@ const experiences: Record<string, {
       howToEngage: [
         { title: 'Visit', description: 'The WOW Heritage Center is open to the public. Come experience heritage exhibitions, attend community events, or simply explore the space.' },
         { title: 'Partner', description: 'Cultural organizations, businesses, and educational institutions can partner with the Heritage Center to co-develop programming, host events, or create workforce opportunities.' },
-        { title: 'Support', description: 'Funders and community supporters can invest in the Heritage Center\'s capacity to serve as the physical home of the 4E Ecosystem.' },
+        { title: 'Support', description: 'Funders and community supporters can invest in the Heritage Center\'s capacity to serve as the physical home of the E4 Ecosystem.' },
       ],
     },
   },
@@ -292,7 +292,7 @@ const experiences: Record<string, {
       accentColor: '#7BDCB5',
       whoFor: 'E4 Level Up is for E4Youth participants who have moved through earlier ecosystem stages and are ready for the next step: real careers. If you\'ve built skills through Educate experiences, produced professional work through Empower, and demonstrated leadership readiness, Level Up connects you to employer-funded positions and career advancement opportunities across Austin\'s creative technology sector.',
       whatHappens: [
-        'E4 Level Up is a structured career advancement experience within the Elevate stage of the 4E Ecosystem:',
+        'E4 Level Up is a structured career advancement experience within the Elevate stage of the E4 Ecosystem:',
         'Stipend-Supported Cohorts — Participants enter structured cohorts with stipend support, focusing on advanced professional development, industry networking, and career readiness.',
         'Employer Matching — Level Up connects participants with employer partners across Austin — creative agencies, tech companies, media organizations, heritage institutions, and more.',
         'Paid Pilot Placements — Real-world work placements with partner organizations, designed to demonstrate capability and build employer relationships.',

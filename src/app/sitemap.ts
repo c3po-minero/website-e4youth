@@ -4,8 +4,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://e4youth.org'
   const pages = [
     '/',
-    '/ecosystem',
+    '/e4-ecosystem',
     '/experiences',
+    '/experiences/public',
+    '/experiences/learning',
+    '/experiences/professional',
     '/experiences/ar-heritage-tours',
     '/experiences/digital-storytelling',
     '/experiences/get-creative',
@@ -25,6 +28,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${baseUrl}${path}`,
     lastModified: new Date(),
     changeFrequency: 'monthly' as const,
-    priority: path === '/' ? 1 : path === '/ecosystem' || path === '/experiences' ? 0.9 : 0.8,
+    priority: path === '/' ? 1 : path === '/e4-ecosystem' || path === '/experiences' ? 0.9 : 0.8,
   }))
 }

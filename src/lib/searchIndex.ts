@@ -15,10 +15,10 @@ export const searchIndex: SearchItem[] = [
     category: 'Main',
   },
   {
-    title: '4E Ecosystem',
+    title: 'E4 Ecosystem',
     description: 'Discover E4Youth\'s circular development model. Four stages — Engage, Educate, Empower, Elevate.',
-    keywords: '4E ecosystem engage educate empower elevate circular model workforce youth development',
-    href: '/ecosystem',
+    keywords: 'E4 ecosystem engage educate empower elevate circular model workforce youth development',
+    href: '/e4-ecosystem',
     category: 'Main',
   },
   {
@@ -65,8 +65,8 @@ export const searchIndex: SearchItem[] = [
   },
   {
     title: 'WOW Heritage Center',
-    description: 'The physical hub of the 4E Ecosystem — heritage, creative technology, and workforce development.',
-    keywords: 'WOW heritage center physical hub 4E ecosystem heritage workforce Austin',
+    description: 'The physical hub of the E4 Ecosystem — heritage, creative technology, and workforce development.',
+    keywords: 'WOW heritage center physical hub E4 ecosystem heritage workforce Austin',
     href: '/experiences/wow-heritage-center',
     category: 'Experiences',
   },
@@ -93,14 +93,14 @@ export const searchIndex: SearchItem[] = [
   },
   {
     title: 'Partner With Us',
-    description: 'Join E4Youth\'s 4E Ecosystem as a corporate, community, or education partner.',
+    description: 'Join E4Youth\'s E4 Ecosystem as a corporate, community, or education partner.',
     keywords: 'partner schools employers funders community organizations workforce development',
     href: '/partner',
     category: 'Main',
   },
   {
     title: 'Stories & Showcases',
-    description: 'Real stories from E4Youth participants across the 4E Ecosystem.',
+    description: 'Real stories from E4Youth participants across the E4 Ecosystem.',
     keywords: 'stories showcases youth voices elevate proof success',
     href: '/stories',
     category: 'Main',

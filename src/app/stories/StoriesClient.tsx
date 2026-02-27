@@ -98,7 +98,7 @@ export default function StoriesClient() {
   return (
     <>
       <HeroSection
-        headline="Youth Stories — Voices of the 4E Ecosystem"
+        headline="Youth Stories — Voices of the E4 Ecosystem"
         subheadline="Stories & Showcases highlight youth voices, project outcomes, and public storytelling experiences across E4Youth programs. Every story here is proof that the ecosystem works."
         primaryCTA={{ text: 'Explore Stories', href: '#elevate-proof' }}
         secondaryCTA={{ text: 'Attend a Showcase', href: '/contact' }}
@@ -111,7 +111,7 @@ export default function StoriesClient() {
           <AnimatedSection className="text-center mb-16">
             <span className="inline-block px-4 py-1.5 bg-mint/10 text-mint font-semibold text-sm rounded-full mb-4">Elevate Proof</span>
             <h2 className="text-3xl md:text-4xl font-display font-bold text-secondary">Elevate Proof</h2>
-            <p className="mt-4 text-body max-w-2xl mx-auto">These are the stories that show where the 4E Ecosystem leads. Real participants, real outcomes, real careers.</p>
+            <p className="mt-4 text-body max-w-2xl mx-auto">These are the stories that show where the E4 Ecosystem leads. Real participants, real outcomes, real careers.</p>
           </AnimatedSection>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {elevateProof.map((story, i) => (

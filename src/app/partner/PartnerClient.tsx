@@ -9,7 +9,7 @@ import EcosystemCircle from '@/components/EcosystemCircle'
 
 const partnerStages = [
   {
-    title: 'Engage Partners',
+    title: 'Invest in Engage',
     subtitle: 'Schools, community organizations, cultural institutions, neighborhood associations',
     icon: faHeart,
     color: '#4DB8FF',
@@ -22,7 +22,7 @@ const partnerStages = [
     ],
   },
   {
-    title: 'Educate Partners',
+    title: 'Invest in Educate',
     subtitle: 'Technology providers, curriculum partners, educational institutions, media organizations',
     icon: faGraduationCap,
     color: '#9B51E0',
@@ -35,7 +35,7 @@ const partnerStages = [
     ],
   },
   {
-    title: 'Empower Partners',
+    title: 'Invest in Empower',
     subtitle: 'Project sponsors, exhibition venues, creative agencies, community organizations',
     icon: faBolt,
     color: '#FCB900',
@@ -48,7 +48,7 @@ const partnerStages = [
     ],
   },
   {
-    title: 'Elevate Partners',
+    title: 'Invest in Elevate',
     subtitle: 'Employers, workforce development organizations, funders, industry leaders',
     icon: faRocket,
     color: '#7BDCB5',
@@ -67,8 +67,8 @@ export default function PartnerClient() {
   return (
     <>
       <HeroSection
-        headline="Partner With E4Youth"
-        subheadline="Schools, workforce and industry partners, and funders all have a role in the 4E Ecosystem. Whether you're looking to connect with emerging talent, support community impact, or invest in youth workforce development — there's a partnership model built for you."
+        headline="Partner in Building the E4 Ecosystem"
+        subheadline="Schools, workforce and industry partners, and funders all have a role in the E4 Ecosystem. Whether you're looking to connect with emerging talent, support community impact, or invest in youth workforce development — there's a partnership model built for you."
         primaryCTA={{ text: 'Become a Partner', href: '/contact' }}
         secondaryCTA={{ text: 'Contact Us', href: '/contact' }}
         gradient="from-primary-dark via-gold to-purple"
@@ -80,9 +80,9 @@ export default function PartnerClient() {
       <section className="section-padding bg-white">
         <div className="max-w-4xl mx-auto text-center">
           <AnimatedSection>
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-secondary mb-4">The 4E Circle — Where Partners Fit</h2>
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-secondary mb-4">The Model</h2>
             <p className="text-body leading-relaxed mb-10">
-              The 4E Ecosystem works because it&apos;s supported at every stage by partners who bring resources, expertise, access, and opportunity. Here&apos;s how different partners connect:
+              The E4 Ecosystem is a circular model — Story to Skill to Opportunity to Leadership — powered at every stage by partners who bring resources, expertise, access, and opportunity.
             </p>
           </AnimatedSection>
           <AnimatedSection className="flex justify-center" delay={0.2}>

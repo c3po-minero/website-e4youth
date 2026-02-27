@@ -38,7 +38,7 @@ export default function ProgramsClient() {
     <>
       <HeroSection
         headline="Youth Experiences in Creative Technology"
-        subheadline="E4Youth experiences support young people at different ages and stages — from early exposure and creative confidence-building to professional readiness and public visibility. All experiences are part of the 4E Ecosystem."
+        subheadline="E4Youth experiences support young people at different ages and stages — from early exposure and creative confidence-building to professional readiness and public visibility. All experiences are part of the E4 Ecosystem."
         primaryCTA={{ text: 'Explore Experiences', href: '#public-experiences' }}
         secondaryCTA={{ text: 'Join an Experience', href: '/contact' }}
         gradient="from-purple via-primary-dark to-mint"
@@ -49,7 +49,7 @@ export default function ProgramsClient() {
         <div className="max-w-3xl mx-auto text-center">
           <AnimatedSection>
             <p className="text-lg text-body leading-relaxed">
-              Rather than offering standalone classes, E4Youth organizes its work as a connected ecosystem of experiences that allow participants to enter at multiple points and grow over time. Every experience maps to a stage of the <Link href="/ecosystem" className="text-primary-dark font-semibold hover:underline">4E Ecosystem</Link> — Engage, Educate, Empower, or Elevate — and many span multiple stages as participants progress.
+              Rather than offering standalone classes, E4Youth organizes its work as a connected ecosystem of experiences that allow participants to enter at multiple points and grow over time. Every experience maps to a stage of the <Link href="/e4-ecosystem" className="text-primary-dark font-semibold hover:underline">E4 Ecosystem</Link> — Engage, Educate, Empower, or Elevate — and many span multiple stages as participants progress.
             </p>
             <p className="mt-4 text-body leading-relaxed">
               All learning and professional experiences are stipend-supported + employer-funded (expanding).

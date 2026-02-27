@@ -58,7 +58,7 @@ export default function WowHeritageClient() {
         gradient="from-primary via-primary-dark to-mint"
       />
 
-      {/* 4E Activation Sections */}
+      {/* E4 Activation Sections */}
       <section className="section-padding bg-white">
         <div className="max-w-7xl mx-auto">
           <AnimatedSection className="text-center mb-16">

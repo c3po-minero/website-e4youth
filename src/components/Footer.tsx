@@ -34,12 +34,14 @@ export default function Footer() {
           <div>
             <h3 className="font-display font-semibold text-lg mb-4">Experiences</h3>
             <ul className="space-y-2 text-sm text-gray-300">
-              <li><Link href="/experiences/ar-heritage-tours" className="hover:text-primary transition-colors">AR Heritage Tours</Link></li>
+              <li><Link href="/experiences/public" className="hover:text-primary transition-colors">Public Experiences</Link></li>
+              <li><Link href="/experiences/learning" className="hover:text-primary transition-colors">Learning Experiences</Link></li>
+              <li><Link href="/experiences/professional" className="hover:text-primary transition-colors">Professional Experiences</Link></li>
+              <li className="pt-2 border-t border-gray-600"><Link href="/experiences/ar-heritage-tours" className="hover:text-primary transition-colors">AR Heritage Tours</Link></li>
               <li><Link href="/experiences/digital-storytelling" className="hover:text-primary transition-colors">Digital Storytelling (DSP)</Link></li>
               <li><Link href="/experiences/get-creative" className="hover:text-primary transition-colors">Get Creative!</Link></li>
               <li><Link href="/experiences/hip" className="hover:text-primary transition-colors">Heritage Innovation (HIP)</Link></li>
               <li><Link href="/experiences/wow" className="hover:text-primary transition-colors">WOW — Workforce Opportunity</Link></li>
-              <li><Link href="/experiences/e4-live" className="hover:text-primary transition-colors">E4 Live</Link></li>
               <li><Link href="/experiences/e4-level-up" className="hover:text-primary transition-colors">E4 Level Up</Link></li>
             </ul>
           </div>
@@ -48,7 +50,7 @@ export default function Footer() {
           <div>
             <h3 className="font-display font-semibold text-lg mb-4">Organization</h3>
             <ul className="space-y-2 text-sm text-gray-300">
-              <li><Link href="/ecosystem" className="hover:text-primary transition-colors">4E Ecosystem</Link></li>
+              <li><Link href="/e4-ecosystem" className="hover:text-primary transition-colors">E4 Ecosystem</Link></li>
               <li><Link href="/experiences" className="hover:text-primary transition-colors">Experiences</Link></li>
               <li><Link href="/impact" className="hover:text-primary transition-colors">Impact</Link></li>
               <li><Link href="/partner" className="hover:text-primary transition-colors">Partner With Us</Link></li>

@@ -91,13 +91,13 @@ export default function EcosystemClient() {
   return (
     <>
       <HeroSection
-        headline="The 4E Ecosystem"
+        headline="The E4 Ecosystem"
         subheadline="Built on four pillars — Engage, Educate, Empower, and Elevate — the E4 Ecosystem is a circular pathway that connects storytelling to skill, opportunity, and visible leadership."
         primaryCTA={{ text: 'See Our Experiences', href: '/experiences' }}
         secondaryCTA={{ text: 'Partner With Us', href: '/partner' }}
         gradient="from-purple via-primary-dark to-mint"
         backgroundImage="/images/e4youth/_a4a1944.webp"
-        backgroundImageAlt="E4Youth 4E Ecosystem creative technology experiences"
+        backgroundImageAlt="E4Youth E4 Ecosystem creative technology experiences"
       />
 
       {/* Ecosystem Intro */}
@@ -127,7 +127,7 @@ export default function EcosystemClient() {
       {stages.map((stage, i) => {
         const storyData = stage.spotlight || stage.story!
         return (
-          <section key={stage.label} className={`section-padding ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}`}>
+          <section key={stage.label} className={`section-padding ${stage.isElevate ? 'bg-gray-900 text-white' : i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}`}>
             <div className="max-w-7xl mx-auto">
               <AnimatedSection>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
@@ -142,47 +142,47 @@ export default function EcosystemClient() {
                     </div>
 
                     {/* Title */}
-                    <h2 className="text-3xl md:text-4xl font-display font-bold text-secondary mb-2">
+                    <h2 className={`text-3xl md:text-4xl font-display font-bold mb-2 ${stage.isElevate ? "text-white" : "text-secondary"}`}>
                       {stage.subtitle}
                     </h2>
                     <div className="w-16 h-1 rounded-full mb-6" style={{ backgroundColor: stage.color }} />
 
                     {/* Description */}
                     {stage.body.split('\n\n').map((p, pi) => (
-                      <p key={pi} className="text-body leading-relaxed mb-4">{p}</p>
+                      <p key={pi} className={`leading-relaxed mb-4 ${stage.isElevate ? "text-gray-300" : "text-body"}`}>{p}</p>
                     ))}
 
                     {/* Outcomes */}
-                    <p className="text-sm text-body mt-2 mb-8"><strong className="text-secondary">Outcomes:</strong> {stage.outcomes}</p>
+                    <p className={`text-sm mt-2 mb-8 ${stage.isElevate ? "text-gray-300" : "text-body"}`}><strong className={stage.isElevate ? "text-white" : "text-secondary"}>Outcomes:</strong> {stage.outcomes}</p>
 
                     {/* Quote */}
                     <div className="border-l-4 pl-5 py-2" style={{ borderColor: stage.color }}>
-                      <blockquote className="text-lg italic text-secondary leading-relaxed mb-3">
+                      <blockquote className={`text-lg italic leading-relaxed mb-3 ${stage.isElevate ? "text-white" : "text-secondary"}`}>
                         &ldquo;{storyData.quote}&rdquo;
                       </blockquote>
                       <div>
-                        <p className="font-display font-bold text-secondary text-sm">{storyData.name}</p>
-                        <p className="text-xs text-body italic">{storyData.pathway}</p>
+                        <p className={`font-display font-bold text-sm ${stage.isElevate ? "text-white" : "text-secondary"}`}>{storyData.name}</p>
+                        <p className={`text-xs italic ${stage.isElevate ? "text-gray-400" : "text-body"}`}>{storyData.pathway}</p>
                       </div>
                     </div>
                   </div>
 
                   {/* Right Column: Experiences in this stage */}
                   <div>
-                    <h3 className="text-lg font-display font-bold text-secondary mb-6">Experiences in this stage</h3>
+                    <h3 className={`text-lg font-display font-bold mb-6 ${stage.isElevate ? "text-white" : "text-secondary"}`}>Experiences in this stage</h3>
                     <div className="space-y-4">
                       {stage.experiences.map((exp, ei) => (
                         <div
                           key={exp.name}
-                          className="bg-white rounded-xl p-5 shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300"
+                          className={`rounded-xl p-5 shadow-sm border hover:shadow-md transition-shadow duration-300 ${stage.isElevate ? "bg-gray-800 border-gray-700" : "bg-white border-gray-100"}`}
                         >
                           <div className="flex items-start gap-4">
                             <div className="w-8 h-8 rounded-lg flex-shrink-0 flex items-center justify-center mt-0.5 text-white font-bold text-xs" style={{ backgroundColor: stage.color }}>
                               {ei + 1}
                             </div>
                             <div>
-                              <h4 className="font-display font-bold text-secondary mb-1">{exp.name}</h4>
-                              <p className="text-sm text-body leading-relaxed">{exp.desc}</p>
+                              <h4 className={`font-display font-bold mb-1 ${stage.isElevate ? "text-white" : "text-secondary"}`}>{exp.name}</h4>
+                              <p className={`text-sm leading-relaxed ${stage.isElevate ? "text-gray-300" : "text-body"}`}>{exp.desc}</p>
                             </div>
                           </div>
                         </div>
@@ -204,7 +204,7 @@ export default function EcosystemClient() {
           <AnimatedSection>
             <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">The Circle Continues</h2>
             <p className="text-lg text-white/90 leading-relaxed">
-              When Elevate participants return as mentors, facilitators, and community leaders, they become the engine of Engage. They&apos;re the faces young people see first. They&apos;re the proof that the pathway is real. And they&apos;re the reason the 4E Ecosystem isn&apos;t a program — it&apos;s a living, self-sustaining system.
+              When Elevate participants return as mentors, facilitators, and community leaders, they become the engine of Engage. They&apos;re the faces young people see first. They&apos;re the proof that the pathway is real. And they&apos;re the reason the E4 Ecosystem isn&apos;t a program — it&apos;s a living, self-sustaining system.
             </p>
             {/* Visual indicator */}
             <div className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 rounded-full mt-8">
@@ -228,12 +228,12 @@ export default function EcosystemClient() {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'WebPage',
-            name: 'The 4E Ecosystem',
+            name: 'The E4 Ecosystem',
             description: 'Discover E4Youth\'s circular development model. Four stages — Engage, Educate, Empower, Elevate — create lasting workforce pathways through creative technology and community storytelling.',
             mainEntity: {
               '@type': 'EducationalOrganization',
               name: 'E4Youth',
-              hasCredential: '4E Ecosystem Model',
+              hasCredential: 'E4 Ecosystem Model',
             },
           }),
         }}
