@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import HeroSection from '@/components/HeroSection'
 import AnimatedSection from '@/components/AnimatedSection'
 import EcosystemCircle from '@/components/EcosystemCircle'
@@ -13,10 +14,12 @@ export default function HomeClient() {
     <>
       {/* Hero */}
       <HeroSection
-        headline="Building Futures Through Creative Technology"
-        subheadline="E4Youth connects young people, mentors, and communities across Austin through a living ecosystem of creative technology experiences — from first spark to paid career."
-        primaryCTA={{ text: 'Explore 4E Ecosystem', href: '/ecosystem' }}
+        headline="We use storytelling to engage, empower, educate, and elevate across generations."
+        subheadline="Through the E4 Ecosystem, we connect young creatives, community leaders, and industry partners in pathways that transform stories into skills, opportunity, and visible leadership."
+        primaryCTA={{ text: 'Explore the E4 Ecosystem', href: '/ecosystem' }}
         secondaryCTA={{ text: 'Join an Experience', href: '/experiences' }}
+        backgroundImage="/images/e4youth/_a4a2514.webp"
+        backgroundImageAlt="E4Youth participants engaged in creative technology storytelling"
       >
         <div className="mt-4">
           <Link href="/partner" className="inline-flex items-center px-8 py-4 border-2 border-white/60 text-white font-semibold rounded-full hover:bg-white hover:text-secondary transition-all duration-300">
@@ -30,15 +33,28 @@ export default function HomeClient() {
         <div className="max-w-7xl mx-auto">
           <AnimatedSection className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-display font-bold text-secondary">The 4E Ecosystem</h2>
-            <h3 className="text-lg md:text-xl text-body mt-2">Engage → Educate → Empower → Elevate</h3>
+            <h3 className="text-lg md:text-xl text-body mt-2">Story &gt; Skill &gt; Opportunity &gt; Leadership</h3>
             <p className="mt-4 max-w-3xl mx-auto text-body leading-relaxed">
-              Every experience at E4Youth lives inside a single, circular ecosystem. Young people enter through community engagement — AR Heritage Tours, public showcases, live events — and move through stages of learning, creating, and leading. The model doesn&apos;t end at Elevate. Alumni return as mentors, leaders, and advocates, fueling the next generation&apos;s entry point. The circle continues.
+              We use the 4E&apos;s to build the E4 Ecosystem — a circular pathway that transforms storytelling into opportunity.
             </p>
           </AnimatedSection>
 
-          <AnimatedSection className="flex justify-center mb-10" delay={0.2}>
-            <EcosystemCircle />
-          </AnimatedSection>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-10">
+            <AnimatedSection className="flex justify-center" delay={0.2}>
+              <EcosystemCircle />
+            </AnimatedSection>
+            <AnimatedSection delay={0.3}>
+              <div className="relative rounded-2xl overflow-hidden shadow-lg aspect-[4/3]">
+                <Image
+                  src="/images/e4youth/_a4a1906.webp"
+                  alt="E4Youth mentorship and community connection"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
+              </div>
+            </AnimatedSection>
+          </div>
 
           <AnimatedSection className="text-center">
             <Link href="/ecosystem" className="inline-flex items-center gap-2 text-primary-dark font-semibold hover:gap-3 transition-all">
@@ -48,11 +64,41 @@ export default function HomeClient() {
         </div>
       </section>
 
-      {/* Elevate Proof — Where This Leads */}
+      {/* Innovation & XR */}
+      <section className="section-padding bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <AnimatedSection>
+              <div className="relative rounded-2xl overflow-hidden shadow-lg aspect-[4/3]">
+                <Image
+                  src="/images/e4youth/_a4a5419.webp"
+                  alt="E4Youth innovation and XR creative technology experiences"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
+              </div>
+            </AnimatedSection>
+            <AnimatedSection delay={0.2}>
+              <div className="relative rounded-2xl overflow-hidden shadow-lg aspect-[4/3]">
+                <Image
+                  src="/images/e4youth/img_5137_1.webp"
+                  alt="E4Youth story production and creative pathways"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
+              </div>
+            </AnimatedSection>
+          </div>
+        </div>
+      </section>
+
+      {/* Elevate In Action */}
       <section className="section-padding bg-white">
         <div className="max-w-7xl mx-auto">
           <AnimatedSection className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-secondary">Elevate Proof — Where This Leads</h2>
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-secondary">Elevate In Action</h2>
           </AnimatedSection>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <StoryTile
@@ -85,15 +131,28 @@ export default function HomeClient() {
         </div>
       </section>
 
-      {/* Built Across Generations */}
+      {/* Youth Voice / Outcome */}
       <section className="section-padding bg-gray-50">
-        <div className="max-w-3xl mx-auto text-center">
-          <AnimatedSection>
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-secondary mb-6">Built Across Generations</h2>
-            <p className="text-lg text-body leading-relaxed">
-              E4Youth is designed to be multi-generational from the ground up. Young people bring energy and vision. Community leaders bring lived experience and deep roots. Mentors bridge the gap between learning and doing. Industry partners open doors to real careers. And alumni return to strengthen every stage of the ecosystem. This isn&apos;t a youth program with adult supervision — it&apos;s a community model where every generation has a role, a voice, and a stake in what comes next.
-            </p>
-          </AnimatedSection>
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <AnimatedSection>
+              <h2 className="text-3xl md:text-4xl font-display font-bold text-secondary mb-6">Built Across Generations</h2>
+              <p className="text-lg text-body leading-relaxed">
+                Youth build skills. Community members share knowledge. Industry partners open doors. Alumni return as leaders. The ecosystem strengthens when each generation contributes.
+              </p>
+            </AnimatedSection>
+            <AnimatedSection delay={0.2}>
+              <div className="relative rounded-2xl overflow-hidden shadow-lg aspect-[4/3]">
+                <Image
+                  src="/images/e4youth/_a4a4672.webp"
+                  alt="E4Youth intergenerational community impact and youth voice"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
+              </div>
+            </AnimatedSection>
+          </div>
         </div>
       </section>
 

@@ -12,9 +12,11 @@ export default function AboutClient() {
       <HeroSection
         headline="About E4 Youth"
         subheadline="E4 Youth is a community-rooted organization using storytelling to unlock equity and opportunity across generations."
-        primaryCTA={{ text: 'Explore Our Programs', href: '/programs' }}
+        primaryCTA={{ text: 'Explore Our Experiences', href: '/programs' }}
         secondaryCTA={{ text: 'Partner With Us', href: '/partner' }}
         gradient="from-primary via-purple to-gold"
+        backgroundImage="/images/e4youth/_a4a3253_1.webp"
+        backgroundImageAlt="E4Youth about our mission"
       />
 
       {/* Story */}
@@ -94,7 +96,7 @@ export default function AboutClient() {
             <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">Join Our Mission</h2>
             <p className="text-lg text-white/90 mb-8">Be part of the movement to unlock equity and opportunity through the power of storytelling.</p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link href="/programs" className="btn-gold">Explore Our Programs</Link>
+              <Link href="/experiences" className="btn-gold">Explore Our Experiences</Link>
               <Link href="/partner" className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-secondary transition-all duration-300">Partner With Us</Link>
             </div>
           </AnimatedSection>

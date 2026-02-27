@@ -25,9 +25,9 @@ const metricSections: {
     tag: 'Engage',
     title: 'Engage Metrics',
     color: '#4DB8FF',
-    image: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&q=80',
+    image: '/images/e4youth/_a4a2225.webp',
     imageAlt: 'Diverse community members participating in a public engagement event in Austin',
-    image2: 'https://images.unsplash.com/photo-1517457373958-b7bdd4587205?w=600&q=80',
+    image2: '/images/e4youth/_a4a2866.webp',
     image2Alt: 'Youth leading an interactive community tour experience',
     imagePosition: 'left',
     metrics: [
@@ -43,9 +43,9 @@ const metricSections: {
     tag: 'Educate',
     title: 'Educate Metrics',
     color: '#9B51E0',
-    image: 'https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=800&q=80',
+    image: '/images/e4youth/e4y_creative_clubs-12.webp',
     imageAlt: 'Youth learning digital media skills in a creative technology workshop',
-    image2: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=600&q=80',
+    image2: '/images/e4youth/e4y_creative_clubs-58_1.webp',
     image2Alt: 'Students collaborating on a digital storytelling project',
     imagePosition: 'right',
     metrics: [
@@ -61,9 +61,9 @@ const metricSections: {
     tag: 'Empower',
     title: 'Empower Metrics',
     color: '#FCB900',
-    image: 'https://images.unsplash.com/photo-1531545514256-b1400bc00f31?w=800&q=80',
+    image: '/images/e4youth/_a4a5473_2.webp',
     imageAlt: 'Young creative professional presenting portfolio work at a showcase',
-    image2: 'https://images.unsplash.com/photo-1542744094-3a31f272c490?w=800&q=80',
+    image2: '/images/e4youth/e4y_creative_clubs-44_1.webp',
     image2Alt: 'Student working on a creative design project',
     imagePosition: 'left',
     metrics: [
@@ -79,9 +79,9 @@ const metricSections: {
     tag: 'Elevate',
     title: 'Elevate Metrics',
     color: '#7BDCB5',
-    image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&q=80',
+    image: '/images/e4youth/alumni__a4a2020_1.webp',
     imageAlt: 'Young professionals collaborating in leadership roles',
-    image2: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=600&q=80',
+    image2: '/images/e4youth/alumni__a4a2027_1.webp',
     image2Alt: 'Young professional in a creative technology leadership position',
     imagePosition: 'right',
     metrics: [
@@ -105,6 +105,8 @@ export default function ImpactClient() {
         primaryCTA={{ text: 'View Impact Highlights', href: '#metrics' }}
         secondaryCTA={{ text: 'Partner on Evaluation', href: '/partner' }}
         gradient="from-gold via-purple to-primary-dark"
+        backgroundImage="/images/e4youth/_a4a5235-edit.webp"
+        backgroundImageAlt="E4Youth impact and community outcomes"
       />
 
       {/* Metrics by Stage */}

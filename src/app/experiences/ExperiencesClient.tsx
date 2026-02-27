@@ -86,6 +86,8 @@ export default function ExperiencesClient() {
         primaryCTA={{ text: 'Explore the 4E Ecosystem', href: '/ecosystem' }}
         secondaryCTA={{ text: 'Partner With Us', href: '/partner' }}
         gradient="from-primary-dark via-purple to-gold"
+        backgroundImage="/images/e4youth/e4y_creative_clubs-64_1.webp"
+        backgroundImageAlt="E4Youth youth experiences in creative technology"
       />
 
       <div className="bg-white border-b border-gray-100">

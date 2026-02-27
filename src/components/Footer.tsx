@@ -39,7 +39,6 @@ export default function Footer() {
               <li><Link href="/experiences/get-creative" className="hover:text-primary transition-colors">Get Creative!</Link></li>
               <li><Link href="/experiences/hip" className="hover:text-primary transition-colors">Heritage Innovation (HIP)</Link></li>
               <li><Link href="/experiences/wow" className="hover:text-primary transition-colors">WOW — Workforce Opportunity</Link></li>
-              <li><Link href="/experiences/wow-heritage-center" className="hover:text-primary transition-colors">WOW Heritage Center</Link></li>
               <li><Link href="/experiences/e4-live" className="hover:text-primary transition-colors">E4 Live</Link></li>
               <li><Link href="/experiences/e4-level-up" className="hover:text-primary transition-colors">E4 Level Up</Link></li>
             </ul>
@@ -53,6 +52,7 @@ export default function Footer() {
               <li><Link href="/experiences" className="hover:text-primary transition-colors">Experiences</Link></li>
               <li><Link href="/impact" className="hover:text-primary transition-colors">Impact</Link></li>
               <li><Link href="/partner" className="hover:text-primary transition-colors">Partner With Us</Link></li>
+              <li><Link href="/wow-heritage-center" className="hover:text-primary transition-colors">WOW Heritage Center</Link></li>
               <li><Link href="/about" className="hover:text-primary transition-colors">About Us</Link></li>
               <li><Link href="/stories" className="hover:text-primary transition-colors">Stories</Link></li>
               <li><Link href="/contact" className="hover:text-primary transition-colors">Contact</Link></li>

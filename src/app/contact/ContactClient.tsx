@@ -21,6 +21,8 @@ export default function ContactClient() {
         primaryCTA={{ text: 'Contact Us', href: '#contact-form' }}
         secondaryCTA={{ text: 'Join an Experience', href: '/programs' }}
         gradient="from-purple via-primary-dark to-mint"
+        backgroundImage="/images/e4youth/_a4a5415.webp"
+        backgroundImageAlt="Connect with E4Youth"
       />
 
       {/* Ways to Connect */}

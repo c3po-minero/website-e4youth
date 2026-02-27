@@ -13,7 +13,7 @@ const experiences = [
   { name: 'Get Creative!', href: '/experiences/get-creative' },
   { name: 'Heritage Innovation (HIP)', href: '/experiences/hip' },
   { name: 'WOW — Workforce Opportunity', href: '/experiences/wow' },
-  { name: 'WOW Heritage Center', href: '/experiences/wow-heritage-center' },
+
   { name: 'E4 Live', href: '/experiences/e4-live' },
   { name: 'E4 Level Up', href: '/experiences/e4-level-up' },
 ]
@@ -24,6 +24,7 @@ const navLinks = [
   { name: 'Experiences', href: '/experiences', children: experiences },
   { name: 'Impact', href: '/impact' },
   { name: 'Partner', href: '/partner' },
+  { name: 'WOW Heritage Center', href: '/wow-heritage-center' },
   { name: 'About', href: '/about' },
   { name: 'Contact', href: '/contact' },
 ]

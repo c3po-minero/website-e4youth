@@ -27,6 +27,8 @@ interface ExperienceDetailProps {
   storyImageAlt?: string
   storyImage2?: string
   storyImage2Alt?: string
+  heroImage?: string
+  heroImageAlt?: string
   howToEngage: { title: string; description: string }[]
 }
 
@@ -47,6 +49,8 @@ export default function ExperienceDetailLayout({
   storyImageAlt,
   storyImage2,
   storyImage2Alt,
+  heroImage,
+  heroImageAlt,
   howToEngage,
 }: ExperienceDetailProps) {
   return (
@@ -57,6 +61,8 @@ export default function ExperienceDetailLayout({
         primaryCTA={primaryCTA}
         secondaryCTA={secondaryCTA}
         gradient={gradient}
+        backgroundImage={heroImage}
+        backgroundImageAlt={heroImageAlt}
       />
 
       {/* Breadcrumb */}

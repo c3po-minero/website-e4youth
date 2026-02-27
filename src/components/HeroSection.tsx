@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import Image from 'next/image'
 import { ReactNode } from 'react'
 
 interface Props {
@@ -10,6 +11,8 @@ interface Props {
   primaryCTA?: { text: string; href: string }
   secondaryCTA?: { text: string; href: string }
   gradient?: string
+  backgroundImage?: string
+  backgroundImageAlt?: string
   children?: ReactNode
 }
 
@@ -19,10 +22,27 @@ export default function HeroSection({
   primaryCTA,
   secondaryCTA,
   gradient = 'from-primary-dark via-purple to-primary',
+  backgroundImage,
+  backgroundImageAlt,
   children,
 }: Props) {
   return (
     <section className={`relative min-h-[85vh] flex items-center overflow-hidden bg-gradient-to-br ${gradient}`}>
+      {/* Background image */}
+      {backgroundImage && (
+        <div className="absolute inset-0 z-0">
+          <Image
+            src={backgroundImage}
+            alt={backgroundImageAlt || ''}
+            fill
+            className="object-cover"
+            sizes="100vw"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/50 to-black/70" />
+        </div>
+      )}
+
       {/* Animated background shapes */}
       <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
         <div className="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-white/5 animate-float" />

@@ -72,6 +72,8 @@ export default function PartnerClient() {
         primaryCTA={{ text: 'Become a Partner', href: '/contact' }}
         secondaryCTA={{ text: 'Contact Us', href: '/contact' }}
         gradient="from-primary-dark via-gold to-purple"
+        backgroundImage="/images/e4youth/_a4a1947_1.webp"
+        backgroundImageAlt="E4Youth partnership and collaboration"
       />
 
       {/* The Model */}

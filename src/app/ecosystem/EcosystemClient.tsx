@@ -91,11 +91,13 @@ export default function EcosystemClient() {
   return (
     <>
       <HeroSection
-        headline="The 4E Ecosystem — Engage, Educate, Empower, Elevate"
-        subheadline="The 4E Ecosystem is E4Youth's circular youth development model. It's not a pipeline with a start and an end — it's a living system where each stage feeds the next, and the final stage feeds the first."
+        headline="The 4E Ecosystem"
+        subheadline="Built on four pillars — Engage, Educate, Empower, and Elevate — the E4 Ecosystem is a circular pathway that connects storytelling to skill, opportunity, and visible leadership."
         primaryCTA={{ text: 'See Our Experiences', href: '/experiences' }}
         secondaryCTA={{ text: 'Partner With Us', href: '/partner' }}
         gradient="from-purple via-primary-dark to-mint"
+        backgroundImage="/images/e4youth/_a4a1944.webp"
+        backgroundImageAlt="E4Youth 4E Ecosystem creative technology experiences"
       />
 
       {/* Ecosystem Intro */}
@@ -103,7 +105,7 @@ export default function EcosystemClient() {
         <div className="max-w-3xl mx-auto text-center">
           <AnimatedSection>
             <p className="text-lg text-body leading-relaxed">
-              Young people enter through <strong>Engage</strong>: community experiences that spark curiosity and connection. They build skills through <strong>Educate</strong>: structured digital media training and creative technology workshops. They produce real work through <strong>Empower</strong>: portfolio building, public presentations, and creative projects with community impact. And they step into leadership and paid opportunity through <strong>Elevate</strong>: stipend-supported cohorts, paid pilot placements, and employer-funded roles that are expanding across Austin.
+              Participants enter at multiple points and grow over time. As individuals elevate into paid and visible leadership roles, they reinforce the next cycle of engagement.
             </p>
             <p className="mt-6 text-body leading-relaxed">
               Here&apos;s what makes the model circular: Elevate feeds Engage. Alumni who reach Elevate return as mentors, facilitators, and community leaders — becoming the people who spark the next young person&apos;s entry into the ecosystem. The circle never stops turning.
