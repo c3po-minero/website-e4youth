@@ -82,6 +82,13 @@ export default function Footer() {
 
         <div className="border-t border-gray-600 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-400">
           <p>&copy; {new Date().getFullYear()} E4 Youth. All rights reserved.</p>
+          <div className="flex items-center gap-1 text-gray-500">
+            Powered by{' '}
+            <a href="https://minero.io" target="_blank" rel="noopener noreferrer" className="inline-flex items-center">
+              <Image src="/images/minero-logo.webp" alt="Minero" width={56} height={14} className="h-3.5 w-auto opacity-40 brightness-0 invert relative -top-px" />
+            </a>
+            {' '}+ <span className="relative -top-px">🤖</span>
+          </div>
           <div className="flex gap-6">
             <Link href="/about" className="hover:text-primary transition-colors">Privacy Policy</Link>
             <Link href="/about" className="hover:text-primary transition-colors">Terms</Link>
