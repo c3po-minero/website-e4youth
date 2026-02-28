@@ -46,6 +46,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${inter.variable} ${poppins.variable}`}>
       <head>
+        <link
+          rel="preload"
+          href="/images/e4youth/_a4a2514.webp"
+          as="image"
+          type="image/webp"
+        />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-887T09CZYB"
           strategy="lazyOnload"
