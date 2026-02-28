@@ -1,0 +1,108 @@
+# E4 Youth — Storytelling for Equity & Opportunity
+
+## Organization Overview
+E4 Youth is a community-rooted nonprofit organization based in Austin, Texas. The organization uses the power of storytelling and creative technology to unlock equity, workforce access, and opportunity across generations. E4 Youth builds multi-generational pathways through creative technology, connecting young people to skills, mentors, and career opportunities.
+
+Website: https://e4youth.org
+Email: info@e4youth.org
+Location: Austin, Texas, USA
+
+## Mission
+E4 Youth uses storytelling to unlock equity and opportunity across generations, building workforce pathways through creative technology and community engagement.
+
+## The E4 Ecosystem Model
+The E4 Ecosystem is E4 Youth's circular development model with four interconnected stages:
+
+1. **Engage** — Community entry points through public experiences, events, and cultural programming that welcome participants into the ecosystem.
+2. **Educate** — Structured learning experiences in digital media, storytelling, and creative technology that build foundational skills.
+3. **Empower** — Applied projects and professional experiences where participants create real work, build portfolios, and develop career-ready competencies.
+4. **Elevate** — Workforce placement, leadership roles, and alumni pathways that create lasting economic impact and community contribution.
+
+The model is circular: participants who Elevate return to Engage the next generation, creating sustainable community impact.
+
+Page: https://e4youth.org/e4-ecosystem
+
+## Experiences & Programs
+
+### Public Experiences (Open to Everyone)
+- **AR Heritage Tours** — Youth-created augmented reality walking tours that bring Austin's cultural history to life through immersive community storytelling.
+- **Community Showcases** — Public events featuring youth work and creative productions.
+- **WOW Public Events** — Open events at the WOW Heritage Center.
+
+Page: https://e4youth.org/experiences/public
+
+### Learning Experiences (Skill Building)
+- **Digital Storytelling Program (DSP)** — Structured digital media and storytelling training.
+- **Workshops & Labs** — Hands-on skill-building sessions in creative technology.
+
+Page: https://e4youth.org/experiences/learning
+
+### Professional Experiences (Career Pathways)
+- **Get Creative!** — Creative production experiences with real deliverables.
+- **Heritage Innovation Program (HIP)** — Heritage-focused innovation and technology projects.
+- **E4 Level Up** — Advanced career pathway program with stipend support.
+
+Page: https://e4youth.org/experiences/professional
+
+### Additional Programs
+- **WOW (Workforce Opportunity Works)** — Workforce development program connecting youth to employment opportunities.
+- **E4 Live** — Live production and event experiences.
+- **WOW Heritage Center** — The physical hub of the E4 Ecosystem where heritage, creative technology, and workforce development come together under one roof.
+
+All experiences are stipend-supported, providing compensation for youth participants.
+
+## Pages Directory
+
+| URL | Purpose |
+|-----|---------|
+| / | Homepage — overview of E4 Youth's mission and programs |
+| /e4-ecosystem | The E4 Ecosystem model explanation (Engage, Educate, Empower, Elevate) |
+| /experiences | Overview of all youth experiences and programs |
+| /experiences/public | Public experiences open to everyone |
+| /experiences/learning | Learning and skill-building experiences |
+| /experiences/professional | Professional and career pathway experiences |
+| /experiences/ar-heritage-tours | AR Heritage Tours program detail |
+| /experiences/digital-storytelling | Digital Storytelling Program (DSP) detail |
+| /experiences/get-creative | Get Creative! program detail |
+| /experiences/hip | Heritage Innovation Program (HIP) detail |
+| /experiences/wow | WOW — Workforce Opportunity Works detail |
+| /experiences/wow-heritage-center | WOW Heritage Center experience detail |
+| /experiences/e4-live | E4 Live production experience detail |
+| /experiences/e4-level-up | E4 Level Up career pathway detail |
+| /impact | Impact metrics and outcomes data |
+| /partner | Partnership opportunities for corporations, communities, and educators |
+| /stories | Real stories and testimonials from E4 Youth participants |
+| /about | About the organization, team, and history |
+| /contact | Contact information and ways to get involved |
+| /funders | Information for funders and institutional supporters |
+| /wow-heritage-center | WOW Heritage Center — the physical hub |
+| /search | Site search |
+
+## Partnership Opportunities
+E4 Youth partners with corporations, community organizations, and educational institutions. Partners can support youth workforce development through creative technology programs. Partnership page: https://e4youth.org/partner
+
+## For Funders
+E4 Youth designs community-informed pathways combining storytelling, digital literacy, and applied learning for workforce readiness. Funders page: https://e4youth.org/funders
+
+## Impact
+E4 Youth measures impact across all four stages of the E4 Ecosystem. The organization tracks engagement metrics, skill development, portfolio completion, and workforce placement outcomes for youth participants in Austin, TX.
+Impact page: https://e4youth.org/impact
+
+## Stories
+Real stories from E4 Youth participants demonstrate how young people engage, grow, and elevate through creative technology and workforce experiences.
+Stories page: https://e4youth.org/stories
+
+## Contact
+- Email: info@e4youth.org
+- Location: Austin, Texas
+- Website: https://e4youth.org/contact
+- Facebook: https://www.facebook.com/e4youth
+- Twitter/X: https://twitter.com/e4youth
+- Instagram: https://www.instagram.com/e4youth
+
+## Technical Details
+- Built with Next.js 14, React 18, TypeScript
+- Styled with Tailwind CSS
+- Animations by Framer Motion
+- Hosted on Vercel
+- Fully responsive and accessible

@@ -23,6 +23,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/about',
     '/contact',
     '/funders',
+    '/wow-heritage-center',
   ]
   return pages.map((path) => ({
     url: `${baseUrl}${path}`,
