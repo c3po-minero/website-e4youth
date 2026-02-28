@@ -1,0 +1,19 @@
+/* TEAM */
+Name: Francisco Javier Manrique Martínez
+Role: Solution Architect
+Location: Monterrey, México
+LinkedIn: https://www.linkedin.com/in/fcomanrique/
+Email: francisco@manrique.mx
+
+/* TECHNOLOGY */
+Framework: Next.js 14
+Hosting: Vercel
+Styling: Tailwind CSS
+Animation: Framer Motion
+Icons: Font Awesome
+Language: TypeScript
+
+/* SITE */
+Last update: 2026-02-27
+Standards: HTML5, CSS3, ES6+
+Components: React 18
