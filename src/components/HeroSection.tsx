@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import Link from 'next/link'
 import Image from 'next/image'
 import { ReactNode } from 'react'
@@ -38,6 +37,7 @@ export default function HeroSection({
             className="object-cover"
             sizes="100vw"
             priority
+            fetchPriority="high"
           />
           <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/50 to-black/70" />
         </div>
@@ -51,28 +51,21 @@ export default function HeroSection({
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 lg:px-20 py-32">
-        <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
-          className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white leading-tight max-w-4xl"
+        <h1
+          className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white leading-tight max-w-4xl animate-fade-in-up"
         >
           {headline}
-        </motion.h1>
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.2 }}
-          className="mt-6 text-lg md:text-xl text-white/90 max-w-3xl leading-relaxed"
+        </h1>
+        <p
+          className="mt-6 text-lg md:text-xl text-white/90 max-w-3xl leading-relaxed animate-fade-in-up"
+          style={{ animationDelay: '0.2s' }}
         >
           {subheadline}
-        </motion.p>
+        </p>
         {(primaryCTA || secondaryCTA) && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.4 }}
-            className="mt-10 flex flex-wrap gap-4"
+          <div
+            className="mt-10 flex flex-wrap gap-4 animate-fade-in-up"
+            style={{ animationDelay: '0.4s' }}
           >
             {primaryCTA && (
               <Link href={primaryCTA.href} className="btn-gold">
@@ -84,16 +77,15 @@ export default function HeroSection({
                 {secondaryCTA.text}
               </Link>
             )}
-          </motion.div>
+          </div>
         )}
         {children && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.4 }}
+          <div
+            className="animate-fade-in-up"
+            style={{ animationDelay: '0.4s' }}
           >
             {children}
-          </motion.div>
+          </div>
         )}
       </div>
     </section>

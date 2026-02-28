@@ -1,6 +1,6 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import { useEffect, useRef, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBookOpen, faWrench, faDoorOpen, faCrown } from '@fortawesome/free-solid-svg-icons'
 import type { IconDefinition } from '@fortawesome/fontawesome-svg-core'
@@ -16,12 +16,24 @@ export default function EcosystemCircle() {
   const circleSize = 640
   const radius = circleSize / 2 - 70
   const center = circleSize / 2
+  const mobileRef = useRef<HTMLDivElement>(null)
+  const [mobileVisible, setMobileVisible] = useState(false)
+
+  useEffect(() => {
+    const el = mobileRef.current
+    if (!el) return
+    const observer = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) { setMobileVisible(true); observer.unobserve(el) } },
+      { rootMargin: '-50px' }
+    )
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [])
 
   return (
     <div className="flex flex-col items-center">
       {/* Desktop: circular layout */}
       <div className="hidden md:block relative" style={{ width: circleSize, height: circleSize }}>
-        {/* Outer ring arcs */}
         <svg className="absolute inset-0" viewBox={`0 0 ${circleSize} ${circleSize}`} fill="none">
           {stages.map((stage, i) => {
             const gap = 4 * (Math.PI / 180)
@@ -41,14 +53,11 @@ export default function EcosystemCircle() {
               />
             )
           })}
-
-          {/* Directional arrows between stages */}
           {stages.map((_, i) => {
             const midAngle = ((i + 1) * 90 - 90) * (Math.PI / 180)
             const arrowR = radius + 24
             const ax = center + arrowR * Math.cos(midAngle)
             const ay = center + arrowR * Math.sin(midAngle)
-
             const tangentAngle = midAngle + Math.PI / 2
             const size = 10
             const tipX = ax + size * Math.cos(tangentAngle)
@@ -57,7 +66,6 @@ export default function EcosystemCircle() {
             const baseL_Y = ay - size * 0.6 * Math.sin(tangentAngle) + size * 0.5 * Math.sin(tangentAngle + Math.PI / 2)
             const baseR_X = ax - size * 0.6 * Math.cos(tangentAngle) - size * 0.5 * Math.cos(tangentAngle + Math.PI / 2)
             const baseR_Y = ay - size * 0.6 * Math.sin(tangentAngle) - size * 0.5 * Math.sin(tangentAngle + Math.PI / 2)
-
             return (
               <polygon
                 key={`arrow-${i}`}
@@ -68,8 +76,6 @@ export default function EcosystemCircle() {
             )
           })}
         </svg>
-
-        {/* Stage icons + labels positioned in quadrants */}
         {stages.map((stage, i) => {
           const angle = (i * 90) * (Math.PI / 180)
           const labelR = radius * 0.55
@@ -79,11 +85,7 @@ export default function EcosystemCircle() {
             <div
               key={stage.label}
               className="absolute text-center z-10"
-              style={{
-                left: x - 65,
-                top: y - 40,
-                width: 130,
-              }}
+              style={{ left: x - 65, top: y - 40, width: 130 }}
             >
               <div
                 className="w-20 h-20 rounded-full mx-auto flex items-center justify-center text-white mb-2 shadow-md"
@@ -95,8 +97,6 @@ export default function EcosystemCircle() {
             </div>
           )
         })}
-
-        {/* Center text */}
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
           <div className="text-center">
             <span className="text-sm font-semibold text-gray-400 uppercase tracking-widest">E4</span>
@@ -106,13 +106,15 @@ export default function EcosystemCircle() {
       </div>
 
       {/* Mobile: stacked layout */}
-      <div className="md:hidden space-y-3 w-full max-w-md">
+      <div ref={mobileRef} className="md:hidden space-y-3 w-full max-w-md">
         {stages.map((stage, i) => (
-          <motion.div
+          <div
             key={stage.label}
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: i * 0.1 }}
+            style={{
+              opacity: mobileVisible ? 1 : 0,
+              transform: mobileVisible ? 'none' : 'translateX(-20px)',
+              transition: `opacity 0.4s ease-out ${i * 0.1}s, transform 0.4s ease-out ${i * 0.1}s`,
+            }}
           >
             <div className="flex items-center gap-4 p-4 rounded-xl border border-gray-200">
               <div
@@ -129,7 +131,7 @@ export default function EcosystemCircle() {
                 {i < stages.length - 1 ? '>' : ''}
               </span>
             </div>
-          </motion.div>
+          </div>
         ))}
       </div>
     </div>
